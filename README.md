@@ -3,15 +3,16 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of milestoneR is to ...
+The goal of milestoneR is to provide R access to the database tables used in the Milestones Project,
+  reflecting the history of data visualization, as used in http://datavis.ca/milestones.
 
-## Installation
-
-You can install the released version of milestoneR from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("milestoneR")
-```
+# ## Installation
+# 
+# You can install the released version of milestoneR from [CRAN](https://CRAN.R-project.org) with:
+# 
+# ``` r
+# install.packages("milestoneR")
+# ```
 
 ## Example
 
