@@ -21,3 +21,5 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     DBI
+URL: https://github.com/friendly/milestoneR
+BugReports: https://github.com/friendly/milestoneR/issues
