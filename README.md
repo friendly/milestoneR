@@ -1,6 +1,7 @@
 # milestoneR
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
 The goal of milestoneR is to provide R access to the database tables used in the Milestones Project,
