@@ -1,6 +1,6 @@
 Package: milestoneR
 Title: Access the Database of the Milestones Project
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     person(given = "Michael",
            family = "Friendly",
@@ -12,10 +12,9 @@ Authors@R:
            email = "matt.dubins@donorscience.ca",
            role = c("aut")
     )
-Description: This package provides a simple interface to the database tables used in the Milestones Project,
+Description: This package provides a simple R interface to the database tables used in the Milestones Project,
   reflecting the history of data visualization, as used in datavis.ca/milestones.
-  Functions are provided to retrieve the tables of
-  milestones events, authors, references, etc.
+  Functions are provided to retrieve the tables of milestones events, authors, references, etc.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

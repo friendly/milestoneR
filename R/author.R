@@ -2,7 +2,7 @@
 #'
 #' @return Returns a tibble of the `author` table
 #' @details
-#' The `authors` data set contains the following fields:
+#' The `author` data set contains the following fields:
 #'
 #'   \describe{
 #'      \item{\code{aid}}{author id, a numeric vector}

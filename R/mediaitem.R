@@ -17,7 +17,7 @@
 
 #' @export
 #'
-mediaitems <- function(connection = .mstone.env$connnection) {
+mediaitem <- function(connection = .mstone.env$connnection) {
   mitems <- as_tibble(dbReadTable(mitems_con,
                                    'mediaitem'))
   mitems <- mitems %>%
