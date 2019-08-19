@@ -4,7 +4,7 @@
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of the `milestoneR` is to provide R access to the database tables used in the Milestones Project,
+The goal of the `milestoneR` package is to provide R access to the database tables used in the Milestones Project,
   reflecting the history of data visualization, as used in http://datavis.ca/milestones.
   This project is described in Friendly et al. (2015).
 
