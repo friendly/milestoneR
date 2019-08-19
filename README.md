@@ -26,7 +26,7 @@ install.packages("milestoneR")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a stub for a basic example which shows you how to solve a common problem:
 
 ``` r
 library(milestoneR)
