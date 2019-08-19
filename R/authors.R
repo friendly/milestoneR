@@ -38,6 +38,7 @@ authors <- function(connection = .mstone.env$connnection) {
   # change data types of some fields
   # TODO: recode HTML in lname, givennames, birthplace, deathplace to latin1
   auth <- auth %>%
+    # fullname should include prefix & suffix
     mutate(fullname = ifelse(givennames != '', paste0(givennames, ' ', lname), lname))
     mutate_at(c(vars(birthlat, birthlong,
                      deathlat, deathlong)), as.numeric) %>%

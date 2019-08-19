@@ -2,12 +2,12 @@
 #'
 #' The `milestone` table gives each item considered a milestone in the history of data visualization.
 #'
-#' @return Returns a tibble of the `milestone`` table
+#' @return Returns a tibble of the `milestone` table
 #' @export
 #'
 milestones <- function(connection = .mstone.env$connnection) {
   mstones <- as_tibble(dbReadTable(mstones_con,
-                                'milestones'))
+                                'milestone'))
   mstones <- mstones %>%
     select(-uid)
   mstones
