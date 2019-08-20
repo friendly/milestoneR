@@ -5,8 +5,10 @@
 <!-- badges: end -->
 
 The goal of the `milestoneR` package is to provide R access to the database tables used in the Milestones Project,
-  reflecting the history of data visualization, as used in http://datavis.ca/milestones.
+  reflecting the history of data visualization, as used in http://datavis.ca/milestones and other applications
+  on this site, such as the [Milestones Calendar](http://www.datavis.ca/milestones-cal/).
   This project is described in Friendly et al. (2015).
+  
   Another goal is to document what we have done to create a database comprised of important events in this
   history, combined with source images, external links, references, etc. to make this useful for further
   research.
@@ -37,10 +39,20 @@ The main table
 (`milestone`) contains information regarding each of the items considered a milestone in the history
 of data visualization. These are linked
 to other tables (e.g., `author`, `reference`, `mediaitem`) by unique (primary) keys: `mid` is the
-key for a given milestones item.
+key for a given milestones item. 
 
-Other supporting tables (e.g., `milestone2aspect`) provide for convenient lookups of descriptors of these
-milestones items (subject, aspect, keyword).
+Each milestones item is coarsely classified in two tables: 
+
+* `subject` indicates the substantive context of the milestones event, with categories "Physical",
+"Mathematical", "Human", "Other".
+
+* `aspect` indicates the role this event played in the history of data visualization, with categories
+"Cartography", "Statistics & Graphics", "Technology", "Other".
+
+In addition, there is a freeform `keyword` table listing keywords or terms attached to milestones items.
+
+Other supporting tables (e.g., `milestones2subject`, `milestone2aspect`) provide for convenient lookups of descriptors of these
+milestones items (subject, aspect, keyword) using the milestones id (`mid`) as the key.
 
 ![Milestones database schema](man/figures/database-schema.png)
 
