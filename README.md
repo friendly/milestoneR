@@ -7,6 +7,9 @@
 The goal of the `milestoneR` package is to provide R access to the database tables used in the Milestones Project,
   reflecting the history of data visualization, as used in http://datavis.ca/milestones.
   This project is described in Friendly et al. (2015).
+  Another goal is to document what we have done to create a database comprised of important events in this
+  history, combined with source images, external links, references, etc. to make this useful for further
+  research.
 
 ## Installation
 
@@ -24,6 +27,22 @@ You can install the released version of milestoneR from [CRAN](https://CRAN.R-pr
 install.packages("milestoneR")
 ```
 -->
+
+## Database schema
+
+The milestones database was designed as a relational database (implemented in MySQL).
+It consists of the tables shown in the figure below.
+
+The main table
+(`milestone`) contains information regarding each of the items considered a milestone in the history
+of data visualization. These are linked
+to other tables (e.g., `author`, `reference`, `mediaitem`) by unique (primary) keys: `mid` is the
+key for a given milestones item.
+
+Other supporting tables (e.g., `milestone2aspect`) provide for convenient lookups of descriptors of these
+milestones items (subject, aspect, keyword).
+
+![Milestones database schema](man/figures/database-schema.png)
 
 ## Example
 
