@@ -5,7 +5,8 @@
 #' @return Returns a tibble of the `milestone` table
 #' @export
 #'
-milestone <- function(connection = .mstone.env$connnection) {
+milestone <- function() {
+  mstones_con = .mstone.env$connnection
   mstones <- as_tibble(dbReadTable(mstones_con,
                                 'milestone'))
   mstones <- mstones %>%

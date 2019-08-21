@@ -31,7 +31,8 @@
 #' @examples
 #' # none yet
 #'
-authors <- function(connection = .mstone.env$connnection) {
+authors <- function() {
+  mstones_con = .mstone.env$connnection
   auth <- as_tibble(dbReadTable(mstones_con,
                                 'author'))
 
