@@ -24,6 +24,8 @@
 #'   \item{\code{abstract}}{a character vector}
 #'   \item{\code{note}}{a character vector}
 #'  }
+#'
+#'  TODO: fix HTML encoding of author, title journal, ...
 
 #' @export
 #'
@@ -34,6 +36,18 @@ reference <- function() {
   refs <- reference %>%
     mutate(type = as.factor(type),
            year = as.numeric(year))
+
+  # fix books that have a booktitle rather than title; booktitle should only be used for incollection
+  # very messy, but it works
+  fixtitle <- function(type, title, booktitle) {
+    if(type != "book") return (title)
+    if(title == "" & booktitle != "") return (booktitle)
+    title
+  }
+  for (i in 1:nrow(refs)) {
+    refs$title[i] = fixtitle(refs$type[i], refs$title[i], refs$booktitle[i])
+  }
+
 
   refs
 }
