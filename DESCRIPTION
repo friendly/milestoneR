@@ -2,15 +2,16 @@ Package: milestoneR
 Title: Access the Database of the Milestones Project
 Version: 0.0.1
 Authors@R: 
+  c(
     person(given = "Michael",
            family = "Friendly",
            role = c("aut", "cre"),
            email = "friendly@yorku.ca",
-           comment = c(ORCID = "0000-0002-3237-0941"),
+           comment = c(ORCID = "0000-0002-3237-0941")),
     person(given = "Matthew",
            family = "Dubins",
            email = "matt.dubins@donorscience.ca",
-           role = c("aut")
+           role = c("aut"))
     )
 Description: This package provides a simple R interface to the database tables used in the Milestones Project,
   reflecting the history of data visualization, as used in datavis.ca/milestones.
@@ -22,3 +23,4 @@ Imports:
     DBI
 URL: https://github.com/friendly/milestoneR
 BugReports: https://github.com/friendly/milestoneR/issues
+RoxygenNote: 6.1.1
