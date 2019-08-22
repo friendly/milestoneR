@@ -5,7 +5,7 @@
 #'
 #' In the present form, it uses \code{\link[textutils]{HTMLdecode}} for named HTML entities, like "&eacute;"
 #' That doesn't handle numeric HTML entities, like "&#0239".
-#' This also handles a few milestone encodings that aren't quite correct in the DB.
+#' This function also handles a few milestone encodings that aren't quite correct in the DB.
 #'
 #' @param A vector of character strings
 #'
