@@ -44,8 +44,8 @@ authors <- function() {
     mutate_at(c(vars(birthlat, birthlong,
                      deathlat, deathlong)), as.numeric) %>%
     mutate_at(c(vars(birthdate, deathdate)), as_date)
-    # mutate_at(c(vars(lname, givennames,
-    #                  birthplace, deathplace)), html2latin1)
+    mutate_at(c(vars(lname, givennames,
+                     birthplace, deathplace)), html2utf8)
 
   auth
 
