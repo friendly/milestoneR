@@ -10,5 +10,6 @@ milestone()
 Returns a tibble of the `milestone` table
 }
 \description{
-The `milestone` table gives each item considered a milestone in the history of data visualization.
+The `milestone` table gives each item considered a milestone in the history of data visualization. This is
+the primary table. Others are linked to it via the `mid` key.
 }

@@ -32,4 +32,6 @@ The `reference` table gives the references associated with milestones items
   \item{\code{abstract}}{a character vector}
   \item{\code{note}}{a character vector}
  }
+
+ TODO: fix HTML encoding of author, title journal, ...
 }

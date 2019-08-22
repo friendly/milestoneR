@@ -2,7 +2,9 @@
 
 export(authors)
 export(connect)
+export(html2utf8)
 export(mediaitem)
 export(milestone)
 export(reference)
 importFrom(lubridate,as_date)
+importFrom(textutils,HTMLdecode)
