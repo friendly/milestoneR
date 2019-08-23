@@ -14,7 +14,10 @@
 #' @export
 #'
 #' @examples
-#' # none yet
+#' strings <- c("Fr&egrave;re de Montizon", "Lumi&egrave;re",
+#'               "Ni&eacute;pce", "S&uuml;ssmilch", "Sch&uuml;pbach",
+#'               "&#177; .25 #&215; 2 = &#189;")
+#' html2utf8(strings)
 #'
 html2utf8 <- function(text) {
   # named entities
