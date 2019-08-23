@@ -13,6 +13,7 @@
 #' This function should be ammended to handles a few milestone encodings that aren't quite correct in the DB.
 #'
 #' @param txt A vector of character strings#'
+#' @param A vector of character strings#'
 #' @return A character vector, with HTML entities translated
 #' @author David Carlson
 #' @export
