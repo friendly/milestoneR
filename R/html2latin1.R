@@ -1,41 +1,73 @@
-#' Translate HTML entities to UTF8 characters
+# from David Carlson, R-Help 8/12/2012
+# Revised 8/22/2019 tohtml2latin1 to address possibility of no matches for
+# Name or Number
+
+#This may work for your needs with a little fine tuning. Special and accented
+#characters can be represented in HTML with a character name or a numeric
+#value. For example, " can be represented as &quot; or as &#034; and it
+#appears from your example that both are used. I've included
+#dput(HTMLChars) with the concordances. The
+#following works on your data, but I haven't included any error checking.
+
+#' Translate HTML entities to latin1 characters
 #'
-#' This function is somewhat of a kludge to handle the encoding of various fields in the
-#' `milestones` database in a form that there could be directly displayed in the PHP scripts.
+#' This function should be ammended to handles a few milestone encodings that aren't quite correct in the DB.
 #'
-#' In the present form, it uses \code{\link[textutils]{HTMLdecode}} for named HTML entities, like "&eacute;"
-#' That doesn't handle numeric HTML entities, like "&#0239".
-#' This function also handles a few milestone encodings that aren't quite correct in the DB.
-#'
-#' @param A vector of character strings
-#'
+#' @param A vector of character strings#'
 #' @return A character vector, with HTML entities translated
-#' @importFrom textutils HTMLdecode
+#' @author David Carlson
 #' @export
-#'
 #' @examples
 #' strings <- c("Fr&egrave;re de Montizon", "Lumi&egrave;re",
 #'               "Ni&eacute;pce", "S&uuml;ssmilch", "Sch&uuml;pbach",
 #'               "&#177; .25 &#215; 2 = &#189;")
-#' html2utf8(strings)
-#'
-html2utf8 <- function(text) {
-  # named entities
-  txt <- textutils::HTMLdecode(text)
+#' html2latin1(strings)
 
-  # numeric entities
-  for (i in seq(nrow(.HTMLChars))) {
-    txt <- gsub(.HTMLChars[i,"Number"], .HTMLChars[i,"Character"], txt, fixed=TRUE)
-  }
-  # clean up some weird ones with bad encoding in the milestones DB
-  txt <- gsub("&#39;", "'", txt)    # apostrophe, or &apos;
-  txt <- gsub("&#65533;", "ä", txt) # &aul; -- only occurs in one place
-  txt <- gsub("&#0233;", "é", txt)  # &eacute;
 
-  txt
+html2latin1 <- function(txt) {
+	# Search for &Name;
+	lsta <- unique(unlist(regmatches(txt, gregexpr("&[[:alpha:]]+;", txt))))
+	lsta <- data.frame(Name=lsta)
+	matches <- merge(.HTMLChars, lsta)
+	if(nrow(matches)) {
+		for (i in 1:nrow(matches)) {
+		     txt <- gsub(matches$Name[i], matches$Character[i], txt)
+		}
+	}
+
+	# Search for &#Number;
+	lstn <- unique(unlist(regmatches(txt, gregexpr("&#[[:digit:]]+;", txt))))
+	lstn <- data.frame(Number=lstn)
+	matches <- merge(.HTMLChars, lstn)
+	if(nrow(matches)) {
+		for (i in 1:nrow(matches)) {
+			txt <- gsub(matches$Number[i], matches$Character[i], txt)
+		}
+	}
+	txt
+}
+
+latin12html <- function(txt, type=c("name", "number")) {
+	# Search for Character;
+	chars <- paste(.HTMLChars[,1], collapse='|')
+	lsta <- unique(unlist(regmatches(txt, chars)))
+#	lsta <- data.frame(Name=lsta)
+#	matches <- merge(HTMLChars, lsta)
+	type <- match.arg(type)
+	if (type=="name") {
+  	  for (i in 1:nrow(.HTMLChars)) {
+  	     txt <- gsub(.HTMLChars$Character[i], .HTMLChars$Name[i], txt)
+  	}
+	} else {
+  	  for (i in 1:nrow(.HTMLChars)) {
+  	     txt <- gsub(.HTMLChars$Character[i], .HTMLChars$Number[i], txt)
+  	}
+	}
+	txt
 }
 
 # table of HTML characters, taken from David Carlson, R-Help 8/12/2012
+
 .HTMLChars <-
   structure(list(Character = c("\"", "'", "&", "<", ">", "", "¡",
                                "¢", "£", "¤", "¥", "¦", "§", "¨", "©", "ª", "«", "¬", "--",
@@ -81,4 +113,3 @@ html2utf8 <- function(text) {
                           "&thorn;")), .Names = c("Character", "Number", "Name"),
             row.names = c(NA, 100L),
             class = "data.frame")
-
