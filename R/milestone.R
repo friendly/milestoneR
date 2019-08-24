@@ -4,6 +4,8 @@
 #' the primary table. Others are linked to it via the `mid` key.
 #'
 #' @return Returns a tibble of the `milestone` table
+#' @importFrom tibble as_tibble
+#' @importFrom dplyr mutate
 #' @export
 #'
 milestone <- function() {
@@ -13,7 +15,7 @@ milestone <- function() {
   mstones <- mstones %>%
     select(-uid) %>%
     # cleanup description field
-    mutate(description = html2utf8(description)) %>%
+    mutate(description = html2latin1(description)) %>%
     mutate(description = gsub("</?p>", "", description))
 
   # TODO: quoted strings are badly handled in the description field.

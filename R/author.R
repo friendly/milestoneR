@@ -26,6 +26,8 @@
 #' translated to latin1.
 #'
 #' @importFrom lubridate as_date
+#' @importFrom tibble as_tibble
+#' @importFrom dplyr mutate
 #' @export
 #'
 #' @examples
@@ -45,7 +47,7 @@ authors <- function() {
                      deathlat, deathlong)), as.numeric) %>%
     mutate_at(c(vars(birthdate, deathdate)), as_date)
     mutate_at(c(vars(lname, givennames,
-                     birthplace, deathplace)), html2utf8)
+                     birthplace, deathplace)), html2latin1)
 
   auth
 
