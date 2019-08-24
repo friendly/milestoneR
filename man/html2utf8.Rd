@@ -15,6 +15,7 @@ A character vector, with HTML entities translated
 \description{
 This function is somewhat of a kludge to handle the encoding of various fields in the
 `milestones` database in a form that there could be directly displayed in the PHP scripts.
+It will shortly be removed, replaced by `html2latin1`
 }
 \details{
 In the present form, it uses \code{\link[textutils]{HTMLdecode}} for named HTML entities, like "&eacute;"
