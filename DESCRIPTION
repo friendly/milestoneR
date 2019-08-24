@@ -1,6 +1,6 @@
 Package: milestoneR
 Title: Access the Database of the Milestones Project
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
   c(
     person(given = "Michael",
