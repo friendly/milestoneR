@@ -13,13 +13,14 @@ Returns a tibble of the `reference` table
 The `reference` table gives the references associated with milestones items
 }
 \details{
-\describe{
+The fields in the `reference` table are:
+ \describe{
   \item{\code{rid}}{reference id, a numeric vector}
   \item{\code{type}}{reference type, a factor with levels \code{} \code{article} \code{book} \code{incollection}}
   \item{\code{author}}{author, a character vector}
-  \item{\code{title}}{title, a character vector}
+  \item{\code{title}}{title of publication, a character vector}
   \item{\code{journal}}{journal name, for an \code{article}, character vector}
-  \item{\code{month}}{a character vector}
+  \item{\code{month}}{month name, a character vector}
   \item{\code{year}}{a numeric vector}
   \item{\code{volume}}{a character vector}
   \item{\code{number}}{a character vector}
@@ -28,10 +29,10 @@ The `reference` table gives the references associated with milestones items
   \item{\code{address}}{a character vector}
   \item{\code{editor}}{a character vector}
   \item{\code{booktitle}}{a character vector}
-  \item{\code{bibtexkey}}{a character vector}
+  \item{\code{bibtexkey}}{BibTeX key used in the source .bib files, a character vector}
   \item{\code{abstract}}{a character vector}
   \item{\code{note}}{a character vector}
  }
 
- TODO: fix HTML encoding of author, title journal, ...
+ TODO: need a function to turn these back to BibTeX
 }

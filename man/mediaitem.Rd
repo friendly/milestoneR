@@ -13,6 +13,7 @@ Returns a tibble of the `mediaitem` table
 The `mediaitem` table gives each link or image used in displaying the milestones items
 }
 \details{
+The fields in the `mediaitem` table are:
 \describe{
    \item{\code{miid}}{mediaitem id, a numeric vector}
    \item{\code{type}}{type, a factor, with values \code{link}, \code{image}}
@@ -22,4 +23,7 @@ The `mediaitem` table gives each link or image used in displaying the milestones
    \item{\code{source}}{a character vector}
    \item{\code{mid}}{milestones id to which this is attached, a numeric vector}
 }
+
+For `type=="link"`, these give a standard HTML reference in the `url` field.
+For `type`=="image"`, the `url` field references the local image in the milestones DB.
 }

@@ -7,7 +7,7 @@
 html2utf8(text)
 }
 \arguments{
-\item{A}{vector of character strings}
+\item{text}{A vector of character strings}
 }
 \value{
 A character vector, with HTML entities translated
@@ -24,7 +24,7 @@ This function also handles a few milestone encodings that aren't quite correct i
 \examples{
 strings <- c("Fr&egrave;re de Montizon", "Lumi&egrave;re",
               "Ni&eacute;pce", "S&uuml;ssmilch", "Sch&uuml;pbach",
-              "&#177; .25 #&215; 2 = &#189;")
+              "&#177; .25 &#215; 2 = &#189;")
 html2utf8(strings)
 
 }

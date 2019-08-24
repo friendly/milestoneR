@@ -2,9 +2,13 @@
 
 export(authors)
 export(connect)
+export(html2latin1)
 export(html2utf8)
+export(latin12html)
 export(mediaitem)
 export(milestone)
 export(reference)
+importFrom(dplyr,mutate)
 importFrom(lubridate,as_date)
 importFrom(textutils,HTMLdecode)
+importFrom(tibble,as_tibble)
