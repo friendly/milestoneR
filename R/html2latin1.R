@@ -12,7 +12,7 @@
 #'
 #' This function should be ammended to handles a few milestone encodings that aren't quite correct in the DB.
 #'
-#' @param txt A vector of character strings#'
+#' @param txt A vector of character strings
 #' @param A vector of character strings#'
 #' @return A character vector, with HTML entities translated
 #' @author David Carlson
@@ -44,8 +44,25 @@ html2latin1 <- function(txt) {
 			txt <- gsub(matches$Number[i], matches$Character[i], txt)
 		}
 	}
+
+	# clean up some weird ones with bad encoding in the milestones DB
+	txt <- gsub("&#39;", "'", txt)    # apostrophe, or &apos;
+	txt <- gsub("&#65533;", "ä", txt) # &aul; -- only occurs in one place
+	txt <- gsub("&#0233;", "é", txt)  # &eacute;
+
 	txt
 }
+
+#' Translate latin1 characters to HTML entities
+#'
+#' @param txt A vector of character strings with latin1 characters
+#' @return A character vector, with latin1 characters translated to HTML
+#' @author David Carlson
+#' @export
+#' @examples
+#' strings <- c("Frère de Montizon", "Lumière", "Niépce", "Süssmilch", "Schüpbach",
+#'              "± .25 × 2 = ½")
+#' latin12html(strings)
 
 latin12html <- function(txt, type=c("name", "number")) {
 	# Search for Character;
