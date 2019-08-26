@@ -27,7 +27,7 @@
 #'
 #' @importFrom lubridate as_date
 #' @importFrom tibble as_tibble
-#' @importFrom dplyr mutate
+#' @importFrom dplyr mutate mutate_at
 #' @export
 #'
 #' @examples

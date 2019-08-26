@@ -13,7 +13,6 @@
 #' This function should be ammended to handles a few milestone encodings that aren't quite correct in the DB.
 #'
 #' @param txt A vector of character strings
-#' @param A vector of character strings#'
 #' @return A character vector, with HTML entities translated
 #' @author David Carlson
 #' @export
@@ -56,6 +55,7 @@ html2latin1 <- function(txt) {
 #' Translate latin1 characters to HTML entities
 #'
 #' @param txt A vector of character strings with latin1 characters
+#' @param type Type of characters to translate: \code{"name"} or \code{"number"}
 #' @return A character vector, with latin1 characters translated to HTML
 #' @author David Carlson
 #' @export
@@ -72,13 +72,18 @@ latin12html <- function(txt, type=c("name", "number")) {
 #	matches <- merge(HTMLChars, lsta)
 	type <- match.arg(type)
 	if (type=="name") {
-  	  for (i in 1:nrow(.HTMLChars)) {
-  	     txt <- gsub(.HTMLChars$Character[i], .HTMLChars$Name[i], txt)
-  	}
+	  if(nrow(matches)) {
+	    for (i in 1:nrow(.HTMLChars)) {
+	      txt <- gsub(.HTMLChars$Character[i], .HTMLChars$Name[i], txt)
+	    }
+	  }
 	} else {
-  	  for (i in 1:nrow(.HTMLChars)) {
-  	     txt <- gsub(.HTMLChars$Character[i], .HTMLChars$Number[i], txt)
-  	}
+	  if (type=="name") {
+
+	    for (i in 1:nrow(.HTMLChars)) {
+	      txt <- gsub(.HTMLChars$Character[i], .HTMLChars$Number[i], txt)
+	    }
+	  }
 	}
 	txt
 }

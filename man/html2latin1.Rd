@@ -8,8 +8,6 @@ html2latin1(txt)
 }
 \arguments{
 \item{txt}{A vector of character strings}
-
-\item{A}{vector of character strings#'}
 }
 \value{
 A character vector, with HTML entities translated

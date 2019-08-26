@@ -4,6 +4,9 @@
 #'
 #' @return The string representing the database connection. For convenience, this is also
 #'         stored in an environment variable, `.mstone.env$connnection`.
+#' @importFrom RMySQL MySQL
+#' @importFrom DBI dbConnect
+#' @importFrom keyring key_get
 #' @export
 #'
 #' @examples

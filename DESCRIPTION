@@ -16,11 +16,17 @@ Authors@R:
 Description: This package provides a simple R interface to the database tables used in the Milestones Project,
   reflecting the history of data visualization, as used in datavis.ca/milestones.
   Functions are provided to retrieve the tables of milestones events, authors, references, etc.
-License: MIT + file LICENSE
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    DBI
+    DBI,
+    RMySQL,
+    keyring,
+    dplyr,
+    tibble,
+    lubridate,
+    textutils
 URL: https://github.com/friendly/milestoneR
 BugReports: https://github.com/friendly/milestoneR/issues
 RoxygenNote: 6.1.1

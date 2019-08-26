@@ -8,6 +8,8 @@ latin12html(txt, type = c("name", "number"))
 }
 \arguments{
 \item{txt}{A vector of character strings with latin1 characters}
+
+\item{type}{Type of characters to translate: \code{"name"} or \code{"number"}}
 }
 \value{
 A character vector, with latin1 characters translated to HTML
