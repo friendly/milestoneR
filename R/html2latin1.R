@@ -79,9 +79,10 @@ latin12html <- function(txt, type=c("name", "number")) {
 	  }
 	} else {
 	  if (type=="name") {
-
-	    for (i in 1:nrow(.HTMLChars)) {
-	      txt <- gsub(.HTMLChars$Character[i], .HTMLChars$Number[i], txt)
+	    if(nrow(matches)) {
+	      for (i in 1:nrow(.HTMLChars)) {
+	        txt <- gsub(.HTMLChars$Character[i], .HTMLChars$Number[i], txt)
+	      }
 	    }
 	  }
 	}
