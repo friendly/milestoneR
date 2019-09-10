@@ -34,21 +34,42 @@
 #' # none yet
 #'
 authors <- function() {
-  mstones_con = .mstone.env$connnection
-  auth <- as_tibble(dbReadTable(mstones_con,
-                                'author'))
+  authors = as.data.table(
+    dbReadTable(mstones_con, 'author', encoding = 'UTF-8')
+  )
+  
+  authors[, Full_Name := ifelse(givennames != '', paste0(givennames, ' ', lname), lname)]
+  
+  
+  authors[grepl(', ', birthplace), Birth_Country := tstrsplit(birthplace, ', ')[[length(tstrsplit(birthplace, ', '))]],
+          by = 'aid'][, 
+                      Birth_Country := gsub('[\\)\\(]', '', Birth_Country)]
+  
+  authors[grepl(', ', deathplace), Death_Country := tstrsplit(deathplace, ', ')[[length(tstrsplit(deathplace, ', '))]],
+          by = 'aid'][, 
+                      Death_Country := gsub('[\\)\\(]', '', Death_Country )]
+  
+  authors[nchar(birthdate) > 3, birthdate_fixed := as.Date(birthdate)]
+  authors[, Birth_Year := year(birthdate_fixed)]
+  
+  authors[nchar(deathdate) > 3, deathdate_fixed := as.Date(deathdate)]
+  authors[, Death_Year := year(deathdate_fixed)]
+  
+  authors[!is.na(birthdate_fixed) & !is.na(deathdate_fixed), 
+          Age := as.numeric(deathdate_fixed - birthdate_fixed)/365,
+          by = 'aid'][, Age:= as.numeric(Age)]
+  
+  authors[, c("givennames", 'lname', 'birthplace', 'deathplace', 'Full_Name',
+              'Birth_Country', 'Death_Country') := .(
+                html2latin1(givennames),
+                html2latin1(lname),
+                html2latin1(birthplace),
+                html2latin1(deathplace),
+                html2latin1(Full_Name),
+                html2latin1(Birth_Country),
+                html2latin1(Death_Country)
+              ), keyby = 'aid']
 
-  # change data types of some fields
-  # TODO: recode HTML in lname, givennames, birthplace, deathplace to latin1
-  auth <- auth %>%
-    # fullname should include prefix & suffix
-    mutate(fullname = ifelse(givennames != '', paste0(givennames, ' ', lname), lname))
-    mutate_at(c(vars(birthlat, birthlong,
-                     deathlat, deathlong)), as.numeric) %>%
-    mutate_at(c(vars(birthdate, deathdate)), as_date)
-    mutate_at(c(vars(lname, givennames,
-                     birthplace, deathplace)), html2latin1)
-
-  auth
+  return(as_tibble(authors))
 
 }
