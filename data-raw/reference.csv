@@ -1,0 +1,366 @@
+rid,type,author,title,journal,month,year,volume,number,pages,publisher,address,editor,booktitle,bibtexkey,abstract,note
+261,article,"LLull, Ramon",Artifitium Electionis Personarum,,,1274-1283,,,,,,NULL,,Llull:1280,,"Biblioteca Apostolica Vaticana, Cod. Vat. lat. 9332, f. 11r-12v"
+262,article,"Oresme, Nicole",Tractatus De Latitudinibus Formarum,,,1482,,,,,Padova,NULL,,Oresme:1482,,Loc{BL: IA 3Q024}
+263,book,"da Vinci, Leonardo",,,,1500,"M, Verso 40",,,Manuscripts of the Institute of France,Paris,NULL,Notebooks,daVinci:1500,,(c. 1500)
+264,article,"Frisius, R. Gemma",Principiis Astronomiae Cosmographicae,,,1530,,,,,,NULL,,Frisius:1530,,
+265,article,"Frisius, R. Gemma",Libellus de Locorum Describendorum Ratione,,,1533,,,,,Antwerp,NULL,,Frisius:1533,,
+266,book,"Gemma-Frisius, Reinerus",,,,1545,,,,(n.p.),Louvain,NULL,De Radio Astronomica et Geometrica,GemmaFrisius:1545,,
+267,book,"Tartaglia, Niccolo Fontana",,,,1556,,,,Vinegia,Venice,NULL,General Trattato di Numeri et Misure,Tartaglia:1556,,Loc{BL: 531.n.7-9; 47.e.4}
+268,article,"Rupelmonde, Gerard Mercator van",Nova et Aucta Orbis Terrae Descriptio ad Usum Navigantum Emendate Accomodata,,,1569,,,,,,NULL,,Mercator:1569,,
+269,book,"Ortelius, Abraham",,,May,1570,,,,Coppenium Diesth,Antwerp,NULL,Theatrum Orbis Terrarum,Ortelius:1570,,"53 maps in coperplate, 41 x 29 cm."
+270,book,"Galelei, Galileo",,,,1610,,,,(n.p.),"Venice, Italy",NULL,Sidereus Nuncius [The Starry Messenger],Galilei:1610,,
+272,article,"Snell, Willebrord van Roijen (Snellius)",Eratosthenes Batavus,,,1617,,,,,,NULL,,Snell:1617,,
+273,article,"Gunter, Edmund","Description and Use of the Sector, the Crosse-staffe and other Instruments",,,1624,,,,,,NULL,,Gunter:1624,,
+274,book,"Scheiner, Christophe",,,,1626-1630,,,,Andream Phaeum,"Bracciano, Italy",NULL,Rosa Ursina sive Sol ex Admirando Facularum &amp; Macularum Suarum Phoenomeno Varius,Scheiner:1626,,Loc{BL: 532.l.6}
+275,book,"Galilei, Galileo",,,,1632,,,,n.p.,Pisa,NULL,"Dialogo sopra i due massimi sistemi del mondo, Tolemaico, e Copernicano (Dialog concerning the Two Chief World Systems - Ptolemaic and Copernican)",Galileo:1632,,"(English translation by S. Drake, 1953 (2nd ed., 1967), Berkeley, CA: Univ. California Press)"
+276,incollection,"Descartes, R&eacute;ne",La G&eacute;om&eacute;trie,,,1637,,,,Essellier,Paris,NULL,Discours de la M&eacute;thode,Descartes:1637,,(Appendix)
+277,article,"van Langren, Michael Florent",La Verdadera Longitud por Mar y Tierra,,,1644,,,,(n.p.),Antwerp,NULL,,Langren:1644,,Loc{BL: 716.i.6}
+278,book,"Kirscher, Athanasius",,,,1646,,,,(n.p.),Germany,NULL,Ars Magna Lucis et Umbrae,Kirscher:1646,,
+279,incollection,"Huygens, Christiaan",De Ratiociniis in Ludo Aleae,,,1657,,,,Elsevirii,Amsterdam,NULL,Exercitationum mathematicarum libri quinque,Huygens:1657,,"Reprinted in Oeuvres Compl&eacute;tes, Soci&eacute;t&eacute; Hollandais des Sciences, Nijhoff, La Haye, Vol. 14 (1920)"
+280,book,"Graunt, John",,,,1662,,,,"Martin, Allestry, and Dicas",London,NULL,Natural and Political Observations Mentioned in a Following Index and Made Upon the Bills of Mortality,Graunt:1662,,
+281,book,"Cardano, Gerolamo",,,,1663,,,,n.p.,Milan,NULL,Liber de Ludo Alaea,Cardano:1663,,"Trans. Sidney Henry Gould, 1961, New York: Holt, Rinehart &amp; Winston"
+282,book,"Petty, William",,,,1665,,,,The University Press,Cambridge,NULL,The Economic Writings of Sir William Petty: Together with the Observations upon the Bills of Mortality,Petty:1665,,C. H. Hall (ed.) (more probably by Captain John Graunt)
+283,book,"Witt, Jan de",,,,1671,,,,n.p.,Leiden,NULL,The Worth of Life Annuities Compared to Redemption Bonds,deWitt:1671,,
+284,article,"Halley, Edmund","An Historical Account of the Trade Winds, and Monsoons, Observable in the Seas between and Near the Tropicks, with an Attempt to Assign the Phisical Cause of the Said Wind",Philosophical Transactions,,1686,16,,153-168,,,NULL,,Halley:1686a,,
+285,article,"Halley, Edmund","On the Height of the Mercury in the Barometer At Different Elevations Above the Surface of the Earth, and On the Rising and Falling of the Mercury on the Change of Weather",Philosophical Transactions,,1686,16,,104-115,,,NULL,,Halley:1686,,
+286,book,"Petty, William",,,,1687,,,,H. Mortlock and F. Lloyd,London,NULL,"Two Essays in Political Arithmetick, Concerning the People, Housing Hospitals &amp;c. of London and Paris",Petty:1687b,,Tries to show that London has more people and housing than Paris and Rouen put together; more people die in hospitals in Paris than in London
+287,book,"Petty, William",,,,1687,,,,H. Mortlock and F. Lloyd,London,NULL,Observations upon the Cities of London and Rome,Petty:1687a,,"Tries to show that, though Rome at the birth of Christ was the greatest city of the world, London at the coronation of James II was nearly six times as great as Rome"
+288,book,"Petty, William",,,,1690,,,,Robert Clavel,London,NULL,Politicak Arithmetick,Petty:1690,,
+289,article,"Halley, Edmund","An Estimate of the Degrees of Mortality of Mankind, Drawn from Curious Tables of the Births and Funerals At the City of Breslaw, with an Attempt to Ascertain the Price of Annuities on Lives",Philosophical Transactions,,1693,17,,596-610,,,NULL,,Halley:1693,,
+290,article,"Halley, Edmund","The Description and Uses of a New, and Correct Sea-Chart of the Whole World, Shewing Variations of the Compass",,,1701,,,,Author,London,NULL,,Halley:1701,,
+291,article,"Hauksbee, Francis",Account of the Experiment on the Ascent of Water Between Two Glass Planes in an Hyperbolick Figure,Philosophical Transactions,,1712,27,,539-540,,,NULL,,Hauksbee:1712,,"(Read to Royal Society 13 Nov., 1712"
+292,article,"Cruquius, Nicolaus Samuel","Observationes Accuratae Captae ... Circa Mediam Barometri Altitudinem, Mediam Thermometri Elevationem, Tum Et Hydrometri Varietatem Mediam, Etc.",Philosophical Transactions,,1724,,,07-Apr,,,NULL,,Cruquius:1724,,
+293,article,"De Moivre, Abraham",Approximatio ad Summam Terminorum Binomii a $(a+b)^n$ in Seriem expansi,,,1733,,,,,,NULL,,deMoivre:1733,,"Reproduced in Archibald, 1926"
+294,book,"De Moivre, Abraham",,,,1738,,,,Woodfall,London,NULL,The Doctrine of Chances,deMoivre:1738,,3rd ed. online at http://www.ibiblio.org/chance/
+295,book,"Achenwall, Gottfried",,,,1749,,,,n.p.,,NULL,Staatsverfassung der heutigen vornehmsten europ&auml;ischen Reiche und V&ouml;lker im Grundrisse,Achenwall:1748,,
+296,article,"Mayer, Johannes Tobias",Abhandlung &uuml;ber die Umw&auml;lzung des Monds um seine Axe,Kosmographische Nachrichten un Sammlungen,,1750,1,,52-183,,,NULL,,Mayer:1750,,English translation of pages 146--159 by Trenkler (1986)
+297,book,"Wren, Christopher",,,,1750,,,,T. Osborn and R. Dodsley,London,NULL,"Parentalia: Or, Memoirs of the Family of the Wrens",Wren:1750,,
+298,book,"Marie, C. &amp; Boscovich, J. T.",,,,1755,,,,N. and M. Palearini,Rome,NULL,De Litteraria Expeditione per Pontificiam Ditionem,MarieBoscovich:1755,,"French translation by Fr. Hugon, M. Tillard, Paris, 1770"
+299,article,"Mayer, Jophannes Tobias",De affinitate colorum commentatio,,,1758,Farbendreieck,,,n.p.,,NULL,,Mayer:1758,,"edited by Lichtenberg, 1775"
+300,book,"Lambert, Johann Heinrich",,,,1760,,,,Vidvae Eberhardi Klett,Augustae Vindelicorum,NULL,Photometria sive de mensura et gradibus luminis colorum et umbrae,Lambert:1760,,
+301,article,"Bayes, Thomas",Essay Towards Solving a Problem in the Doctrine of Chances,Philosophical Transactions,,1763,53,,370-418,,,NULL,,Bayes:1763,,
+302,incollection,"Lambert, Johann Heinrich",Theorie Der Zuverl&auml;ssigkeit,,,1765,1,,424-488,Verlage des Buchladens der Realschule,Berlin,NULL,Beytr&auml;ge zum Gebrauche der Mathematik and Deren Anwendungen,Lambert:1765,,
+303,book,"Priestley, Joseph",,,,1765,,,,(n.p.),London,NULL,A Chart of Biography,Priestley:1765,,Loc{BL: 611.I.19}
+304,article,"Harris, Moses",The natural system of colours,,,1766,Prismatic color mixture system,,,Laidler,Licester-Fields,NULL,,Harris:1766,,
+305,book,"Lambert, Johann Heinrich",,,,1772,,,,n.p.,Berlin,NULL,Beschreibung einer mit dem Calauschen Wachse ausgemalten Farbenpyramide,Lambert:1772,,
+306,book,"von Charpentier, Johann F. W. T.",,,,1778,,,,Crusius,Leipzig,NULL,Mineralogische Geographie Der Chursachsischen Lande,Charpentier:1778,,
+307,article,"Lambert, Johann Heinrich","Pyrometrie; oder, Vom Maasse des Feuers und der W&auml;rme mit acht Kupfertafeln",,,1779,,,,Bey Haude &amp; Spener,Berlin,NULL,,Lambert:1779,,
+308,book,"Crome, August F. W.",,,,1782,,,,(self published),Dessau,NULL,Producten-Karte von Europa,Crome:1782,,
+309,book,"Crome, August F. W.",,,,1785,,,,Weygand,Leipzig,NULL,&Uuml;ber die Gr&ouml;sse and Bev&ouml;lkerung der S&auml;mtlichen Europ&auml;schen Staaten,Crome:1785,,
+310,book,"Chladni, Ernest Florens Friedrich",,,,1787,,,,Bey Weidmanns Erben und Reich,Leipzig,NULL,Entdeckungen uber die Theorie des Klanges,Chladni:1787,,
+311,book,"Zimmerman, E. A. W.",,,,1787,,,,London,,NULL,Political Survey of the Present State of Europe,Zimmerman:1787,,
+312,article,"Howard, Luke","On a Periodical Variation of the Barometer, Apparently Due to the Influence of the Sun and Moon on the Atmosphere",Philosophical Magazine,,1800,7,,355-363,,,NULL,,Howard:1800,,
+313,article,"Keith, Alexander","Description of a Thermometer, Which Marks the Greatest Degree of Heat and Cold from One Time of Observation to Another, and May Also Register Its Own Height At Every Instant","Journal of Natural Philosophy, Chemistry and the Arts",,1800,3,,266-268,,,NULL,,Keith:1800,,"Reprinted in Fulford, Tim (ed.) 2002, Romanticism and Science, 1773-1833, Routledge. ISBN:0415219523, pp. 95-101."
+314,book,"Playfair, William",,,,1801,,,,Wallis,London,NULL,"Statistical Breviary; Shewing, on a Principle Entirely New, the Resources of Every State and Kingdom in Europe",Playfair:1801,,"Re-published in Wainer, H. and Spence, I. (eds.), The Commercial and Political Atlas and Statistical Breviary, 2005, Cambridge University Press, ISBN 0-521-85554-3"
+315,book,"Playfair, W.",,,,1805,,,,J. Whiting,London,NULL,A Statistical Account of the United States of America by D. F. Donnant,Playfair:1805,,"William Playfair, Trans."
+316,book,"Gauss, Johann Carl Friedrich",,,,1809,,,,n.p.,Hamburg,NULL,Theoria motus corporum coelestium in sectionibus conicis solem ambientum,Gauss:1809,,
+317,book,"von Humboldt, Alexander",,,,1811,,,,F. Schoell,Paris,NULL,Atlas G&eacute;ographique et Physique du Royaume de la Nouvelle-Espagne,Humboldt:1811,,
+318,book,"Smith, William",,,February,1815,,,,John Cary,London,NULL,"A delineation of the strata of England and Wales, with part of Scotland; exhibiting the collieries and mines, the marshes and fenlands originally overflowed by the sea, and the varieties of soil according to the substrata, illustrated by the most descript",Smith:1815,,Loc{BL: Maps 1180.(19)}
+319,article,"von Humboldt, Alexander",Sur les lignes isothermes,Annales de Chimie et de Physique,,1817,5,,102-112,,,NULL,,Humboldt:1817,,
+320,book,"Senefelder, Aloys",,,,1819,,,,Ackermann,London,NULL,A Complete Course of Lithography: Containing Clear and Explicit Instructions...,Senefelder:1819,,(English translation)
+321,article,"Fourier, Jean Baptiste Joseph","Notions Generales, Sur La Population",Recherches Statistiques sur la Ville de Paris et le Departement de la Seine,,1821,1,,1-70,,,NULL,,Fourier:1821,,
+322,article,"Gompertz, Benjamin","On the Nature of the Functions Expressive of the Law of Human Mortality, and on a New Mode of Determining the Value of Life Contingencies",Philosophical Transactions,,1825,115,,513-585,,,NULL,,Gompertz:1832,,
+323,book,"Dupin, Charles",,,,1827,,,,Bachelier,,NULL,Forces productives et commerciales de la France,Dupin:1827,,
+324,book,"Quetelet, Adolphe",,,,1828,,,,M. Hayez,Brussels,NULL,Instructions Populaires sur le Calcul des Probabilit&eacute;s,Quetelet:1828,,
+325,article,"Fr&egrave;re de Montizon, Armand Joseph",Carte philosophique figurant la population de la France,,,1830,,,,(s.p.),Paris,NULL,,Montizon:1830,,Loc{BNF}
+326,book,"Quetelet, Adolphe",,,,1831,,,,Hayez,Brussels,NULL,Recherches sur le penchant au crime aux diff&eacute;rents &acirc;ges,Quetelet:1831,,"English translation by Sawyer F. Sylvester. Cincinnati, OH: Anderson Publishing Company, 1984"
+327,book,"Guerry, Andr&eacute;-Michel",,,,1833,,,,Crochard,Paris,NULL,Essai sur la statistique morale de la France,Guerry:1833,,"English translation: Hugh P. Whitt and Victor W. Reinking, Lewiston, N.Y. : Edwin Mellen Press, 2002"
+328,article,"Herschel, John F. W.",On the Investigation of the Orbits of Revolving Double Stars,Memoirs of the Royal Astronomical Society,,1833,5,,171-222,,,NULL,,Herschel:1833,,
+329,book,"Scrope, George P.",,,,1833,,,,Longmans,,NULL,"Principles of Political Economy, Deduced from the Natural Laws of Social Welfare, and Applied to the Present State of Britain",Scrope:1833,,
+330,book,Parent-Duch&acirc;telet &amp; Alexandre Jean Baptiste,,,,1836,,,,Dumont,Bruxelles,NULL,De la prostitution dans la ville de Paris,Parent-Duchatelet:1836,,
+331,book,"Berghaus, Heinrich",,,,1838,,,,Justus Perthes,Gotha,NULL,Physikalischer Atlas,Berghaus:1838,,"2 vols., published 1845--48"
+332,book,"Harness, Henry D.",,,,1838,,,,H.M.S.O.,Dublin,NULL,"Atlas to Accompany the Second Report of the Railway Commissioners, Ireland",Harness:1837,,"(a) Map showing the relative number of passengers in different directions by regular public conveyances, 80 x 64 cm; (b) map showing the relative quantities of traffic in different directions, 80 x 64 cm; (c) map showing by varieties of shading the comparative density of the population, 80 x 64 cm"
+333,article,"Quetelet, Adolphe",Notice sur la loi que la population suit dans son accroissement,Corrrespondence math&eacute;matique et physique,,1838,10,,113-121,,,NULL,,Quetelet:1838,,
+334,book,"Johnston, Alexander Keith",,,,1843,,,,William Blackwood and Sons,London,NULL,"The National Atlas of Historical, Commercial, and Political Geography",Johnston:1843,,
+335,book,"Prichard, James Cowles",,,,1843,,,,Houlston &amp; Stoneman,London,NULL,Researches Into the Physical History of Man,Prichard:1843,,
+336,article,"Minard, Charles Joseph",Tableaux figuratifs de la circulation de quelques chemins de fer,,May,1844,,,,Clouet,Paris,NULL,,Minard:1844,,"Loc{ENPC: 5860/C351, 5299/C307}"
+337,book,"Quetelet, Adolphe",,,,1846,,,,M. Hayez,Brussels,NULL,"Lettres sur la Th&eacute;orie des Probabilit&eacute;s, Appliqu&eacute;e aux Sciences Morales et Politiques",Quetelet:1846,,
+338,book,"Snow, John",,,,1855,,,,(n.p.),London,NULL,On the Mode of Communication of Cholera,Snow:1855,,
+339,book,"Nightingale, Florence",,,,1857,,,,Harrison and Sons,London,NULL,Mortality of the British Army,Nightingale:1857,,
+340,incollection,International Statistical Congress,Emploi De La Cartographic Et De La M&eacute;thode Graphique En G&eacute;n&eacute;ral Pour Les Besoins Sp&eacute;ciaux De La Statistique,,,1858,,,192-197,,Vienna,NULL,Proceedings,Congress:1858,,"3rd Session, August 31-September 5, 1857"
+341,article,"Galton, Francis",Meteorological charts,Philosophical Magazine,,1861,22,,34-35,,,NULL,,Galton:1861,,
+342,book,"Minard, Charles Joseph",,,,1861,,,,E. Thunot et Cie,Paris,NULL,Des Tableaux Graphiques et des Cartes Figuratives,Minard:1861,,Loc{ENPC: 3386/C161; BNF: V-16168}
+344,article,"Levasseur, &Eacute;mile","La France, Avec Ses Colonies",,,1868,,,,,Paris,NULL,,Levasseur:1868,,
+345,article,"Zeuner, Gustav",Abhandlungen aus der Mathematischen Statistik,,,1869,,,,,Leipzig,NULL,,Zeuner:1869,,Loc{BL: 8529.f.12}
+346,article,"Galton, Francis",Barometric predictions of weather,Nature,,1870,2,,501-503,,,NULL,,Galton:1870,,
+347,book,U. S. Bureau of the Census,,,,1872,,,,U.S. Government Printing Office,"Washington, D.C.",NULL,Statistics of Wealth and Public Indebtedness,Census:1872,,
+348,article,"Schwabe, Hermann",Theorie Der Graphischen Darstellungen,,,1872,,,61-73,Trenk&eacute; &amp; Fusnot,St. Petersburg,NULL,Proceedings of the International Statistical Congress,Schwabe:1872,,
+349,article,"Gibbs, Josiah Willard",Graphical Methods in the Thermodynamics of Fluids,Transactions of the Connecticut Academy of Arts and Sciences,,1873,2,,309-342,,,NULL,,Gibbs:1873a,,reprinted in Bumstead:1961
+350,article,"Gibbs, Josiah Willard",A Method of Geometrical Representation of the Thermodynamic Properties of Substances by Means of Surfaces,Transactions of the Connecticut Academy of Arts and Sciences,,1873,2,,382-404,,,NULL,,Gibbs:1873b,,reprinted in Bumstead:1961
+351,book,"Loua, Toussaint",,,,1873,,,,J. Dejey,Paris,NULL,Atlas statistique de la population de Paris,Loua:1873,,
+352,article,"Marey, Etienne-Jules","La Machine Animale, Locomotion Terestre et A&eacute;rienne",,,1873,,,,,,NULL,,Marey:1873,,
+353,book,"Mayr, Georg von",,,,1874,,,,(n.p.),,NULL,Gutachten &Uuml;ber die Anwendung der Graphischen und Geographischen Methoden in der Statistik,vonMayr:1874,,
+354,book,"Walker, Francis A.",,,,1874,,,,Julius Bien,New York,NULL,"Statistical Atlas of the United States, Based on the Results of Ninth Census, 1870, with Contributions from Many Eminent Men of Science and Several Departments of the Federal Government",Walker:1874,,
+355,article,"Lexis, Wilhelm",Einleitung in der Theorie der Bev&ouml;lkerungsstatistik,,,1875,,,,,Strassburg,NULL,,Lexis:1875,,
+356,article,"Ravenstein, Ernest G.",Statistics at the Paris Geographical Congress,Journal of the Statistical Society of London,December,1875,38,,422-429,,,NULL,,Ravenstein:1875,,
+357,book,"Mayr, Georg von",,,,1877,,,,Oldenbourg,,NULL,Die Gesetzm&auml;ssigkeit im Gesellschaftsleben,vonMayr:1877,,
+358,book,"Marey, Etienne-Jules",,,,1878,,,,G. Masson,Paris,NULL,La M&eacute;thode Graphique dans les Sciences Exp&eacute;rimentales et Principalement en Physiologie et en M&eacute;decine,Marey:1878,,
+359,article,"Sylvester, James Joseph","On an Application of the New Atomic Theory to the Graphical Representation of the Invariants and Covariants of Binary Quantics, With Three Appendices",American Journal of Mathematics,,1878,1,,64-128,,,NULL,,Sylvester:1878,,http://www.jstor.org/cgi-bin/jstor/viewitem/00029327/di994050/99p0010a/0
+360,book,Minist&egrave;re des Travaux Publics,,,,1879--1899,,,,Imprimerie Nationale,Paris,NULL,Album de Statistique Graphique,Album:1879,,"Cheysson, director"
+361,article,"Perozzo, Luigi",Della Rappresentazione Graphica di una Collettivit&agrave; di Individui nella Successione del Tempo,Annali di Statistica,,1880,12,,16-Jan,,,NULL,,Perozzo:1880,,Loc{BL: S.22}
+362,article,"Venn, John",On the diagrammatic and mechanical representation of propositions and reasonings,"The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science",,1880,9,,18-Jan,,,NULL,,Venn:1880,,
+363,book,"Venn, John",,,,1881,,,,MacMillan,London,NULL,Symbolic Logic,Venn:1881,,
+364,article,"John, V.",Statistik - Eine Etymologisch Skizze,Journal of the Statistical Society of London,,1883,46,4,656-679,,,NULL,,John:1883,,
+365,book,"Abbott, Edwin A",,,,1884,,,,Buccaneer Books,"Cutchogue, NY",,Flatland: A Romance of Many Dimensions,Abbott:1884,,(1976 reprint of the 1884 edition)
+366,article,"Mulhall, Michael George",Dictionary of Statistics,,,1884,,,,,London,NULL,,Mulhall:1884,,
+367,article,"Levasseur, &Eacute;mile",La statistique graphique,Journal of the Statistical Society of London,,1885,50?,,218-250,,,NULL,,Levasseur:1885,,
+368,book,"Marey, Etienne-Jules",,,,1885,,,,Paris,,NULL,La m&eacute;thode graphique,Marey:1885,,
+369,article,"Galton, Francis",Regression Towards Mediocrity in Hereditary Stature,Journal of the Anthropological Institute,,1886,15,,246-263,,,NULL,,Galton:1885,,
+370,book,"Booth, Charles",,,,1889,,,,Macmillan and Co,London,NULL,Labour and Life of the People,Booth:1889a,,"(2 volumes, plus maps under separate cover; expanded to 17 volumes in 1902 edition)"
+371,article,"Galton, Francis",A Geometric Determination of the Median Value of a System of Normal Variants from Two of Its Centiles,Nature,,1899,16,,102-104,,,NULL,,Galton:1899,,
+372,article,"Lorenz, M. O.",Methods of Measuring the Concentration of Wealth,Publications of the American Statisical Association,,1905,9,,209-219,,,NULL,,Lorenz:1905,,
+373,book,"Ball, W. W. Rouse",,,,1908,,,,Macmillan &amp; Co.,London,NULL,A Short Account of the History of Mathematics,Ball:1908,,"(re-published in 1960, N.Y.: Dover)"
+374,book,"Peddle, John B.",,,,1910,,,,McGraw-Hill,New York,NULL,The Construction of Graphical Charts,Peddle:1910,,
+375,article,"Hertzsprung, Elnar",Publikationen des Astrophysikalischen Observatorium zu Potsdam,,,1911,,,,,,NULL,,Hertzsprung:1911,,Num. 63
+376,book,"Roesle, Emil Eugen",,,,1911,,,,Verlag der Internationelen Hygiene-Ausstellung,"Dresden, Germany",NULL,Sonderkatalog f&uuml;r die Gruppe Statistik der wissenschaftlichen Abteilung der Internationalen Hygiene-Ausstellung,Roesle:1911,,(15 colored reproductions of posters from the exhibition)
+377,article,"Moseley, Henry",The high frequency spectra of the elements,Philosophical Magazine,,1913,26,,1024-1034,,,NULL,,Moseley:1913,,"(Part II, 27:1914, pp. 703--)"
+378,article,"Roesle, Emil Eugen","Graphische-statistische Darstellungen, ihre Technik, Methodik und wissenschaftliche Bedeutung",Archiv f&uuml;r soziale Hygiene,,1913,8,,369-406,,,NULL,,Roesle:1913,,
+379,book,"Brinton, Willard C.",,,,1914,,,,The Engineering Magazine Company,New York,NULL,Graphic Methods for Presenting Facts,Brinton:1914,,"xi, 371 p. : ill. ; 24 cm.; reprinted: Arno Press, NY, 1980"
+380,article,"Hazen, Allen",Storage to Be Provided in Impounding Reservoirs for Municipal Water Supply,Transactions of the American Society of Civil Engineers,,1914,77,,1529-1669,,,NULL,,Hazen:1914,,"read December 17, 1913."
+381,article,Joint Committee on Standards for Graphic Presentation,Preliminary Report Published for the Purpose of Inviting Suggestions for the Benefit of the Committee,Publications of the American Statistical Association,,1914,14,112,790-797,,,NULL,,JCSGP:1914,,
+382,book,"Pearson, Karl",,,,1914-1930,,,,Cambridge: University Press,,NULL,"The life, letters and labours of Francis Galton",Pearson:1914,,
+383,article,"Costelloe, Martin F. P.",Graphic Methods and the Presentation of this Subject to First Year College Students,Nebraska Blue Print,April,1915,,,,,,NULL,,Costelloe:1915,,
+384,article,"Fisher, Ronald Alymer",Theory of Statistical Estimation,Proceedings of the Cambridge Philosophical Society,,1915,22,,700-725,,,NULL,,Fisher:1925,,
+385,article,"Fisher, Ronald Alymer",Frequency Distribution of the Values of the Correlation Coefficient in Samples from an Indefinitely Large Population,Biometrika,,1915,10,,507-521,,,NULL,,Fisher:1915,,
+386,article,"Gilman, S.",Graphic Charts for the Business Man,,,1917,,,,,Chicago,NULL,,Gilman:1917,,
+387,incollection,"Godfrey, Ernest H.",History and Development of Statistics in Canada,,,1918,,,179-198,Macmillan,New York,NULL,"History of Statistics, their Development and Progress in Many Countries",Godfrey:1918,,
+388,book,"Ayres, Leonard Porter",,,,1919,,,,U.S. Government Printing Office,"Washington, D.C.",NULL,"The War with Germany, A Statistical Summary",Ayres:1919,,"Commonly known as the Ayres report; reprinted: Arno Press, NY, 1979"
+389,book,"Gantt, Henry L.",,,,1919,,,,"Harcourt, Brace &amp; Rowe",New York,NULL,Organizing for work,Gantt:1919,,
+390,book,"Haskell, A. C.",,,,1919,,,,Codex,New York,NULL,How to Make and Use Graphic Charts,Haskell:1919,,
+391,article,"Wright, Sewall",The relative importance of heredity and environment in determining the piebald pattern of guinea-pigs,Proceedings of the National Academy of Sciences,,1920,6,,320-332,,,NULL,,Wright:1920,,
+392,book,"Palmer, A. R.",,,,1921,,,,(n.p.),"London, U.K.",NULL,The Use of Graphs in Commerce and Industry,Palmer:1921,,"Palsky, 2000, p. 73"
+393,book,"Karsten, K. G.",,,,1925,,,,Prentice Hall,New York,NULL,Charts and Graphs. An Introduction to Graphic Methods in the Control and and Analysis of Statistics,Karsten:1925,,
+394,book,"Smith, David Eugene",,,,1925,,,,Ginn and Co.,Boston,NULL,"History of Mathematics, vol. II",Smith:1925,,
+395,article,"Eells, W. C.",The Relative Merits of Circles and Bars for Representing Component Parts,Journal of the American Statistical Association,,1926,21,,119-132,,,NULL,,Eells:1926,,
+396,article,"Croxton, F. E.",Further Studies in the Graphic Use of Circles and Bars,Journal of the American Statistical Association,,1927,22,,36-39,,,NULL,,Croxton:1927,,
+397,article,"Croxton, F. E. &amp; Stryker, R. E.",Bar Charts Versus Circle Diagrams,Journal of the American Statistical Association,,1927,22,,473-482,,,NULL,,CroxtonStryker:1927,,
+398,article,"Thurstone, Louis Leon",A law of comparative judgement,Psychological Review,,1927,34,,278-286,,,NULL,,Thurstone:1927,,
+399,article,"Washburne, J. N.","An Experimental Study of Various Graphic, Tabular and Textual Methods of Presenting Quantitative Material",Journal of Educational Psychology,,1927,18,,"361-376, 465-476",,,NULL,,Washburne:1927,,
+400,article,"Anderson, Edgar","The Problem of Species in the Northern Blue Flags, Iris versicolor L. and Iris virginica L.",Annals of the Missouri Botanical Garden,,1928,13,,241-313,,,NULL,,Anderson:1928,,
+401,book,"Henderson, Lawrence J.",,,,1928,,,,Yale University Press,"New Haven, CT",NULL,Blood: A Study in General Physiology,Henderson:1928,,
+402,book,"Walker, Helen M.",,,,1929,,,,Williams &amp; Wilkinson Co.,"Baltimore, MD",NULL,Studies in the History of the Statistical Method,Walker:1929,,
+403,article,"Martin, F. C. &amp; Leavens, D. H.",A New Grid for Fitting a Normal Probability Curve to a Given Frequency Distribution,Journal of the American Statistical Association,,1931,26,,178-183,,,NULL,,MartinLeavens:1931,,
+404,book,"Shewhart, Walter A.",,,,1931,,,,American Society for Quality Control,"Milwaukee, WI",NULL,Economic control of quality of manufactured product,Shewhart:1931,,
+405,article,"von Huhn, R.",A trigonometrical method for computing the scales of statistical charts to improve visualization,Journal of the American Statistical Association,,1931,26,,319-324,,,NULL,,vonHuhn:1931,,
+406,article,"Croxton, F. E. &amp; Stein, H.","Graphic Comparisons by Bars, Squares, Circles and Cubes",Journal of the American Statistical Association,,1932,27,,54-60,,,NULL,,CroxtonStein:1932,,
+407,article,"Thurstone, Louis Leon",The Vectors of the Mind,Psychological Review,,1934,41,,1-32,,,NULL,,Thurstone:1934,,"Presidential address to American Psychological Association, 1933; published as a book in 1935 by University of Chicago Press"
+408,article,"Funkhouser, H. Gray",A Note on a Tenth Century Graph,Osiris,,1936,1,,260-262,,,NULL,,Funkhouser:1936,,
+409,article,"Funkhouser, H. Gray",Historical Development of the Graphical Representation of Statistical Data,Osiris,November,1937,3,1,269-405,,,NULL,,Funkhouser:1937,,"reprinted Brugge, Belgium: St. Catherine Press, 1937"
+410,article,"Shields, M. C.",The Early History of Graphs in Physical Literature,American Journal of Physics,,1937,5,2,68-71,,,NULL,,Shields:1937,,
+411,article,"Boyer, Carl B.",Note on an Early Graph of Statistical Data (Huygens 1669),Isis,,1947,37,04-Mar,148-149,The University of Chicago Press,,NULL,,Boyer:1947,,
+412,book,"Taton, R.",,,,1950,,,,Basel,,NULL,Gaspard Monge,Taton:1950,,
+413,article,"Robinson, Arthur H.",The 1837 Maps of Henry Drury Harness,Geographical Journal,,1955,121,,440-450,,,NULL,,Robinson:1955,,
+414,article,"Anderson, Edgar",A Semigraphical Method for the Analysis of Complex Problems,Proceedings of the National Academy of Sciences,,1957,13,3,923-927,,,NULL,,Anderson:1957,,"reprinted in Technometrics, 2:387--391 (August 1960)"
+415,article,"Gilbert, E. W.",Pioneer maps of health and disease in England,Geographical Journal,,1958,124,,172-183,,,NULL,,Gilbert:1958,,
+416,article,"Phillips, Alban W. H.","The Relation between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861-1957",Economica,,1958,"New Series, 25",2,283-299,,,NULL,,Phillips:1958,,
+417,book,,,,,1961,,,,"Dover Publications, Inc.",New York,H. A. Bumstead,The Scientific Papers of J. Willard Gibbs,Bumstead:1961,,"(an unabridged republication of the work originally published by Longmans, Green and Company in 1906)"
+418,article,"Hoff, Hebbel E. &amp; Geddes, L. A.",The Beginnings of Graphic Recording,Isis,,1962,53,,287-324,,,NULL,,HoffGeddes:1962,,Pt. 3
+419,article,"Tukey, John Wilder",The future of data analysis,Annals of Mathematical Statistics,,1962,33,,1-67 and 81,,,NULL,,Tukey:1962,,
+420,article,"Sutherland, I.",John Graunt: A tercentenary tribute,"Journal of the Royal Statistical Society, Series A",,1963,126,,537-556,,,NULL,,Sutherland:1963,,
+421,incollection,"Tukey, John Wilder",The Future of Processes of Data Analysis,,,1965,,,691-729,U.S. Army Research Office,"Durham, NC",NULL,Proceedings of the Tenth Conference on the Design of Experiment in Army Research Development and Testing,Tukey:1965,,ARO-D Report 65-3
+422,incollection,"Pickett, R. &amp; White, B. W.",Constructing Data Pictures,,,1966,,,75-81,,,NULL,Proceedings of the 7th National Symposium of the Society for Information Display,PickettWhite:1966,,
+423,book,"Bertin, Jacques",,,,1967,,,,Gauthier-Villars,Paris,NULL,"S&eacute;miologie Graphique: Les diagrammes, les r&eacute;seaux, les cartes",Bertin:1967,,
+424,article,"Robinson, Arthur H.",The Thematic Maps of Charles Joseph Minard,Imago Mundi,,1967,21,,95-108,,,NULL,,Robinson:1967,,
+425,book,"Bachi, Roberto",,,,1968,,,,Israel Universities Press,Jerusalem,NULL,"Graphical Rational Patterns, A New Approach to Graphical Presentation of Statistics",Bachi:1968,,
+426,book,"Oresme, Nicole",,,,1968,,,,University of Wisconsin Press,Madison WI,NULL,Nicole Oresme and the Medieval Geometry of Qualities and Motions: A Treatise on the Uniformity and Difformity Known as Tractatus de Configrationibus Qualitatum et Motuum,Oresme:1968,,tr.: M. Clagget
+427,book,"Robinson, J. M.",,,,1968,,,,Houghton Mifflin,New York,NULL,An Introduction to Early Greek Philosophy,Robinson:1968,,
+428,incollection,"Barnard, George",Summary Remarks,,,1969,,,696-711,Wiley-Interscience,New York,NULL,New Developments in Survey Sampling,Barnard:1969,,
+429,article,"Royston, E.","Studies in the History of Probability and Statistics, III. A Note on the History of the Graphical Presentation of Data",Biometrika,,1970,43,,241-247,,,NULL,,Royston:1970,,"Pts. 3 and 4 (December 1956); reprinted In Studies in the History Of Statistics and Probability Theory, eds. E. S. Pearson and M. G. Kendall, London: Griffin."
+430,article,"Biderman, Albert D.",Kinostatistics for Social Indicators,Educational Broadcasting Review,,1971,5,,13-19,,,NULL,,Biderman:1971,,
+431,article,"Gabriel, K. Rubin",The Biplot Graphic Display of Matrices with Application to Principal Components Analysis,Biometrics,,1971,58,3,453-467,,,NULL,,Gabriel:1971,,
+432,article,"Siegel, J. H. &amp; Goldwyn, R. M. &amp; Friedman, H. P.",Pattern and Process of the Evolution of Human Septic Shock,Surgery,,1971,70,,232-245,,,NULL,,Siegel-etal:1971,,
+433,article,"Andrews, David F",Plots of High Dimensional Data,Biometrics,,1972,28,,125-136,,,,,Andrews:1972,,
+434,incollection,"Tukey, John Wilder",Some Graphic and Semigraphic Displays,,,1972,,,293-316,Iowa State University Press,"Ames, IA",NULL,Statistical Papers in Honor of George W. Snedecor,Tukey:1972,,"presented at the Annual Meeting of the American Statistical Association, August 1969."
+435,article,"Chernoff, Herman",The Use of Faces to Represent Points in k-Dimensional Space Graphically,Journal of the American Statistical Association,,1973,68,,361-368,,,NULL,,Chernoff:1973,,
+436,incollection,"Neurath, Otto",From Vienna Method to Isotype,,,1973,,,214-248,Reidel,"Dordrecht, NL",NULL,Empiricism and Sociology,Neurath:1973,,(papers written 1925-45)
+437,book,"Executive Office of the President, Office of Management, Budget",,,,1973,,,,U.S. Government Printing Office,"Washington, D.C.",NULL,Social Indicators 1973,PresidentBudget:1973,,
+438,book,U. S. Bureau of the Census,,,,1974,,,,U.S. Government Printing Office,"Washington, D.C.",NULL,Urban Atlas,USCensus:1974,,Series GE-80
+439,incollection,"Fishkeller, M. A. &amp; Friedman, J. H. &amp; Tukey, John Wilder",PRIM-9: An interactive multidimensional data display and analysis system,,,1974,,SLAC-PUB-1408,,,"Stanford, CA",NULL,,Fishkeller-etal:1974,,
+440,article,"Fishkeller, M. A. &amp; Friedman, J. H. &amp; Tukey, John Wilder","PRIM-9, an Interactive Multidimensional Data Display and Analysis System",,,1974,,,,,,NULL,Proceedings of the Pacific ACM Regional Conference,Fishkeller-etal:1974b,,
+441,article,"Friis, H. R.",Statistical Cartography in the United States Prior to 1870 and the Role of Joseph C. G. Kennedy and the U.S. Census Office,American Cartographer,,1974,1,,131-157,,,NULL,,Friis:1974,,
+442,article,"Wainer, Howard",The Suspended Rootogram and Other Visual Displays: An Empirical Validation,American Statistician,,1974,28,,143-145,,,NULL,,Wainer:1974,,
+443,article,"Chernoff, Herman &amp; Rizvi, M. H.",Effect on Classification Error of Random Permutations of Features in Representing Multivariate Data by Faces,Journal of the American Statistical Association,,1975,70,,548-554,,,NULL,,ChernoffRizvi:1975,,
+444,incollection,"Cleveland, William S. &amp; Kleiner, Beat",A Graphical Technique for Enhancing Scatterpiots with Moving Statistics,,,1975,,,,,"Atlanta, GA",NULL,Proceedings of the Annual Meeting,ClevelandKleiner:1975,,
+445,article,"Ehrenberg, A. S. C.","Numerical Information Processing Project, London Graduate School of Business Studies",,,1975,,,,,,NULL,,Ehrenberg:1975,,unpublished personal communication
+446,article,"Fienberg, Stephen E.",Perspective Canada As a Social Report,,,1975,,,,,,NULL,,Fienberg:1975,,unpublished paper
+447,article,"Hartigan, John A.",Printer Graphics for Clustering,Journal of Statistical Computing and Simulation,,1975,4,,187-213,,,NULL,,Hartigan:1975,,
+448,article,"Tilling, Laura",Early Experimental Graphs,British Journal for the History of Science,,1975,8,,193-213,,,NULL,,Tilling:1975,,
+449,book,U. S. Bureau of the Census,,,,1976,,,,U.S. Government Printing Office,"Washington, D.C.",NULL,StatUS,USCensus:1976,,
+450,incollection,"Wainer, Howard &amp; Reiser, M.",Assessing the Efficacy of Visual Displays,,,1976,19,,89-92,American Statistical Association,,NULL,Proceedings of the Social Statistics Section,WainerReiser:1976,,Part 1
+451,article,"Ehrenberg, A.S.C",The Rudiments of Numeracy,"Journal of the Royal Statistical Society, Series A",,1977,140,,277-297,,,NULL,,Ehrenberg:1977,,
+452,incollection,"Kruskal, William",Visions of Maps and Graphs,,,1977,,,27-36,,,NULL,"Proceedings of the International Symposium on Computer- Assisted Cartography, Auto-Carto II",Kruskal:1977,,1975
+453,book,"Tukey, John Wilder",,,,1977,,,,Addison-Wesley,"Reading, MA",NULL,Exploratory Data Analysis,Tukey:1977,,Chapters from what would become this book were circulated privately 1971--75
+454,book,,,,,1978,,,,Griffin &amp; Co. Ltd.,London,Egon S. Pearson,"The History of Statistics in the 17th and 18th Centuries Against the Changing Background of Intellectual, Scientific and Religeous Thought",Pearson:1978,,Lectures by Karl Pearson given at University College London during the academic sessions 1921--1933
+455,article,"Beniger, J. R. &amp; Robyn, D. L.",Quantitative Graphics in Statistics: A Brief History,The American Statistician,,1978,32,,11-Jan,,,,,BenigerRobyn:1978,,
+456,incollection,"Newton, Carol M.",Graphics: From Alpha to Omega in Data Analysis,,,1978,,,,Academic Press,"New York, NY",NULL,Graphical Representation of Multivariate Data,Newton:1978,,"Proc. of the Symp. on Graphical Representation of Multivariate Data, Naval Postgraduate School, Monterey CA, Feb 24, 1978"
+457,article,"Riddell, R. C.",Parameter disposition in pre-Newtonain planetary theories,Archives Hist. Exact Sci.,,1980,23,,87-157,,,NULL,,Riddell:1980,,
+458,book,,,,,1981,,,,Hakluyt Society,London,"Thrower, N. J. W.",The Three Voyages of Edmond Halley in the Paramore 1698 - 1701,Thrower:1981,,"2nd series, vol 156-157 (2 vols)"
+459,article,"Furnas, George W.",The Fisheye View: A New Look at Structured Files,,,1981,,Technical Memorandum 81-11221-9,,,,NULL,,Furnas:1981,,
+460,incollection,"Hartigan, John A. &amp; Kleiner, Beat",Mosaics for Contingency Tables,,,1981,,,268-273,Springer-Verlag,"New York, NY",NULL,Computer Science and Statistics: Proceedings of the 13th Symposium on the Interface,HartiganKleiner:1981,,
+461,incollection,"Tukey, Paul A. &amp; Tukey, John Wilder",Graphical Display of Data Sets in 3 Or More Dimensions,,,1981,,,,Wiley and Sons,"Chichester, U.K.",NULL,Interpreting Multivariate Data,TukeyTukey:1981,,
+462,book,"Bennett, J. A.",,,,1982,,,,Cambridge University Press,"Cambridge, UK",NULL,The Mathematical Science of Christopher Wren,Bennett:1982,,
+463,article,"McDonald, John A.",Interactive Graphics for Data Analysis,,,1982,,,,,,NULL,,McDonald:1982,,
+464,book,"Robinson, Arthur H.",,,,1982,,,,University of Chicago Press,Chicago,NULL,Early Thematic Mapping in the History of Cartography,Robinson:1982,,
+465,incollection,"Wheeler, John Archibald","Bohr, Einstein, and the Strange Lesson of the Quantum",,,1982,,,,Harper and Row,San Francisco,R. Q. Elvee,Mind in Nature,Wheeler:1982,,
+466,book,"Bertin, Jacques",,,,1983,,,,University of Wisconsin Press,"Madison, WI",NULL,Semiology of Graphics,Bertin:1983,,(trans. W. Berg)
+467,book,"Monmonier, Mark &amp; Schnell, George",,,,1983,,,,Charles E. Merrill,"Columbus, OH",NULL,"The Study of Population: Elements, Patterns, Processes",MonmonierSchnell:1983,,
+468,article,"Riedwyl, Hans &amp; Sch&uuml;pbach, Michel",Siebdiagramme: Graphische Darstellung von Kontingenztafeln,,,1983,,12,,,,NULL,,RiedwylSchupbach:1983,,
+469,book,"Tufte, Edward R.",,,,1983,,,,Graphics Press,"Cheshire, CT",NULL,The Visual Display of Quantitative Information,Tufte:1983,,
+470,book,"Becker, Richard A. &amp; Chambers, J. M.",,,,1984,,,,Wadsworth,"Bellmont, CA",NULL,An Interactive Environment for Data Analysis and Graphics,BeckerChambers:1984,,
+471,article,"Asimov, D",Grand Tour,SIAM Journal of Scientific and Statistical Computing,,1985,6,1,128-143,,,,,Asimov:1985,,
+473,book,"Porter, T. M.",,,,1986,,,,Princeton University Press,"Princeton, NJ",NULL,The Rise of Statistical Thinking 1820--1900,Porter:1986,,
+474,book,"Stigler, S. M.",,,,1986,,,,Harvard University Press,"Cambridge, MA",NULL,The History of Statistics: The Measurement of Uncertainty before 1900,Stigler:1986,,
+475,article,"Becker, Richard A. &amp; Cleveland, William S.",Brushing Scatterplots,Technometrics,,1987,29,,127-142,,,NULL,,BeckerCleveland:1987,,
+476,article,"Hecht, Jacqueline",Johann Peter Sussmilch: a German prophet in foreign countries,Population Studies,,1987,41,1,31-58,,,NULL,,Hecht:1987,"The life and work of the eighteenth-century demographer, Johann Peter Sussmilch, are examined. His role as a pioneer of demographic studies, in both Germany and the rest of Europe, is described. Consideration is given to his work concerning the natural order governing vital events, as well as the relationship between mortality on the one hand and fertility and nuptiality on the other.",
+477,book,"Wallis, Helen M. & Robinson, Arthur H.",,,,1987,,,,Map Collector Publications,"Tring, Herts",NULL,Cartographical Innovations: An International Handbook of Mapping Terms to 1900,WallisRobinson:1987,,
+478,book,,,,,1988,15 (3),,,The American Cartographer,,R. Tomlinson &amp; B. Petchenik,"Reflections on a Revolution: The Transition from Analogue to Digital Representations of Space, 1958-1988",Tomlinson:1988,,(Special issue)
+479,incollection,"Buja, Andreas &amp; Asimov, Daniel &amp; Hurley, Catherine &amp; McDonald, John A.",Elements of a viewing pipeline for data analysis,,,1988,,,,Brooks/Cole,"Pacific Grove, CA",NULL,Dynamic Graphics for Statistics,Buja-etal:1988,,
+480,article,"Chrisman, N.",The risks of software innovation: A case study of the Harvard Lab,The American Cartographer,,1988,15,3,291-300,,,NULL,,Chrisman:1988,,
+481,incollection,"Unwin, Antony R. &amp; Wills, Graham",Eyeballing Time Series,Proceedings of the 1988 ASA Statistical Computing Section,,1988,,,263-268,,,,,UnwinWills:1988,,
+482,book,,,,,1989,,,,Oxford University Press,"Oxford, UK",J. H. Bennett,Statistical Inference and Analysis : Selected Correspondence of R. A. Fisher,Bennett:1989,,
+483,article,"Bellhouse, D. R",A manuscript on chance written by John Arbuthnot,International Statistical Review,,1989,57,3,249-259,,,,,Bellhouse:1989,,
+484,article,"Dahlke, Richard &amp; Fakler, Robert A. &amp; Morash, Ronald P.",A sketch of the history of probability theory,Mathematics Education,,1989,4,,218-232,,,NULL,,Dahlke:1989,,
+485,incollection,"Inselberg, Alfred",Discovering Multi-Dimensional Structure using Parallel Coordinates,,,1989,,,16-Jan,American Statistical Association,,NULL,"Proc. Amer. Stat. Assoc, Sec. on Stat.Graphics",Inselberg:1989,,
+486,article,"Mihalisin, Ted &amp; Gawlinski, E. &amp; Timlin, J. &amp; Schwegler, J.",Multi-Dimensional Graphing in Two Dimensional Spaces,Scientific Computing and Automation,October,1989,6,,15-20,,,NULL,,Mihalisin-etal:1989,,
+487,article,"Monmonier, Mark",Geographic Brushing: Enhancing Exploratory Analysis of the Scatterplot Matrix,Geographical Analysis,,1989,21,1,81-84,,,NULL,,Monmonier:1989,,
+488,article,"Monmonier, Mark",An Alternative Isomorphism for Mapping Correlation,International Yearbook of Cartography,,1989,19,,77-89,,,NULL,,Monmonier:1979,,
+489,incollection,"Wills, Graham &amp; Haslett, J. &amp; Unwin, Antony R. &amp; Craig, P.",Dynamic Interactive Graphics for Spatially Referenced Data,,,1989,,,278-287,Gustav Fischer Verlag,Stuttgart,NULL,Fortschritte der Statistik-Software 2,Wills-etal:1989,,
+490,book,"Hald, A.",,,,1990,,,,John Wiley and Sons,New York,NULL,A History of Probability and Statistics and their Application before 1750,Hald:1990,,
+491,article,"Hurley, Catherine &amp; Buja, Andreas",Analyzing High-Dimensional Data with Motion Graphics,SIAM Journal on Scientific and Statistical Computing,,1990,11,6,1193-1211,,,NULL,,HurleyBuja:1990,,
+492,article,"Keiding, M.",Statistical inference in the Lexis diagram,"Philosophical transactions of the Royal Society of London, series A",,1990,332,,487-509,,,NULL,,Keiding:1990,,
+493,book,"Tierney, Luke",,,,1990,,,,John Wiley and Sons,New York,NULL,LISP-STAT: An Object-Oriented Environment for Statistical Computing and Dynamic Graphics,Tierney:1990,,
+494,book,"Tufte, Edward R.",,,,1990,,,,Graphics Press,"Cheshire, CT",NULL,Envisioning Information,Tufte:1990,,
+495,article,"Tukey, John Wilder &amp; Tukey, Paul A.",Strips Displaying Empirical Distributions: I. Textured Dot Strips,,,1990,,,,,,NULL,,TukeyTukey:1990,,
+496,article,"Wegman, Edward J.",Hyperdimensional data analysis using parallel coordinates,Journal of the American Statistical Association,,1990,85,411,664-675,,,NULL,,Wegman:1990,,
+497,article,"Ferguson, S.",The 1753 Carte Chronographique of Jacques Barbeu-Dubourg,Princeton University Library Chronicle,,1991,52,,190-230,,,NULL,,Ferguson:1991,,
+498,article,"Friendly, Michael &amp; Fox, John",Interpreting Higher Order Interactions in Loglinear Analysis: A Picture is Worth 1000 Words,,December,1991,,,,,"Toronto, CA",NULL,,FriendlyFox:1991,,
+499,incollection,"Johnson, Brian &amp; Shneiderman, Ben",Treemaps: A space-filling approach to the visualization of hierarchical information structures,,,1991,,,284-291,,"San Diego, CA",NULL,Proc. of the 2nd International IEEE Visualization Conference,JohnsonShneiderman:1991,"This research concerns a novel method for the visualization of hierarchically structured information called Tree-Maps. The visualization technique makes use of 100% of the available display space, mapping the full hierarchy onto a rectangular window in a space-filling manner. This efficient use of space allows very large hierarchies to be displayed in their entirety and facilitates the presentation of semantic information. It is hoped that this approach to the visualization of hierarchical information will produce benefits similar to those achieved by visualization in other areas.",
+500,book,"Neurath, Otto",,,,1991,,,,Verlag Hoelder-Pichler-Tempsky,Vienna,NULL,Gesammelte Bildpaedagogische Schriften,Neurath:1991,,Rudolf Haller and Robin Kinross (eds.)
+501,article,"Shneiderman, Ben",Tree visualization with treemaps: A 2-D space-filling approach,,,1991,,TR 91-03,,,,NULL,,Shneiderman:1991,"The traditional approach to representing tree structures is as a rooted, directed graph with the root node at the top of the page and children nodes below the parent node with lines connecting them has a long discussion about this standard representation, especially why the root is at the top and he offers several alternatives including brief mention of a space-fillling approach. However, the remainder of his presentation and most other discussions of trees focus on various node and edge representiation. By contrast, this paper deals with a two-dimensional (2-D) space-filling approach in which each node is a rectangle whose area is proportional to some attribute such as node size.","(Published in ACM Transactions on Graphics, vol. 11(1): 92--99, 1992)."
+502,incollection,"Mihalisin, Ted &amp; Schwegler, J. &amp; Timlin, J.",Hierarchical Multivariate Visualization,,,1992,24,,141-149,,,NULL,Computing Science and Statistics: Proceedings of the 24th Symposium on the Interface,Mihalisin-etal:1992,,
+503,book,"Morton, John L.",,,,1992,,,,Tempus Publishing,"Stroud, England",NULL,Strata: How William Smith drew the First map of the Earth in 1801 and inspired the Science of Geology,Morton:1992,,
+504,incollection,"Swayne, Deborah F. &amp; Cook, Di &amp; Buja, Andreas",XGobi: Interactive Dynamic Graphics in the X Window System with a Link to S,,,1992,,,??-??,American Statistical Association,,NULL,Proceedings of the 1991 American Statistical Association Meetings,Swayne-etal:1991,,
+505,article,"Spence, Ian &amp; Garrison, R. F.",A Remarkable Scatterplot,The American Statistician,,1993,47,1,19-Dec,,,NULL,,SpenceGarrison:1993,,
+506,incollection,"Becker, Richard A.",A Brief History of S,,,1994,,,81-110,Physica Verlag,Heidleberg,NULL,Computational Statistics,Becker:1994,,
+507,article,"Eick, S. G.",Graphically Displaying Text,Journal of Computational and Graphical Statistics,,1994,3,,127-142,,,NULL,,Eick:1994,,
+508,article,"Friendly, Michael",A Fourfold Display for 2 by 2 by K Tables,,,1994,,217,,,,NULL,,Friendly:1994b,,
+509,article,"Friendly, Michael",Mosaic Displays for Multi-way Contingency Tables,Journal of the American Statistical Association,,1994,89,,190-200,,,NULL,,Friendly:1994a,,
+510,article,"Young, Forrest W.",ViSta: The Visual Statistics System,,,1994,,RM 94-1,,,,NULL,,Young:1994,,
+511,article,"Buja, Andreas, Cook &amp; Di, Swayne &amp; Deborah F.",Interactive High-Dimensional Data Visualization,Journal of Computational and Graphical Statistics,,1996,5,1,78-99,,,NULL,,Buja-etal:1996,,
+512,incollection,"Dykes, J. A.","Dynamic maps for spatial science, a unified approach to cartographic visualization",,,1996,,,177-187,Taylor &amp; Francis,London,NULL,Innovations in GIS 3,Dykes:1996,,
+513,book,"Palsky, G.",,,,1996,,,,Comit&eacute; des Travaux Historiques et Scientifiques (CTHS),Paris,NULL,Des Chiffres et des Cartes: Naissance et d&eacute;veloppement de la cartographie quantitative fran&ccedil;aise au XIX si&egrave;cle,Palsky:1996,,
+514,book,,,,,1997,,,,John Wiley and Sons,New York,N. L. Johnson &amp; S. Kotz,Leading Personalities in Statistical Science,JohnsonKotz:97,,
+515,book,"Tufte, Edward R.",,,,1997,,,,Graphics Press,"Cheshire, CT",NULL,Visual Explanations,Tufte:1997,,
+516,article,"Swayne, Deborah F. &amp; Cook, Di &amp; Buja, Andreas",XGobi: Interactive Dynamic Data Visualization in the X Window System,Journal of Computational and Graphical Statistics,,1998,7,1,113-130,,,,,Swayne-etal:1998,,
+517,article,"Wainer, Howard",The graphical inventions of Dubourg and Ferguson: Two precursors to William Playfair,Chance,,1998,11,4,39-41,,,NULL,,Wainer:1998,,
+518,book,"Farebrother, R. W.",,,,1999,,,,Springer,New York,NULL,Fitting Linear Relationships: A History of the Calculus of Observations 1750--1900,Farebrother:1999,,
+519,article,"Hankins, Thomas L.","Blood, Dirt, and Nomograms: A Particular History of Graphs",Isis,,1999,90,,50-80,,,NULL,,Hankins:1999,,
+520,article,"Ostermann, R&uuml;diger",Georg von Mayrs Beitr&auml;ge zur statistichen Graphik,Algemeines Statistiches Archiv,,1999,83,3,350-362,,,NULL,,Ostermann:1999,,
+521,book,"Wilkinson, Leland",,,,1999,,,,Springer,New York,NULL,The Grammar of Graphics,Wilkinson:1999,,
+522,book,"Friendly, Michael",,,,2000,,,,SAS Institute,"Cary, NC",NULL,Visualizing Categorical Data,Friendly:2000:VCD,,
+523,article,"Friendly, Michael &amp; Denis, Dan",The roots and branches of statistical graphics,Journal de la Soci&eacute;t&eacute; Fran&ccedil;aise de Statistique,,2000,141,4,51-60,,,NULL,,FriendlyDenis:2001:valois,,(published in 2001)
+524,incollection,"Heiser, Willem J.",Early Roots of Statistical Modelling,,October,2000,,,,TT-Publikaties,Amsterdam,NULL,Social Science Methodology in the New Millenium: Proceedings of the Fifth International Conference on Logic and Methodology,Heiser:2000,,
+525,book,"Wainer, Howard",,,,2000,,,,Lawrence Erlbaum and Associates,"Hillsdale, NJ",NULL,Visual Revelations: Graphical Tales of Fate and Deception from Napoleon Bonaparte to Ross Perot,Wainer:2000,,
+526,article,"Ostermann, R.",Emil Eugen Roesle - Grafikpionier im Bereich der Medizinstatistik und Epidemiologie,"Informatik, Biometrie und Epidemiologie in Medizin und Biologie",,2001,244,,,,,NULL,,Ostermann:01,,
+527,article,"Vandeschrick, Christophe","The Lexis diagram, a misnomer",Demographic Research,,2001,4,3,97-124,,,NULL,,Vandeschrick:2001,,
+528,book,"Winchester, Simon",,,,2001,,,,Harper Collins,New York,NULL,The Map That Changed the World: William Smith and the Birth of Modern Geology,Winchester:2001,,
+529,article,"Friendly, Michael",A Brief History of the Mosaic Display,Journal of Computational and Graphical Statistics,,2002,11,1,89-107,,,NULL,,Friendly:2002:mosahist,,
+530,article,"Tucker, Ledyard",e5df5efb835d43a8556c3468858727b7,,January,2002,,,,,,NULL,,Tucker:2002,,
+531,article,"Spence, Ian",No Humble Pie: The Origins and Usage of a Statistical Chart,Journal of Educational and Behavioral Statistics,,2005,30,4,353-368,,,NULL,,Spence:2005,,
+532,book,"Tufte, Edward",,,,2006,,,,Graphics Press,"Cheshire, CT",NULL,Beautiful Evidence,Tufte:2006,,
+533,incollection,"Friendly, M.",A Brief History of Data Visualization,,,2007,III,,1-34,Springer-Verlag,Heidelberg,NULL,Handbook of Computational Statistics: Data Visualization,Friendly:2006:hbook,,
+534,incollection,"Friendly, Michael &amp; Palsky, Gilles",Visualizing Nature and Society,,,2007,,,205-251,University of Chicago Press,"Chicago, IL",NULL,Maps: Finding Our Place in the World,FriendlyPalsky:2007,,
+535,incollection,"Jevons, William Stanley",Graphical Method,,,[1879] 1958,,,492-496,Dover,New York,NULL,Principles of Science: A Treatise on Logic and Scientific Method,Jevons:1879,,First ed.: 1874; page numbers from 3rd Ed. Dover reprint (1958)
+536,book,"Montigny, L&eacute;on",,,,n.d.,,,,Lan&eacute;e,"Imprimerie Monrocq, 3 rue Suger, Paris",NULL,"Les &eacute;lections parisiennes de mai et juin 1869, application de la g&eacute;om&eacute;trie &agrave; la statistique",Montigny:1869,,
+537,article,Courrier International,L&apos;atlas des atlas,NULL,,2005,Mars-Avril-Mai,NULL,NULL,NULL,NULL,NULL,,Courrier:2005,,"Table de Peutinger, pg. 19"
+538,book,"Nautonier, Guillaume de",,NULL,,1602-1604,NULL,NULL,NULL,R. Colomies,NULL,NULL,"Mecometrie de l&#39;eymant, c&#39;est a dire la maniere de mesurer les longitudes par le moyen de l&#39;eymant",Nautonier:1602,,
+539,article,"Mandea, Mioara & Mayaud, Pierre-No&#235;l","Guillaume Le Nautonier, un precurseur dans l\'histoire du g&#0233;omagn&#0233;tisme magnetism",Revue d&#39;Histoire des Sciences,,2004,57,1,161-174,NULL,NULL,NULL,,MandeaMayaud:2004,,
+540,article,"Babcock, B. E.",Some notes on the history and use of Gunter&#039;s scale,Journal of the Oughtred Society,,1994,3,,14-20,,,,,Babcock:1994,,
+541,article,W. F. Wilcox,The founder of statistics,Revue de l&apos;institute international de statistique,,1937,V,321-328,NULL,NULL,NULL,NULL,,Wilcox:1937,,
+542,article,"Arbuthnot, John","An argument for Devine Providence, taken from the constant Regularity observ&apos;d in the Births of both Sexes",Philosophical Transactions,,1710,27,NULL,186-190,NULL,NULL,NULL,,Arbuthnot:1710,,
+543,book,"Laplace, Pierre Simon",,NULL,,1812,NULL,NULL,NULL,Courcier,Paris,NULL,Th&eacute;orie analytique des probabilit&eacute;s,Laplace:1812,,
+544,book,"S&#252;ssmilch, Johann Peter",,NULL,,1741,NULL,NULL,NULL,n.p.,Germany,NULL,"Die g&#246;ttliche Ordnung in den Ver&#65533;nderungen des menschlichen Geschlechts, aus der Geburt, Tod, und Fortpflantzung",Sussmilch:1741,,"(published in French translation as \\emph{L&apos;ordre divin. dans les changements de l&apos;esp\\`ece humaine, d&#233;montr&#233; par la naissance, la mort et la propagation de celle-ci}, trans: Jean-Marc Rohrbasser, Paris: INED, 1998, ISBN 2-7332-1019-X)"
+545,article,"Euler, Leonhard",Decouverte d&apos;un nouveau principe de Mecanique,M&#233;moires de l&apos;acad&#233;mie des sciences de Berlin,,1752,6,NULL,185-217,NULL,NULL,NULL,,Euler:1752,,
+546,article,"Buache, Phillippe",Essai De G&#233;ographie Physique,M&#233;moires de L&apos;Acad&#233;mie Royale des Sciences,,1752,NULL,NULL,399-416,NULL,NULL,NULL,,Buache:1752,,Loc{BNF: Ge.FF-8816-8822}
+548,book,"Taton, Ren&#233;",,NULL,,1951,NULL,NULL,NULL,Presses universitaires de France,Paris,NULL,L&apos;oeuvre scientifique de Monge,Taton:1951,,
+549,book,"Carla-Boniface, Marcellin du",,NULL,,1782,NULL,NULL,NULL,NULL,Paris,NULL,"Expression des nivellements; ou, M&#233;thode nouvelle pour marquer sur les cartes terrestres et marines les hauteurs et les configurations du terrain",Marcellin:1782,,"In Fran&#231;ois de Dainville, &quot;From the Depths to the Heights&quot; translated by Arthur H. Robinson, &quot;Surveying and Mapping&quot;, 1970, 30:389-403, on page 396"
+550,book,"Fourcroy, Charles de",,NULL,,1782,NULL,NULL,NULL,Dupain-Triel,Paris,NULL,"Essai d&apos;une table pol&#233;om&#233;trique, ou amusement d&apos;un amateur de plans sur la grandeur de quelques villes",Fourcroy:1782,,
+551,incollection,"Nikolow, Sybilla",A.F.W. Crome&apos;s Measurements of the Strength of the State: Statistical Representations in Central Europe around 1800,NULL,,2001,NULL,NULL,NULL,Duke University Press,"Raleigh, NC","Klein, J.L. &amp; Morgan, M.S.",The Age of Economic Measurement,Nikolow:2001,,
+552,book,"Playfair, William",,NULL,,1786,NULL,NULL,NULL,Corry,London,NULL,"Commercial and Political Atlas: Representing, by Copper-Plate Charts, the Progress of the Commerce, Revenues, Expenditure, and Debts of England, during the Whole of the Eighteenth Century",Playfair:1786,,"3rd edition, London: Stockdale, 1801; French edition, Tableaux d&apos;arithm&#233;tique lin&#233;aire, du commerce, des finances, et de la dette nationale de l&apos;Angleterre (Paris: Chez Barrois l&apos;A&#233;, 1789)
+
+Re-published in Wainer, H. and Spence, I. (eds.), \\emph{The Commercial and Political Atlas and Statistical Breviary}, 2005, Cambridge University Press, ISBN 0-521-85554-3
+"
+553,incollection,"Pouchet, Louis &apos;Ez&#233;chiel",Arithm&#233;tique Lin&#233;aire,NULL,,1795,NULL,NULL,NULL,Seyer,Rouen,NULL,"Echelle Graphique des Nouveaux Poids, Mesures et Monnaies de la R&#233;publique Fran&#231;aise",Pouchet:1795,,(Appendix)
+554,book,"Dupin, Charles",,NULL,,1826,NULL,NULL,NULL,Jobard,NULL,NULL,Carte figurative de l&apos;instruction populaire de la France,Dupin:1826,,"Loc{BNF: Ge C 6588} (Funkhouser (1937, p. 300) incorrectly dates this as 1819)"
+556,article,"Balbi, Adriano & Guerry, Andr&#233;-Michel","Tableau des Variations m&#233;t&#233;orologique compar&#233;es aux ph&#233;nom&#232;nes physiologiques, d&apos;apr&#233;s les observations faites &#224; l&apos;Obervatoire royal, et les recherches statistique les plus r&#233;centes",Annales d&apos;Hygi&#232;ne Publique et de M&#233;decine L&#233;gale,,1829,1,NULL,228-,NULL,NULL,NULL,,Guerry:1829,,
+557,book,"Balbi, Adriano &amp; Guerry, Andr&eacute;-Michel",,,,1829,,,,Jules Renouard,Paris,,Statistique compar&eacute; de l&#039;&eacute;tat de l&#039;instruction et du nombre des crimes dans les divers arrondissements des Acad&eacute;mies et des Cours Royales de France,BalbiGuerry:1829,,Loc{BL:Tab.597.b.(38); BNF: Ge C 9014 }
+558,book,"Guerry, Andr&#233;-Michel",,NULL,,1832,NULL,NULL,NULL,NULL,Paris,NULL,Statistique compar&#233;e de l&apos;&#233;tat de l&apos;instruction et du nombre des crimes,Guerry:1832,,
+559,article,"Hankins, Thomas L.",A &quot;Large and Graceful Sinuosity&quot;: {John Herschel&apos;s} Graphical Method,Isis,,2006,NULL,NULL,605-633,NULL,NULL,NULL,,Hankins:2006,,
+560,article,"Brock, William H. &amp; Price, Michael H.",Squared Paper in the Nineteenth Century: Instrument of Science and,Educational Studies in Mathematics,,1980,11,4,365-381,Springer,NULL,NULL,,BrockPrice:1980,"The paper traces the gradual adoption of squared paper from its exclusive use as a research tool in the early 19th century to its universal use for a variety of purposes in mathematical education by the end of the first decade of this century. Three underlying causal factors are explored - the growth of new educational philosophies; the development of science teaching and the associated need for mathematics correlation; and the growing demands of engineering and technical education. Whilst the focus on squared paper is a narrow one, it is argued that its adoption in education generally was symptomatic of a much wider transformation of mathematical curricula in response to various demands which, significantly, arose outside the academic mathematical community.",November
+561,book,"d&#039;Angeville, Adolphe",,,,1836,,,,F. Doufour,Bourg-en-Bresse,,Essai sur la Statistique de la Population francaise,Angeville:1836,,"(Reprinted: Paris, Maison des Sciences de l&#039;Homme, vol. VI. Mouton, Paris-La Haye, 1969.)"
+562,article,"Dainville, Fran&#231;ois de",Les bases d&apos;une cartographie industrielle de L&apos;Europe au XIX$^e$ si&#232;cle,Centre National de la Recherch Scientifique,October,1970,,540,NULL,Colloques Internationaux du C.N.R.S.,Lyon,NULL,,Dainville:1970,,
+563,book,"Gribbin, John and Mary Gribbin",,NULL,,2000,NULL,NULL,NULL,Yale University Press,New Haven,NULL,Stardust: Supernovae and Life: The Cosmic Connection,GribbinGribbin:2000,,
+564,incollection,"Lalanne, L&apos;eon",Appendice Sur La Representation Graphique Des Tableaux M&#233;t&#233;orologiques Et Des Lois Naturelles En G&#233;n&#233;ral,NULL,,1845,NULL,NULL,1-35,Paulin,NULL,L. F. Kaemtz,Cours Complet de M&#233;t&#233;orologie,Lalanne:1845,,
+567,article,"Lalanne, L&apos;eon",M&#233;moire Sur Les Tables Graphiques Et Sur La G&#233;om&#233;trie Anamorphique Appliqu&#233;es a Diverses Questions Qui Se Rattachent a L&apos;Art De L&apos;Ing&#233;nieur,Annales des Ponts et Chaus&#233;es,,1846,"2e series, 11",NULL,1-69,NULL,NULL,NULL,,Lalanne:1846,,read 1843
+568,book,"Lalanne, L&eacute;on",,NULL,,1844,NULL,NULL,NULL,Carilan-Goery et Dalmont,Paris,NULL,"Abaque, ou Compteur univsersel, donnant &agrave; vue &agrave; moins de  1/200 pr&egrave;s les r&eacute;sultats de tous les calculs d'arithm&eacute;tique, de geometrie et de m&eacute;canique practique ",Lalanne:1844,,
+569,article,"Tourn&eacute;s, D.",Pour une histoire du calcul graphique,Revue d&apos;Histoire des Math&eacute;matiques,,2000,6,1,127-161,NULL,NULL,NULL,,Tournes:2000,,
+570,article,"Minard, Charles Joseph",Carte figurative des pertes successives en hommes de l&apos;arm&#233;e qu&apos;{A}nnibal conduisit d&apos;{E}spagne en {I}talie en traversant les {G}aules (selon {P}olybe). {C}arte figurative des pertes successives en hommes de l&apos;arm&#233;e fran{\\c{,R&#233;gnier et Dourdet,20-Nov,1869,,,NULL,"lith. (624 x 207, 624 x 245)",Paris,NULL,,Minard:1869a,,"Loc{ENPC: Fol 10975, 10974/C612}
+
+P55, R50--51
+"
+571,article,"Cheysson, &#201;mile",Les m&#233;thodes de statistique graphique &#224; l&apos;exposition universelle de 1878,Journal de la Soci&#233;t&#233; de Statistique de Paris,December,1878,12,,323-333,NULL,NULL,NULL,,Cheysson:1878,,
+572,article,"Vauthier, L. L.",Note sur une Carte Statistique Figurant La R&#233;partition de la Population de {Paris},NULL,,1874,78,NULL,264-267,NULL,NULL,NULL,,Vauthier:1874,,
+573,book,"Hilts, V. L.",,NULL,,1975,65,4,NULL,American Philosophical Society,"Philadelphia, PA",NULL,A Guide to {Francis Galton&apos;s English Men of Science},Hilts:1975,,
+574,article,"Bowditch, Henry Pickering",The growth of children,Board of Health of Massachusetts,,1877,NULL,8,NULL,NULL,NULL,NULL,,Bowditch:1877,,"Reprinted in &quot;Papers on Anthropometry&quot;, Boston, 1894"
+575,incollection,"Vincent, J. H.",On the use of logarithmic coordinates,,,1898,,,NA,NA,Bristol,NA,Report of the sixty-eighth meeting of the British Association  for the Advancement of Science,Vincent:1898,,September
+576,book,"Lallemand, Charles",,NULL,,1885,NULL,NULL,NULL,"Minist&#232;re des travaux publics, Comit&#233; du nivellement g&#233;n&#233;ral de la France",Paris,NULL,"Les abaques h&#233;xagonaux: Nouvelle m&#233;thode g&#233;n&#233;rale de calcul graphique, avec de nombreux exemples d&apos;application",Lallemand:1885,,
+577,book,"d&apos;Ocagne, Maurice",,NULL,,1885,NULL,NULL,NULL,Gauthier-Villars,Paris,NULL,Coordonn&#233;es Parall&#232;les et Axiales: M&#233;thode de transformation g&#233;om&#233;trique et proc&#233;d&#233; nouveau de calcul graphique d&#233;duits de la consid&#233;ration des coordonn&#233;es parall&#232;lles,Ocagne:1885,,
+578,book,"d&apos;Ocagne, Maurice",,NULL,,1899,NULL,NULL,NULL,NULL,Paris,NULL,"Trait&#233; de nomographie: Th&#233;orie des Abaques, Applications Pratiques",Ocagne:1899,,
+579,book,"d&apos;Ocagne, Maurice",,NULL,,1885,NULL,NULL,NULL,Gauthier-Villars,NULL,NULL,Coordonn&#233;es Parall&#232;les et Axiales: M&#233;thode de transformation g&#233;om&#233;trique et proc&#233;d&#233; nouveau de calcul graphique d&#233;duits de la consid&#233;ration des coordonn&#233;es parall&#232;lles,Ocagne:1885,,
+580,book,"Booth, Charles",,NULL,,1889,NULL,NULL,NULL,"London Topographical Society, 1984",NULL,NULL,Charles Booth&apos;s descriptive map of London poverty 1889 by Charles Booth; introduction by David A. Reeder.,Booth:1889,,"Loc{BL: Maps 182.c.1} Facsimile of maps published in Labour and Life of the People, Appendix to vol. II, 1891
+
+1 map on 4 sheets : col ; sheets 47x59cm
+"
+581,incollection,"Bertillon, Jacques",Fr&#233;quence des &#201;trangers &#224; {P}aris en 1891,NULL,,1896,NULL,NULL,NULL,Societ&#233; d&apos;&#233;ditions scientifiques,Paris,NULL,Cours &#233;lementaire de statistique administrative,Bertillon:1896,,(map)
+582,book,"Warne, Frank J.",,NULL,,1916,NULL,NULL,NULL,F. J. Warne,"Washington, D.C.",NULL,"Warne&apos;s Book of Charts, A Special Feature of Warne&apos;s Elementary Course in Chartograph",Warne:1916,,"3 p. l., 106 charts. 31 x 41 cm."
+583,article,"von Huhn, R.",A Discussion of the {E}ells&apos; Experiment,Journal of the American Statistical Association,,1927,22,NULL,31-36,NULL,NULL,NULL,,Huhn:1927,,
+584,article,"Kleinman, Kim",How Graphical Innovations Assisted {Edgar Anderson&apos;s} Discoveries in Evolutionary Biology,Chance,,2002,15,3,17-21,NULL,NULL,NULL,,Kleinman:2002,,
+585,article,"Fowlkes, E. B.","User&apos;s Manual for a System for Interactive Probability Plotting on {Graphic-2}"",",NULL,,1969,NULL,NULL,NULL,Bell Laboratories,NULL,NULL,,Fowlkes:1969,,
+586,article,"Becker, Richard A. & Chambers, John M.",&apos;S&apos;: A Language and System for Data Analysis,Bell Laboratories,September,1978,,NULL,NULL,NULL,NULL,NULL,,BeckerChambers:1978,,(described version 2 of S)
+587,incollection,"Inselberg, Alfred & Dimsdale, Bernard",Parallel coordinates: a tool for visualizing multi-dimensional geometry,NULL,,1990,NULL,NULL,361-378,IEEE Computer Society Press,"Los Alamitos, CA, USA",NULL,VIS &apos;90: Proceedings of the 1st conference on Visualization &apos;90,InselbergDimsdale:1990,,
+588,article,"Friendly, Michael",Graphical Methods for Categorical Data,Proceedings of the {SAS} User&apos;s Group International Conference,,1992,17,NULL,1367-1373,NULL,NULL,NULL,,Friendly:1992,,
+589,incollection,"Rao, Ramaana & Card, Stuart K.",The Table Lens: Merging Graphical and Symbolic Representations in an Interactive Focus+Context Visualization for Tabular Information,NULL,,1994,NULL,NULL,NULL,ACM,"Boston, Massachusetts",NULL,Proc. CHI&apos;94,RaoCard:1994,,
+591,article,"Test, A",Test Article,Journal,01,2008,1,1,06-Mar,,,,,123456,,
+592,article,"Hartigan, John A. &amp; Kleiner, Beat",A Mosaic of Television Ratings,The American Statistician,,1984,38,,32-35,,,,,HartiganKleiner:1984,,
+593,book,"Wilkinson, Leland",,,,2005,,,,Springer,New York,,"The Grammar of Graphics, 2nd ed.",Wilkinson:2005,,
+594,article,"de Martonne, Emmanuel",Essai de carte ethnographique des pays Roumains,Annales de G&#039;eographie,,1920,29,,81-98,,,,,Martonne:1920,,
+596,misc,"de Martonne, Emmanuel",R&#039;epartition de Nationalities dans les Pays o&#039;u dominant les Roumains,,,1919,,,NA,NA,,NA,NA,Martonne:1919:map,,
+598,book,"Adams, John",,,,1679,,,,na,,,"Angliae totius tabula cum distancii notoribus in itinerantium usum
+accommodata",Adams:1679,,\Loc{RGS: S0012110}
+599,book,"Jevons, W. S. ",,,,1863,,,,Edward Stanford,London,,"A Serious Fall in the Value of Gold Ascertained, and Its Social Effects Set Fourth.",Jevons:1863,,
+600,book,"Napier, John",,,,1614,,,,Andre Hart,Edinburgh,,"Mirifici Logarithmorum Canonis descriptio,
+Ejusque usus, in utraque Trigonometria
+",Napier:1614,,
+601,book,"Bowley, Arthur L.",,,,1901,,,,P. S. King and Son,London,,Elements of Statistics,Bowley:1901,,
+602,article,"Funkhouser, H. Gray",Historical Development of the Graphical Representation of Statistical Data,Osiris,November,1937,3,1,269--405,,,,,Funkhouser,,
+603,article,"Freeth, T., Bitsakis, Y., Moussas, X., Seiradakis, J. H., Tselikas, A., Mangou, H., Zafeiropoulou, M., Hadland, R., Bate, D., Ramsey, A., Allen, M., Crawley, A., Hockley, P., Malzbender, T., Gelb, D., Ambrisco, W., Edmunds, M.G.",Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism,Nature,November,2006,,444,587-591,,,,,Freeth:2006,,
+604,article,"Helmholtz, Herman",Messungen uber den zeitlichen Verlauf der Zuckung animalischer Muskeln und die Frotpflanzungsgechwindigkeit der Reizung in den Nerven,"Archive fur Anatomie, Physiologie, und wissensshaftliche Medizin",,1850,,,276-77,,,,,Helmholtz:1850,,
+605,article,"Helmholtz, Herman",Messungen uber den zeitlichen Verlauf der Zuckung animalischer Muskeln und die Frotpflanzungsgechwindigkeit der Reizung in den Nerven. Zweite Reihe,"Archive fur Anatomie, Physiologie, und wissensshaftliche Medizin",,1852,,,201-211,,,,,Helmholtz:1852,,
+607,book,"Holmes, F., L. and Olesko, K. M.",,,,1995,,,,Princeton Unversity Press,"Princeton, New Jersy","Wise, M. N.",&quot;The Images of Precision: Helmholtz and the Graphical Method in Physiology&quot; in The Values of Precision,HolmesOlesko:1995,,
+608,article,"Rosling, H., and Johansson, C.",Gapminder: Liberating the x-axis from the burden of time,Statistical Computing and Graphics,June,2009,20,1,07-Apr,,,,,Rosling:2009,,
+609,book,"Farr, William",,,,1852,,,,HMSO,London,,"Report on the Mortality from Cholera in England, 1848-1849",Farr1852:report,,
+610,book,"Inselberg, Alfred ",,,,2009,,,,Springer,Secaucus,,Parallel Coordinates: Visual Multidimensional Geometry and Its Applications,Inselberg:2009,,
+612,book,"Apperley, M. D and Spence, R.",,,,1980,,,,"Imperial College Television Studio, Production No. 1009",London,,Focus on Information: the Office of the Professional.,ApperleySpence:1980,,Videotape. 
+614,book,"Apperley, M. D., Tzavaras, I., and Space, R.",,,,1982,,,,North-Holland,Amesterdam,"Greenaway, D.S. and Warman, E. A.",A Bifocal Display Technique for Data Presentation in Eurographics&#039;82.,ApperleyTzvarasSpence:1982,,
+615,article,"Inselberg, A.",The Plane with Parallel Coordinates.,The Visual Computer,,1985,1,,69-91,,,,,Inselberg:1985,,
+616,article,"Stigler, Stephen M.",Galton Visualizing Bayesian Inference,Chance,,2011,24,1,10-Aug,,,,,Stigler:2011,,
+617,article,"krzywinski, M. I., Schein, J. E., Birol, I., Connors, J., Gascoyne, R., Horsam, D., Jones, S. J. &amp; Marra, M. A.",Circos: An information aesthetic for comparative genomics,Genome Research,June,2009,,,.,,,,,Krzywinski:2009,,"Krzywinski and colleagues have also developed what they call &quot;hiveplots&quot; as a perceptually uniform and scalable linear layout visualization for network visualization, also with applications to bioimformatics.
+"
+619,article,"Wainer, H. &amp; Harik, P.","Stigler&rsquo;s Law of Eponymy and Marey&rsquo;s Train Schedule: Did Serjev do it before Ibry, and what about Jules Petiet?",Chance,,2013,26,1,xx-xx,,,,,Wainer-Harik:2013,,
+620,article,"Larsen, W. A.  and McCleary, S. J.",The Use of Partial Residual Plots in Regression Analysis,Technometrics,,1972,14,,781-790,,,,,LarsenMcCleary:72,,
+621,article,"Ezekiel, M.",A method of handling curvilinear correlation for any number of variables,Journal of American Statistical Association,,1924,19,148,431-453,,,,,Ezekiel:1924,,
+622,article,"Utrilla, P., Mazo, C., Sopena, M.C., Mart&iacute;nez-Bea, M. &amp; Domingo R.","A palaeolithic map from 13,660 calBP: engraved stone blocks from the Late Magdalenian in Abauntz Cave (Navarra, Spain)",Journal of Human Evolution,August,2009,57,2,99&ndash;111,,,,,Utrilla:2009,"An engraved block from the cave of Abauntz is interpreted as a Magdalenian map in which the actual surrounding landscape, including mountains, rivers, and ponds, is represented. Some possible routes or avenues of access to different parts of the geography are also engraved on the landscape. The engraving seems to reproduce the meandering course of a river crossing the upper part of side A of the block, joined by two tributaries near two mountains. One of these is identical to the mountain that can be seen from the cave, with herds of ibex depicted on its hillsides, on both sides of the gorge in front of which the cave of Abauntz is strategically located. In the southern part of the gorge, there is a completely flat area where the watercourses slow down, forming meanders and flooding in springtime. The following elements are also represented on the block: tangles of concentric strokes and bundles of lines forming very marked meanders. In short, all of these engravings could be a sketch or a simple map of the area around the cave. It could represent the plan for a coming hunt or perhaps a narrative story of one that had already happened. This paper is provided in the context of recent discussions on early modern human capacities of spatial awareness, planning, and organized hunting.",
+623,article,"Brandes, H. W. ","Einige Resultate aus der Witterungs-Geschichte des Jahres 1783, und Bitte um Nachrichten aus jener Zeit; aus einem Schreiben des Professor Brandes an Gilbert",Annalen der Physik,,1819,61,,421-426,,,,,Brandes:1819,,
+624,book,"Wickham, Hadley",,,,2009,,,,Springer,,,ggplot2: Elegant graphics for data analysis,Wickham:ggplot2,,
+625,article,"Wickham, Hadley",A layered grammar of graphics,Journal of Computational and Graphical Statistics,,2010,19,1,28-Mar,,,,,Wichham:2010,,
+626,book,"Du Bois, William Edward Burghardt",NULL,NULL,NULL,1900,NULL,NULL,NULL,n.p.,NULL,NULL,The Georgia Negro: A Social Study,DuBois:1900:Georgia,NULL,NULL
