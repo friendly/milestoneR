@@ -2,6 +2,7 @@ library(here)
 library(readr)
 library(dplyr)
 library(lubridate)
+library(timeless)
 #library(data.table)
 
 source(here("R", "html2latin1.R"))
@@ -12,14 +13,19 @@ aut <- aut |>
   mutate(givennames = html2latin1(givennames),
          lnames = html2latin1(lname),
          birthplace = html2latin1(birthplace),
-         deathplace = html2latin1(deathplace)) |>
-  mutate(birthdate = ifelse(birthdate == "0000-00-00", NA, birthdate),
-         deathdate = ifelse(deathdate == "0000-00-00", NA, deathdate))
+         deathplace = html2latin1(deathplace))
+  # mutate(birthdate = ifelse(birthdate == "0000-00-00", NA, birthdate),
+  #        deathdate = ifelse(deathdate == "0000-00-00", NA, deathdate))
 
 
 # find errors in birth/death dates
 bd <- aut$birthdate
 which(is.na(bd)) |> length()
+
+for (i in seq_along(bd)) {
+  if (!is.na(bd[i])) bd[i] = chronos(bd[i])
+}
+
 
 bd <- bd[!is.na(bd)]
 bd <- as_date(bd)
@@ -46,6 +52,8 @@ aut <- aut |>
   mutate(birthdate = as_date(birthdate),
          deathdate = as_date(deathdate))
 
+# try timeless
+#bd <- chronos(aut$birthdate)
 
 
 author <- aut

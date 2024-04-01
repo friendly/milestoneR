@@ -20,13 +20,10 @@ License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    DBI,
-    RMySQL,
-    keyring,
     dplyr,
     tibble,
     lubridate,
     textutils
 URL: https://github.com/friendly/milestoneR
 BugReports: https://github.com/friendly/milestoneR/issues
-RoxygenNote: 6.1.1
+RoxygenNote: 7.3.1

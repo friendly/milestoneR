@@ -9,14 +9,14 @@
 #' @export
 #'
 milestone <- function() {
-  mstones_con = .mstone.env$connnection
-  mstones <- as_tibble(dbReadTable(mstones_con,
-                                'milestone'))
-  mstones <- mstones %>%
-    select(-uid) %>%
-    # cleanup description field
-    mutate(description = html2latin1(description)) %>%
-    mutate(description = gsub("</?p>", "", description))
+  # mstones_con = .mstone.env$connnection
+  # mstones <- as_tibble(dbReadTable(mstones_con,
+  #                               'milestone'))
+  # mstones <- mstones %>%
+  #   select(-uid) %>%
+  #   # cleanup description field
+  #   mutate(description = html2latin1(description)) %>%
+  #   mutate(description = gsub("</?p>", "", description))
 
   # TODO: quoted strings are badly handled in the description field.
   # many instances like: (\"star plot&#039;&#039;) -> (\"star plot'') after html2utf8
@@ -24,6 +24,16 @@ milestone <- function() {
 
   # TODO: Do we need to export both the date_from & date_from_numeric fields?
 
+  mstones <- .get.mstone()
   mstones
 }
 
+
+#' @importFrom utils data
+.get.mstone <- function(){
+  #browser()
+  .mstone.env <- new.env()
+  data(milestone, package = 'milestoneR', envir = .mstone.env)
+  data(reference, package = 'milestoneR', envir = .mstone.env)
+  .mstone.env$milestone
+}

@@ -1,0 +1,97 @@
+Character,Number,Name,Description
+,&#160;,&nbsp;,non-breaking space
+¡,&#161;,&iexcl;,inverted exclamation mark
+¢,&#162;,&cent;,cent sign
+£,&#163;,&pound;,pound sign
+¤,&#164;,&curren;,currency sign
+¥,&#165;,&yen;,yen sign
+¦,&#166;,&brvbar;,broken bar
+§,&#167;,&sect;,section sign
+¨,&#168;,&uml;,diaeresis
+©,&#169;,&copy;,copyright sign
+ª,&#170;,&ordf;,feminine ordinal indicator
+«,&#171;,&laquo;,left pointing guillemet
+¬,&#172;,&not;,not sign
+­,&#173;,&shy;,soft hyphen
+®,&#174;,&reg;,registered sign
+¯,&#175;,&macr;,macron
+°,&#176;,&deg;,degree sign
+±,&#177;,&plusmn;,plus-minus sign
+²,&#178;,&sup2;,superscript two
+³,&#179;,&sup3;,superscript three
+´,&#180;,&acute;,acute accent
+µ,&#181;,&micro;,micro sign
+¶,&#182;,&para;,paragraph sign
+·,&#183;,&middot;,middle dot
+¸,&#184;,&cedil;,spacing cedilla
+¹,&#185;,&sup1;,superscript one
+º,&#186;,&ordm;,masculine ordinal indicator
+»,&#187;,&raquo;,right pointing guillemet
+¼,&#188;,&frac14;,fraction one quarter
+½,&#189;,&frac12;,fraction one half
+¾,&#190;,&frac34;,fraction three quarters
+¿,&#191;,&iquest;,inverted question mark
+À,&#192;,&Agrave;, capital  A with grave
+Á,&#193;,&Aacute;, capital  A with acute
+Â,&#194;,&Acirc;, capital  A with circumflex
+Ã,&#195;,&Atilde;, capital  A with tilde
+Ä,&#196;,&Auml;, capital  A with diaeresis
+Å,&#197;,&Aring;, capital  A with ring
+Æ,&#198;,&AElig;, capital  AE
+Ç,&#199;,&Ccedil;, capital  C with cedilla
+È,&#200;,&Egrave;, capital  E with grave
+É,&#201;,&Eacute;, capital  E with acute
+Ê,&#202;,&Ecirc;, capital  E with circumflex
+Ë,&#203;,&Euml;, capital  E with diaeresis
+Ì,&#204;,&Igrave;, capital  I with grave
+Í,&#205;,&Iacute;, capital  I with acute
+Î,&#206;,&Icirc;, capital  I with circumflex
+Ï,&#207;,&Iuml;, capital  I with diaeresis
+Ð,&#208;,&ETH;, capital  ETH
+Ñ,&#209;,&Ntilde;, capital  N with tilde
+Ò,&#210;,&Ograve;, capital  O with grave
+Ó,&#211;,&Oacute;, capital  O with acute
+Ô,&#212;,&Ocirc;, capital  O with circumflex
+Õ,&#213;,&Otilde;, capital  O with tilde
+Ö,&#214;,&Ouml;, capital  O with diaeresis
+×,&#215;,&times;,multiplication sign
+Ø,&#216;,&Oslash;, capital  O with stroke
+Ù,&#217;,&Ugrave;, capital  U with grave
+Ú,&#218;,&Uacute;, capital  U with acute
+Û,&#219;,&Ucirc;, capital  U with circumflex
+Ü,&#220;,&Uuml;, capital  U with diaeresis
+Ý,&#221;,&Yacute;, capital  Y with acute
+Þ,&#222;,&THORN;, capital  THORN
+ß,&#223;,&szlig;, small  sharp s
+à,&#224;,&agrave;, small  a with grave
+á,&#225;,&aacute;, small  a with acute
+â,&#226;,&;, small  a with circumflex
+ã,&#227;,&atilde;, small  a with tilde
+ä,&#228;,&auml;, small  a with diaeresis
+å,&#229;,&aring;, small  a with ring above
+æ,&#230;,&aelig;, small  ae
+ç,&#231;,&ccedil;, small  c with cedilla
+è,&#232;,&egrave;, small  e with grave
+é,&#233;,&eacute;, small  e with acute
+ê,&#234;,&ecirc;, small  e with circumflex
+ë,&#235;,&euml;, small  e with diaeresis
+ì,&#236;,&igrave;, small  i with grave
+í,&#237;,&iacute;, small  i with acute
+î,&#238;,&icirc;, small  i with circumflex
+ï,&#239;,&iuml;, small  i with diaeresis
+ð,&#240;,&eth;, small  eth
+ñ,&#241;,&ntilde;, small  n with tilde
+ò,&#242;,&ograve;, small  o with grave
+ó,&#243;,&oacute;, small  o with acute
+ô,&#244;,&ocirc;, small  o with circumflex
+õ,&#245;,&otilde;, small  o with tilde
+ö,&#246;,&ouml;, small  o with diaeresis
+÷,&#247;,&divide;,division sign
+ø,&#248;,&oslash;, small  o with stroke
+ù,&#249;,&ugrave;, small  u with grave
+ú,&#250;,&uacute;, small  u with acute
+û,&#251;,&ucirc;, small  u with circumflex
+ü,&#252;,&uuml;, small  u with diaeresis
+ý,&#253;,&yacute;, small  y with acute
+þ,&#254;,&thorn;, small  thorn
+ÿ,&#255;,&yuml;, small  y with diaeresis
