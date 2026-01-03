@@ -5,7 +5,7 @@ library(lubridate)
 library(timeless)
 #library(data.table)
 
-source(here("R", "html2latin1.R"))
+source(here("data-raw", "html2latin1.R"))
 
 aut <- read_csv("data-raw/author.csv")
 

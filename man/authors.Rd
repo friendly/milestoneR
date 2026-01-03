@@ -22,19 +22,16 @@ The `author` data set contains the following fields:
      \item{\code{lname}}{last name, a character vector}
      \item{\code{suffix}}{name suffix, a character vector}
      \item{\code{lived}}{years lived, a character vector}
-     \item{\code{birthdate}}{a character vector}
+     \item{\code{birthdate}}{a Date vector}
      \item{\code{birthplace}}{place of birth, a character vector}
      \item{\code{birthlat}}{latitude of birthplace, a numeric vector}
      \item{\code{birthlong}}{longitude of birthplace, a numeric vector}
-     \item{\code{deathdate}}{a character vector}
+     \item{\code{deathdate}}{a Date vector}
      \item{\code{deathplace}}{a character vector}
      \item{\code{deathlat}}{latitude of deathplace, a numeric vector}
      \item{\code{deathlong}}{longitude of deathplace, a numeric vector}
      \item{\code{note}}{notes about this author, a character vector}
    }
-
-TODO: The various names field contain some HTML characters.  These should be
-translated to latin1.
 }
 \examples{
 # none yet

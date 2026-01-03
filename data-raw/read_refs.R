@@ -2,7 +2,7 @@ library(here)
 library(readr)
 library(dplyr)
 
-source(here("R", "html2latin1.R"))
+source(here("data-raw", "html2latin1.R"))
 
 reference <- read_csv("data-raw/reference.csv")
 
@@ -20,7 +20,13 @@ refs <- reference |>
 #         year = as.numeric(year),   # some years are ranges
          author = html2latin1(author),
          title = html2latin1(title),
-         journal = html2latin1(journal) )
+         journal = html2latin1(journal),
+         booktitle = html2latin1(booktitle),
+         publisher = html2latin1(publisher),
+         address = html2latin1(address),
+         editor = html2latin1(editor),
+         abstract = html2latin1(abstract),
+         note = html2latin1(note) )
 
 for (i in 1:nrow(refs)) {
   refs$title[i] = fixtitle(refs$type[i], refs$title[i], refs$booktitle[i])

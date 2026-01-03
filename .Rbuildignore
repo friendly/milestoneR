@@ -1,6 +1,7 @@
 ^milestoneR\.Rproj$
 ^\.Rproj\.user$
 extra/
-^data-raw/$
-^dev/$
+^data-raw$
+^dev$
+^.claude$
 

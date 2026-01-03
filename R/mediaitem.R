@@ -8,7 +8,7 @@
 #'  The fields in the `mediaitem` table are:
 #' \describe{
 #'    \item{\code{miid}}{mediaitem id, a numeric vector}
-#'    \item{\code{type}}{type, a factor, with values \code{link}, \code{image}}
+#'    \item{\code{type}}{type, a character vector, with values \code{link}, \code{image}}
 #'    \item{\code{url}}{URL to reference this item in the milestones application}
 #'    \item{\code{title}}{a character vector}
 #'    \item{\code{caption}}{a character vector}
@@ -17,23 +17,14 @@
 #' }
 #'
 #' For `type=="link"`, these give a standard HTML reference in the `url` field.
-#' For `type`=="image"`, the `url` field references the local image in the milestones DB.
+#' For `type=="image"`, the `url` field references the image in the milestones website.
 #'
-#' @importFrom tibble as_tibble
-#' @importFrom dplyr mutate
+#' @importFrom utils data
 #' @export
 #'
 mediaitem <- function() {
-  mstones_con = .mstone.env$connnection
-  mitems <- as_tibble(dbReadTable(mitems_con,
-                                   'mediaitem'))
-  mitems <- mitems %>%
-    mutate(type = as.factor(type)) %>%
-    # should use a general html2latin1
-    mutate(title = html2latin1(title))
-    # mutate(title = str_replace(title, "&#039;", "'")) %>%
-    # mutate(title = str_replace(title, "&quot;", '"'))
-
-  mitems
+  .mediaitem.env <- new.env()
+  data(mediaitem, package = 'milestoneR', envir = .mediaitem.env)
+  .mediaitem.env$mediaitem
 }
 

@@ -1,8 +1,12 @@
-# milestoneR
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Last
+Commit](https://img.shields.io/github/last-commit/friendly/heplots)](https://github.com/friendly/heplots/)
 <!-- badges: end -->
+
+# milestoneR <img src="man/figures/logo.png" height="200" style="float:right; height:200px;"/>
+
 
 The goal of the `milestoneR` package is to provide R access to the database tables used in the Milestones Project,
   reflecting the history of data visualization, as used in http://datavis.ca/milestones and other applications

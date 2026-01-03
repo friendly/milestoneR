@@ -3,19 +3,25 @@ library(readr)
 library(dplyr)
 library(stringr)
 
-source(here("R", "html2latin1.R"))
+source(here("data-raw", "html2latin1.R"))
 
 mstones <- read_csv("data-raw/milestone.csv")
 
 mstones <- mstones |>
   select(-uid) |>
   filter(status != "draft") |>
-  # cleanup description field
-  mutate(description = html2latin1(description),
-         description = gsub("&egrave;",	"è", description),
-         note = html2latin1(note)) |>
-  mutate(description = gsub("</?p>", "", description),
-         location = gsub("</?p>", "", location))
+  # FIRST convert HTML entities (CSV has &lt; &gt; not < >)
+  # Note: some entities are double-encoded (e.g., &amp;egrave; instead of &egrave;)
+  # so we run html2latin1() twice to handle this
+  mutate(title = html2latin1(html2latin1(title)),
+         tag = html2latin1(html2latin1(tag)),
+         description = html2latin1(html2latin1(description)),
+         location = html2latin1(html2latin1(location)),
+         note = html2latin1(html2latin1(note)),
+         extra = html2latin1(html2latin1(extra))) |>
+  # THEN remove HTML tags
+  mutate(description = gsub("<[^>]*>", "", description),
+         location = gsub("<[^>]*>", "", location))
 
 mstones <- mstones |>
   rename(slug = title)
@@ -25,7 +31,7 @@ mstones <- mstones |>
 
 # TODO: Do we need to export both the date_from & date_from_numeric fields?
 
-View(mstones)
+# View(mstones)  # commented out for non-interactive use
 
 
 milestone <- mstones

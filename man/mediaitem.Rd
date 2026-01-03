@@ -16,7 +16,7 @@ The `mediaitem` table gives each link or image used in displaying the milestones
 The fields in the `mediaitem` table are:
 \describe{
    \item{\code{miid}}{mediaitem id, a numeric vector}
-   \item{\code{type}}{type, a factor, with values \code{link}, \code{image}}
+   \item{\code{type}}{type, a character vector, with values \code{link}, \code{image}}
    \item{\code{url}}{URL to reference this item in the milestones application}
    \item{\code{title}}{a character vector}
    \item{\code{caption}}{a character vector}
@@ -25,5 +25,5 @@ The fields in the `mediaitem` table are:
 }
 
 For `type=="link"`, these give a standard HTML reference in the `url` field.
-For `type`=="image"`, the `url` field references the local image in the milestones DB.
+For `type=="image"`, the `url` field references the image in the milestones website.
 }

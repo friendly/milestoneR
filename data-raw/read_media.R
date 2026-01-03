@@ -5,7 +5,7 @@ library(lubridate)
 library(stringr)
 #library(data.table)
 
-source(here("R", "html2latin1.R"))
+source(here("data-raw", "html2latin1.R"))
 
 media <- read_csv("data-raw/mediaitem.csv")
 

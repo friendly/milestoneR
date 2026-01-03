@@ -27,33 +27,11 @@
 #'
 #'  TODO: need a function to turn these back to BibTeX
 #'
-#' @importFrom tibble as_tibble
-#' @importFrom dplyr mutate
+#' @importFrom utils data
 #' @export
 #'
 reference <- function() {
-  mstones_con = .mstone.env$connnection
-  mstones <- as_tibble(dbReadTable(mstones_con,
-                                   'reference'))
-  refs <- reference %>%
-    mutate(type = as.factor(type),
-           year = as.numeric(year),
-           author = html2latin1(author),
-           title = html2latin1(title),
-           journal = html2latin1(journal) )
-
-  # fix books that have a booktitle rather than title; booktitle should only be used for incollection.
-  # This is very messy, but it works.
-  # Should we also make booktitle NA for books?
-  fixtitle <- function(type, title, booktitle) {
-    if(type != "book") return (title)
-    if(title == "" & booktitle != "") return (booktitle)
-    title
-  }
-  for (i in 1:nrow(refs)) {
-    refs$title[i] = fixtitle(refs$type[i], refs$title[i], refs$booktitle[i])
-  }
-
-
-  refs
+  .reference.env <- new.env()
+  data(reference, package = 'milestoneR', envir = .reference.env)
+  .reference.env$reference
 }

@@ -2,7 +2,7 @@ library(readr)
 library(dplyr)
 library(here)
 
-source(here::here("R", "html2latin1.R"))
+source(here::here("data-raw", "html2latin1.R"))
 
 # read the linking files, sort out some joins
 
