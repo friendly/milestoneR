@@ -1,6 +1,6 @@
 Package: milestoneR
 Title: Access the Database of the Milestones Project
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
   c(
     person(given = "Michael",
@@ -14,11 +14,13 @@ Authors@R:
            role = c("aut"))
     )
 Description: This package provides a simple R interface to the database tables used in the Milestones Project,
+  <https://datavis.ca/milestones/>,
   reflecting the history of data visualization, as used in datavis.ca/milestones.
   Functions are provided to retrieve the tables of milestones events, authors, references, etc.
-License: MIT
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 3.5.0)
 Imports: 
     dplyr,
     tibble,
@@ -26,4 +28,4 @@ Imports:
     textutils
 URL: https://github.com/friendly/milestoneR
 BugReports: https://github.com/friendly/milestoneR/issues
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.3

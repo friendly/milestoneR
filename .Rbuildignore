@@ -1,4 +1,6 @@
 ^milestoneR\.Rproj$
 ^\.Rproj\.user$
 extra/
+^data-raw/$
+^dev/$
 
