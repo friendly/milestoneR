@@ -28,3 +28,18 @@ milestone2subject <- function() {
   data(milestone2subject, package = 'milestoneR', envir = .m2s.env)
   .m2s.env$milestone2subject
 }
+
+#' Milestone-to-subject linking data
+#'
+#' A linking table that associates milestones with their subject classifications.
+#' The subject field is included for convenience.
+#'
+#' @format A data frame with 298 rows and 3 variables:
+#' \describe{
+#'   \item{mid}{milestone id, a numeric vector}
+#'   \item{sid}{subject id, a numeric vector}
+#'   \item{subject}{subject name, a character vector}
+#' }
+#' @source \url{https://datavis.ca/milestones/}
+#' @seealso \code{\link{subject}}, \code{\link{milestone}}
+"milestone2subject"

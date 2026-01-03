@@ -27,3 +27,17 @@ subject <- function() {
   data(subject, package = 'milestoneR', envir = .subject.env)
   .subject.env$subject
 }
+
+#' Subject classification data from the Milestones Project
+#'
+#' A lookup table containing subject classifications that indicate the
+#' substantive context of milestone events.
+#'
+#' @format A data frame with 4 rows and 2 variables:
+#' \describe{
+#'   \item{sid}{subject id, a numeric vector}
+#'   \item{name}{subject name (Physical, Mathematical, Human, Other), a character vector}
+#' }
+#' @source \url{https://datavis.ca/milestones/}
+#' @seealso \code{\link{milestone2subject}}
+"subject"

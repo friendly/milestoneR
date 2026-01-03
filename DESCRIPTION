@@ -20,7 +20,7 @@ Description: This package provides a simple R interface to the database tables u
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 3.5.0)
+Depends: R (>= 4.1.0)
 Imports: 
     dplyr,
     tibble,

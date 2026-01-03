@@ -28,3 +28,20 @@ mediaitem <- function() {
   .mediaitem.env$mediaitem
 }
 
+#' Media item data from the Milestones Project
+#'
+#' A dataset containing links and images used in displaying milestone items.
+#'
+#' @format A data frame with 600 rows and 7 variables:
+#' \describe{
+#'   \item{miid}{mediaitem id, a numeric vector}
+#'   \item{type}{type (link or image), a character vector}
+#'   \item{url}{URL to the media item, a character vector}
+#'   \item{title}{title or caption, a character vector}
+#'   \item{caption}{caption text, a character vector}
+#'   \item{source}{source of the media, a character vector}
+#'   \item{mid}{milestone id to which this is attached, a numeric vector}
+#' }
+#' @source \url{https://datavis.ca/milestones/}
+"mediaitem"
+

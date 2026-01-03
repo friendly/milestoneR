@@ -28,3 +28,18 @@ milestone2aspect <- function() {
   data(milestone2aspect, package = 'milestoneR', envir = .m2a.env)
   .m2a.env$milestone2aspect
 }
+
+#' Milestone-to-aspect linking data
+#'
+#' A linking table that associates milestones with their aspect classifications.
+#' The aspect field is included for convenience.
+#'
+#' @format A data frame with 299 rows and 3 variables:
+#' \describe{
+#'   \item{mid}{milestone id, a numeric vector}
+#'   \item{asid}{aspect id, a numeric vector}
+#'   \item{aspect}{aspect name, a character vector}
+#' }
+#' @source \url{https://datavis.ca/milestones/}
+#' @seealso \code{\link{aspect}}, \code{\link{milestone}}
+"milestone2aspect"

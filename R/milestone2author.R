@@ -27,3 +27,16 @@ milestone2author <- function() {
   data(milestone2author, package = 'milestoneR', envir = .m2a.env)
   .m2a.env$milestone2author
 }
+
+#' Milestone-to-author linking data
+#'
+#' A linking table that associates milestones with their authors.
+#'
+#' @format A data frame with 348 rows and 2 variables:
+#' \describe{
+#'   \item{mid}{milestone id, a numeric vector}
+#'   \item{aid}{author id, a numeric vector}
+#' }
+#' @source \url{https://datavis.ca/milestones/}
+#' @seealso \code{\link{authors}}, \code{\link{milestone}}
+"milestone2author"

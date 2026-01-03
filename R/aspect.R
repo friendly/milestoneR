@@ -28,3 +28,17 @@ aspect <- function() {
   data(aspect, package = 'milestoneR', envir = .aspect.env)
   .aspect.env$aspect
 }
+
+#' Aspect classification data from the Milestones Project
+#'
+#' A lookup table containing aspect classifications that indicate the role
+#' milestone events played in the history of data visualization.
+#'
+#' @format A data frame with 4 rows and 2 variables:
+#' \describe{
+#'   \item{asid}{aspect id, a numeric vector}
+#'   \item{name}{aspect name (Cartography, Statistics & Graphics, Technology, Other), a character vector}
+#' }
+#' @source \url{https://datavis.ca/milestones/}
+#' @seealso \code{\link{milestone2aspect}}
+"aspect"

@@ -35,3 +35,30 @@ reference <- function() {
   data(reference, package = 'milestoneR', envir = .reference.env)
   .reference.env$reference
 }
+
+#' Reference data from the Milestones Project
+#'
+#' A dataset containing bibliographic references associated with milestone events.
+#'
+#' @format A data frame with 352 rows and 17 variables:
+#' \describe{
+#'   \item{rid}{reference id, a numeric vector}
+#'   \item{type}{reference type (article, book, incollection), a factor}
+#'   \item{author}{author names, a character vector}
+#'   \item{title}{title of publication, a character vector}
+#'   \item{journal}{journal name (for articles), a character vector}
+#'   \item{month}{month of publication, a character vector}
+#'   \item{year}{year of publication, a character vector}
+#'   \item{volume}{volume number, a character vector}
+#'   \item{number}{issue number, a character vector}
+#'   \item{pages}{page numbers, a character vector}
+#'   \item{publisher}{publisher name, a character vector}
+#'   \item{address}{publisher address, a character vector}
+#'   \item{editor}{editor names, a character vector}
+#'   \item{booktitle}{book title (for incollection), a character vector}
+#'   \item{bibtexkey}{BibTeX key, a character vector}
+#'   \item{abstract}{abstract, a character vector}
+#'   \item{note}{notes, a character vector}
+#' }
+#' @source \url{https://datavis.ca/milestones/}
+"reference"

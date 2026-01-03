@@ -30,3 +30,17 @@ keyword <- function() {
   data(keyword, package = 'milestoneR', envir = .keyword.env)
   .keyword.env$keyword
 }
+
+#' Keyword data from the Milestones Project
+#'
+#' A lookup table containing keywords or terms that are attached to
+#' milestone items as a freeform classification.
+#'
+#' @format A data frame with 335 rows and 2 variables:
+#' \describe{
+#'   \item{kid}{keyword id, a numeric vector}
+#'   \item{name}{keyword name, a character vector}
+#' }
+#' @source \url{https://datavis.ca/milestones/}
+#' @seealso \code{\link{milestone2keyword}}
+"keyword"

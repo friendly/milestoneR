@@ -28,3 +28,18 @@ milestone2keyword <- function() {
   data(milestone2keyword, package = 'milestoneR', envir = .m2k.env)
   .m2k.env$milestone2keyword
 }
+
+#' Milestone-to-keyword linking data
+#'
+#' A linking table that associates milestones with their keywords.
+#' The keyword field is included for convenience.
+#'
+#' @format A data frame with 454 rows and 3 variables:
+#' \describe{
+#'   \item{mid}{milestone id, a numeric vector}
+#'   \item{kid}{keyword id, a numeric vector}
+#'   \item{keyword}{keyword name, a character vector}
+#' }
+#' @source \url{https://datavis.ca/milestones/}
+#' @seealso \code{\link{keyword}}, \code{\link{milestone}}
+"milestone2keyword"
