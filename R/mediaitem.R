@@ -32,7 +32,7 @@ mediaitem <- function() {
 #'
 #' A dataset containing links and images used in displaying milestone items.
 #'
-#' @format A data frame with 600 rows and 7 variables:
+#' @format A data frame with 600 rows and 8 variables:
 #' \describe{
 #'   \item{miid}{mediaitem id, a numeric vector}
 #'   \item{type}{type (link or image), a character vector}
@@ -41,6 +41,7 @@ mediaitem <- function() {
 #'   \item{caption}{caption text, a character vector}
 #'   \item{source}{source of the media, a character vector}
 #'   \item{mid}{milestone id to which this is attached, a numeric vector}
+#'   \item{type2}{secondary type classification, a character vector}
 #' }
 #' @source \url{https://datavis.ca/milestones/}
 "mediaitem"

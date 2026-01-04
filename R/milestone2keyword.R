@@ -20,8 +20,10 @@
 #' @seealso \code{\link{keyword}}, \code{\link{milestone}}
 #'
 #' @examples
+#' \dontrun{
 #' # Get milestone-keyword links
 #' m2k <- milestone2keyword()
+#' }
 #'
 milestone2keyword <- function() {
   .m2k.env <- new.env()
@@ -29,17 +31,7 @@ milestone2keyword <- function() {
   .m2k.env$milestone2keyword
 }
 
-#' Milestone-to-keyword linking data
-#'
-#' A linking table that associates milestones with their keywords.
-#' The keyword field is included for convenience.
-#'
-#' @format A data frame with 454 rows and 3 variables:
-#' \describe{
-#'   \item{mid}{milestone id, a numeric vector}
-#'   \item{kid}{keyword id, a numeric vector}
-#'   \item{keyword}{keyword name, a character vector}
-#' }
-#' @source \url{https://datavis.ca/milestones/}
-#' @seealso \code{\link{keyword}}, \code{\link{milestone}}
-"milestone2keyword"
+#' @name milestone2keyword-data
+#' @rdname milestone2keyword
+#' @format A data frame. See \code{\link{milestone2keyword}} for details.
+NULL

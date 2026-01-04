@@ -1,49 +1,10 @@
-#' Retrieve the `milestone` table from the milestones database
-#'
-#' The `milestone` table gives each item considered a milestone in the history of data visualization. This is
-#' the primary table. Others are linked to it via the `mid` key.
-#'
-#' @return Returns a tibble of the `milestone` table
-#' @importFrom tibble as_tibble
-#' @importFrom dplyr mutate
-#' @export
-#'
-milestone <- function() {
-  # mstones_con = .mstone.env$connnection
-  # mstones <- as_tibble(dbReadTable(mstones_con,
-  #                               'milestone'))
-  # mstones <- mstones %>%
-  #   select(-uid) %>%
-  #   # cleanup description field
-  #   mutate(description = html2latin1(description)) %>%
-  #   mutate(description = gsub("</?p>", "", description))
-
-  # TODO: quoted strings are badly handled in the description field.
-  # many instances like: (\"star plot&#039;&#039;) -> (\"star plot'') after html2utf8
-  # Need one more gsub() to replace '' when it immediately follows \".*
-
-  # TODO: Do we need to export both the date_from & date_from_numeric fields?
-
-  mstones <- .get.mstone()
-  mstones
-}
-
-
-#' @importFrom utils data
-.get.mstone <- function(){
-  #browser()
-  .mstone.env <- new.env()
-  data(milestone, package = 'milestoneR', envir = .mstone.env)
-  data(reference, package = 'milestoneR', envir = .mstone.env)
-  .mstone.env$milestone
-}
-
 #' Milestone data from the Milestones Project
 #'
-#' A dataset containing milestone events in the history of data visualization.
-#' This is the primary table in the database.
+#' Retrieve the `milestone` table containing milestone events in the history of
+#' data visualization. This is the primary table in the database. Other tables
+#' are linked to it via the `mid` key.
 #'
-#' @format A data frame with 297 rows and 14 variables:
+#' @return A data frame with 297 rows and 14 variables:
 #' \describe{
 #'   \item{mid}{milestone id, a numeric vector}
 #'   \item{slug}{title slug, a character vector}
@@ -60,5 +21,41 @@ milestone <- function() {
 #'   \item{note}{notes, a character vector}
 #'   \item{extra}{extra information, a character vector}
 #' }
+#'
 #' @source \url{https://datavis.ca/milestones/}
-"milestone"
+#' @importFrom utils data
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' # Get all milestones
+#' m <- milestone()
+#'
+#' # Filter by date
+#' library(dplyr)
+#' m |> filter(date_from_numeric < 0)  # BC milestones
+#' }
+#'
+milestone <- function() {
+  # TODO: quoted strings are badly handled in the description field.
+  # many instances like: (\"star plot&#039;&#039;) -> (\"star plot'') after html2utf8
+  # Need one more gsub() to replace '' when it immediately follows \".*
+
+  # TODO: Do we need to export both the date_from & date_from_numeric fields?
+
+  mstones <- .get.mstone()
+  mstones
+}
+
+
+#' @importFrom utils data
+.get.mstone <- function(){
+  .mstone.env <- new.env()
+  data(milestone, package = 'milestoneR', envir = .mstone.env)
+  .mstone.env$milestone
+}
+
+#' @name milestone-data
+#' @rdname milestone
+#' @format A data frame. See \code{\link{milestone}} for details.
+NULL

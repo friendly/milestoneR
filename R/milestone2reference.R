@@ -19,8 +19,10 @@
 #' @seealso \code{\link{reference}}, \code{\link{milestone}}
 #'
 #' @examples
+#' \dontrun{
 #' # Get milestone-reference links
 #' m2r <- milestone2reference()
+#' }
 #'
 milestone2reference <- function() {
   .m2r.env <- new.env()
@@ -28,16 +30,7 @@ milestone2reference <- function() {
   .m2r.env$milestone2reference
 }
 
-#' Milestone-to-reference linking data
-#'
-#' A linking table that associates milestones with their bibliographic references.
-#'
-#' @format A data frame with 347 rows and 3 variables:
-#' \describe{
-#'   \item{mid}{milestone id, a numeric vector}
-#'   \item{rid}{reference id, a numeric vector}
-#'   \item{extra}{extra information about the reference, a character vector}
-#' }
-#' @source \url{https://datavis.ca/milestones/}
-#' @seealso \code{\link{reference}}, \code{\link{milestone}}
-"milestone2reference"
+#' @name milestone2reference-data
+#' @rdname milestone2reference
+#' @format A data frame. See \code{\link{milestone2reference}} for details.
+NULL

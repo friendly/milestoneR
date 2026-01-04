@@ -5,7 +5,7 @@
 \alias{mediaitem}
 \title{Retrieve the `mediaitem` table from the milestones database}
 \format{
-A data frame with 600 rows and 7 variables:
+A data frame with 600 rows and 8 variables:
 \describe{
   \item{miid}{mediaitem id, a numeric vector}
   \item{type}{type (link or image), a character vector}
@@ -14,6 +14,7 @@ A data frame with 600 rows and 7 variables:
   \item{caption}{caption text, a character vector}
   \item{source}{source of the media, a character vector}
   \item{mid}{milestone id to which this is attached, a numeric vector}
+  \item{type2}{secondary type classification, a character vector}
 }
 }
 \source{

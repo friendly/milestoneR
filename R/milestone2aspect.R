@@ -20,8 +20,10 @@
 #' @seealso \code{\link{aspect}}, \code{\link{milestone}}
 #'
 #' @examples
+#' \dontrun{
 #' # Get milestone-aspect links
 #' m2a <- milestone2aspect()
+#' }
 #'
 milestone2aspect <- function() {
   .m2a.env <- new.env()
@@ -29,17 +31,7 @@ milestone2aspect <- function() {
   .m2a.env$milestone2aspect
 }
 
-#' Milestone-to-aspect linking data
-#'
-#' A linking table that associates milestones with their aspect classifications.
-#' The aspect field is included for convenience.
-#'
-#' @format A data frame with 299 rows and 3 variables:
-#' \describe{
-#'   \item{mid}{milestone id, a numeric vector}
-#'   \item{asid}{aspect id, a numeric vector}
-#'   \item{aspect}{aspect name, a character vector}
-#' }
-#' @source \url{https://datavis.ca/milestones/}
-#' @seealso \code{\link{aspect}}, \code{\link{milestone}}
-"milestone2aspect"
+#' @name milestone2aspect-data
+#' @rdname milestone2aspect
+#' @format A data frame. See \code{\link{milestone2aspect}} for details.
+NULL

@@ -21,11 +21,6 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 4.1.0)
-Imports: 
-    dplyr,
-    tibble,
-    lubridate,
-    textutils
 URL: https://github.com/friendly/milestoneR
 BugReports: https://github.com/friendly/milestoneR/issues
 RoxygenNote: 7.3.3
