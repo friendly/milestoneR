@@ -278,7 +278,83 @@ Description text here...
 4. **Export to PDF** - Via markdown -> pandoc
 5. **Timeline view** - Show multiple milestones chronologically
 6. **Filtering** - Filter by keyword, subject, aspect, date range
-7. **Full-text search** - Search across descriptions
+7. ~~**Full-text search** - Search across descriptions~~ **✅ IMPLEMENTED**
+
+## Search Functions Implementation
+
+The following search functions have been implemented in `R/search_milestones.R`:
+
+### `search_milestones(pattern, fields, output, ignore.case, ...)`
+
+Primary full-text search function that searches across milestone fields.
+
+**Features:**
+- Regular expression support for flexible pattern matching
+- Multiple field search with OR logic (matches if pattern appears in ANY field)
+- Three output formats: "mid" (IDs), "print" (formatted), "data" (data frame)
+- Case-insensitive by default
+- Searchable fields: description, tag, note, slug, date_from, date_to, location, extra
+
+**Examples:**
+```r
+# Find milestones mentioning "statistical"
+search_milestones("statistical")
+
+# Search in specific fields with regex
+search_milestones("chart|graph", fields = "description")
+
+# Get formatted output
+search_milestones("contour", output = "print")
+
+# Case-sensitive search
+search_milestones("Map", ignore.case = FALSE)
+```
+
+### `search_keywords(pattern, ignore.case, output, ...)`
+
+Convenience function to search by milestone keywords.
+
+**Features:**
+- Searches the keyword field in milestone2keyword table
+- Returns milestones tagged with matching keywords
+- Same output options as search_milestones()
+
+**Examples:**
+```r
+# Find milestones with statistical keywords
+search_keywords("statistic")
+
+# Print results
+search_keywords("visualization", output = "print")
+```
+
+### `search_authors(pattern, name_fields, ignore.case, output, ...)`
+
+Search for milestones by author name.
+
+**Features:**
+- Searches across author name fields (givennames, lname, prefix, suffix)
+- Returns milestones associated with matching authors
+- Can search specific name fields or all of them
+
+**Examples:**
+```r
+# Find Playfair's milestones
+search_authors("Playfair")
+
+# Find all authors named John
+search_authors("John", name_fields = "givennames")
+
+# Search only last names
+search_authors("Nightingale", name_fields = "lname")
+```
+
+### Implementation Notes
+
+- All search functions use `grepl()` for regex pattern matching
+- Empty results return appropriate empty structures with informative messages
+- Output formats are consistent across all search functions
+- Additional arguments can be passed to `print_milestone()` when output = "print"
 
 ## PHP Source Code Analysis
 

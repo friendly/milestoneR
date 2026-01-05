@@ -6,6 +6,7 @@
 * All data tables now available via accessor functions like `authors()`, `milestone()`
 * Added `print_reference()`, print_author()` w/ output to text, html, markdown, bibtex
 * Implement `print_milestone()` method with helper functions
+* Added search_* functions
 
 ## milestoneR 0.0.0.9000
 
