@@ -133,6 +133,25 @@ Functions for formatted display of database entries:
   - Includes birth/death dates and locations
   - Multiple output formats
 
+### Search Functions
+
+Functions for searching and filtering milestones:
+
+- `search_milestones(pattern, fields, output, ignore.case, ...)` -
+  Full-text search across milestone fields
+  - Regular expression support for flexible pattern matching
+  - Search in description, tag, note, location, and other fields
+  - Three output formats: “mid” (IDs), “print” (formatted), “data” (data
+    frame)
+- `search_keywords(pattern, ignore.case, output, ...)` - Search by
+  milestone keywords
+  - Find milestones tagged with specific keywords
+  - Same output options as search_milestones()
+- `search_authors(pattern, name_fields, ignore.case, output, ...)` -
+  Search by author name
+  - Find milestones associated with specific authors
+  - Search across given names, last names, or both
+
 ## Example
 
 ``` r
@@ -213,19 +232,64 @@ milestoneR::print_reference(refs$rid[1], bibtex = TRUE)
 #> }
 ```
 
-### Searching and Filtering
+### Searching Milestones
+
+The package provides flexible search functions for finding milestones by
+text, keywords, or authors.
 
 ``` r
-# Find milestones with specific keywords
-m2k <- milestoneR::milestone2keyword()
-contour_mids <- m2k[grepl("contour", m2k$keyword, ignore.case = TRUE), "mid"]
-cat("Milestones with 'contour' keyword:", paste(unique(contour_mids), collapse = ", "), "\n")
-#> Milestones with 'contour' keyword: 65, 117, 145, 83, 53
+# Full-text search for "statistical" in descriptions, tags, and notes
+stat_ids <- search_milestones("statistical")
+cat("Found", length(stat_ids), "milestones mentioning 'statistical'\n")
+#> Found 51 milestones mentioning 'statistical'
+cat("First 5:", paste(head(stat_ids, 5), collapse = ", "), "\n")
+#> First 5: 36, 38, 55, 76, 94
 
+# Use regex to find "chart" OR "graph"
+chart_ids <- search_milestones("chart|graph", fields = c("description", "tag"))
+cat("\nFound", length(chart_ids), "milestones with 'chart' or 'graph'\n")
+#> 
+#> Found 132 milestones with 'chart' or 'graph'
+
+# Search by keyword
+contour_ids <- search_keywords("contour")
+cat("\nMilestones tagged with 'contour':", paste(contour_ids, collapse = ", "), "\n")
+#> 
+#> Milestones tagged with 'contour': 65, 117, 145, 83, 53
+
+# Search by author name
+playfair_ids <- search_authors("Playfair")
+cat("\nWilliam Playfair's milestones:", paste(playfair_ids, collapse = ", "), "\n")
+#> 
+#> William Playfair's milestones: 80, 89
+
+# Get formatted output for one result
+cat("\nFormatted milestone:\n")
+#> 
+#> Formatted milestone:
+search_milestones("Florence Nightingale", fields = "description", output = "print")
+#> [1829] Polar-area charts
+#> Authors: André Michel Guerry
+#> 
+#> Polar-area charts (predating those by Florence Nightingale cite{Nightingale:1857}), showing frequency of events for cyclic phenomena
+#> 
+#> Location: France
+#> Keywords: chart!polar, coxcomb
+#> Subjects: Physical
+#> Aspects: Statistics & Graphics
+#> 
+#> Note: The plate shows six polar diagrams for daily phenomena: direction of the wind in 8 sectors, births and deaths by hour of theday.
+#> 
+#> References:
+#>   - Balbi, Adriano & Guerry, André-Michel. (1829). "Tableau des Variations météorologique comparées aux phénomènes physiologiques, d'aprés les observations faites à l'Obervatoire royal, et les recherches statistique les plus récentes". _Annales d'Hygiène Publique et de Médecine Légale_. 1(NULL). pp. 228-
+```
+
+### Filtering by Date
+
+``` r
 # Find milestones from a specific time period
 ms_1800s <- ms[ms$date_from_numeric >= 1800 & ms$date_from_numeric < 1900, ]
-cat("\nNumber of milestones from 1800-1899:", nrow(ms_1800s), "\n")
-#> 
+cat("Number of milestones from 1800-1899:", nrow(ms_1800s), "\n")
 #> Number of milestones from 1800-1899: 98
 cat("First few:\n")
 #> First few:
