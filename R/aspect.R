@@ -22,7 +22,7 @@
 #' @examples
 #' \dontrun{
 #' # Get all aspects
-#' asp <- aspect()
+#' aspect()
 #' }
 #'
 aspect <- function() {

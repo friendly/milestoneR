@@ -10,12 +10,12 @@ get_milestone_media(mid)
 \item{mid}{A numeric vector of milestone IDs}
 }
 \value{
-A data frame with columns from both milestone2mediaitem and mediaitem tables,
-  including mid, mediaid, and all media fields (title, caption, url, type, etc.)
+A data frame with columns from the mediaitem table, including mid, miid,
+  type, url, title, caption, source, and type2
 }
 \description{
-Retrieves media item information for one or more milestones by joining the
-milestone2mediaitem linking table with the mediaitem table.
+Retrieves media item information for one or more milestones from the mediaitem table,
+which contains the mid field directly (no linking table needed).
 }
 \examples{
 \dontrun{

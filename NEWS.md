@@ -7,6 +7,7 @@
 * Added `print_reference()`, print_author()` w/ output to text, html, markdown, bibtex
 * Implement `print_milestone()` method with helper functions
 * Added search_* functions
+* Display media items [link|image] in the print method 
 
 ## milestoneR 0.0.0.9000
 

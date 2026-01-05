@@ -100,13 +100,13 @@ get_milestone_references <- function(mid) {
 
 #' Get media items associated with milestone(s)
 #'
-#' Retrieves media item information for one or more milestones by joining the
-#' milestone2mediaitem linking table with the mediaitem table.
+#' Retrieves media item information for one or more milestones from the mediaitem table,
+#' which contains the mid field directly (no linking table needed).
 #'
 #' @param mid A numeric vector of milestone IDs
 #'
-#' @return A data frame with columns from both milestone2mediaitem and mediaitem tables,
-#'   including mid, mediaid, and all media fields (title, caption, url, type, etc.)
+#' @return A data frame with columns from the mediaitem table, including mid, miid,
+#'   type, url, title, caption, source, and type2
 #'
 #' @export
 #'
@@ -120,42 +120,21 @@ get_milestone_references <- function(mid) {
 #' }
 #'
 get_milestone_media <- function(mid) {
-  # Try to load milestone2mediaitem, suppressing warnings if not found
-  .m2m.env <- new.env()
-
-  # Attempt to load the data, catching any errors/warnings
-  result <- tryCatch({
-    suppressWarnings(utils::data(milestone2mediaitem, package = 'milestoneR', envir = .m2m.env))
-    TRUE
-  }, error = function(e) {
-    FALSE
-  })
-
-  # If loading failed or data doesn't exist, return empty data frame
-  if (!result || !exists("milestone2mediaitem", envir = .m2m.env)) {
-    return(data.frame())
-  }
-
-  m2m <- .m2m.env$milestone2mediaitem
-
-  # Filter by requested milestone IDs
-  m2m_subset <- m2m[m2m$mid %in% mid, ]
-
-  # If no matches, return empty data frame
-  if (nrow(m2m_subset) == 0) {
-    return(data.frame())
-  }
-
-  # Load mediaitem table
+  # Load mediaitem table (contains mid field directly - no linking table needed)
   .media.env <- new.env()
   utils::data(mediaitem, package = 'milestoneR', envir = .media.env)
   media <- .media.env$mediaitem
 
-  # Join with mediaitem table
-  result <- merge(m2m_subset, media, by = "mediaid", all.x = TRUE)
+  # Filter by requested milestone IDs
+  result <- media[media$mid %in% mid, ]
 
-  # Order by mid, then mediaid
-  result <- result[order(result$mid, result$mediaid), ]
+  # If no matches, return empty data frame
+  if (nrow(result) == 0) {
+    return(data.frame())
+  }
+
+  # Order by mid, then miid (media item id)
+  result <- result[order(result$mid, result$miid), ]
 
   result
 }

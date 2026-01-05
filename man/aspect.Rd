@@ -32,7 +32,7 @@ The aspect classification indicates the role an event played in the history
 \examples{
 \dontrun{
 # Get all aspects
-asp <- aspect()
+aspect()
 }
 
 }

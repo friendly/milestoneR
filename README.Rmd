@@ -190,6 +190,7 @@ milestoneR::print_reference(refs$rid[1], bibtex = TRUE)
 ### Searching Milestones
 
 The package provides flexible search functions for finding milestones by text, keywords, or authors.
+The search term can be a regular expression (via `grepl()`).
 
 ```{r searching}
 # Full-text search for "statistical" in descriptions, tags, and notes
