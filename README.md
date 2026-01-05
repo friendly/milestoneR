@@ -1,26 +1,32 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Last
 Commit](https://img.shields.io/github/last-commit/friendly/heplots)](https://github.com/friendly/heplots/)
 <!-- badges: end -->
 
 # milestoneR <img src="man/figures/logo.png" height="200" style="float:right; height:200px;"/>
 
+The goal of the `milestoneR` package is to provide R access to the
+database tables used in the Milestones Project, reflecting the history
+of data visualization, as used in <http://datavis.ca/milestones> and
+other applications on this site, such as the [Milestones
+Calendar](http://www.datavis.ca/milestones-cal/). This project is
+described in Friendly et al. (2015).
 
-The goal of the `milestoneR` package is to provide R access to the database tables used in the Milestones Project,
-  reflecting the history of data visualization, as used in http://datavis.ca/milestones and other applications
-  on this site, such as the [Milestones Calendar](http://www.datavis.ca/milestones-cal/).
-  This project is described in Friendly et al. (2015).
-  
-  Another goal is to document what we have done to create a database comprised of important events in this
-  history, combined with source images, external links, references, etc. to make this useful for further
-  research.
+Another goal is to document what we have done to create a database
+comprised of important events in this history, combined with source
+images, external links, references, etc. to make this useful for further
+research.
 
 ## Installation
 
-This package is not yet for public use. If you have access to this private repo, you can install it
-with:
+This package is not yet on CRAN. You can install this development
+version with:
 
 ``` r
 remotes::install_github("friendly/milestoneR")
@@ -28,52 +34,212 @@ remotes::install_github("friendly/milestoneR")
 
 <!--
 You can install the released version of milestoneR from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
+&#10;``` r
 install.packages("milestoneR")
 ```
 -->
 
 ## Database schema
 
-The milestones database was designed as a relational database (implemented in MySQL).
-It consists of the tables shown in the figure below.
+The milestones database was designed as a relational database
+(implemented in MySQL). It consists of the tables shown in the figure
+below.
 
-The main table
-(`milestone`) contains information regarding each of the items considered a milestone in the history
-of data visualization. These are linked
-to other tables (e.g., `author`, `reference`, `mediaitem`) by unique (primary) keys: `mid` is the
-key for a given milestones item. 
+The main table (`milestone`) contains information regarding each of the
+items considered a milestone in the history of data visualization. These
+are linked to other tables (e.g., `author`, `reference`, `mediaitem`) by
+unique (primary) keys: `mid` is the key for a given milestones item.
 
-Each milestones item is coarsely classified in two tables: 
+Each milestones item is coarsely classified in two tables:
 
-* `subject` indicates the substantive context of the milestones event, with categories "Physical",
-"Mathematical", "Human", "Other".
+- `subject` indicates the substantive context of the milestones event,
+  with categories “Physical”, “Mathematical”, “Human”, “Other”.
 
-* `aspect` indicates the role this event played in the history of data visualization, with categories
-"Cartography", "Statistics & Graphics", "Technology", "Other".
+- `aspect` indicates the role this event played in the history of data
+  visualization, with categories “Cartography”, “Statistics & Graphics”,
+  “Technology”, “Other”.
 
-In addition, there is a freeform `keyword` table listing keywords or terms attached to milestones items.
+In addition, there is a freeform `keyword` table listing keywords or
+terms attached to milestones items.
 
-Other supporting tables (e.g., `milestones2subject`, `milestone2aspect`) provide for convenient lookups of descriptors of these
-milestones items (subject, aspect, keyword) using the milestones id (`mid`) as the key.
+Other supporting tables (e.g., `milestones2subject`, `milestone2aspect`)
+provide for convenient lookups of descriptors of these milestones items
+(subject, aspect, keyword) using the milestones id (`mid`) as the key.
 
-![Milestones database schema](man/figures/database-schema.png)
+<figure>
+<img src="man/figures/database-schema.png"
+alt="Milestones database schema" />
+<figcaption aria-hidden="true">Milestones database schema</figcaption>
+</figure>
+
+## Package Functions
+
+The `milestoneR` package provides three main categories of functions:
+
+### Data Accessor Functions
+
+These functions retrieve the main tables from the package:
+
+- `milestone()` - Get the main milestone table (297 milestones)
+- `authors()` - Get the author table (268 authors)
+- `reference()` - Get the reference table (352 references)
+- `mediaitem()` - Get the media items table
+- `keyword()` - Get the keyword lookup table (335 keywords)
+- `subject()` - Get the subject lookup table (4 subjects)
+- `aspect()` - Get the aspect lookup table (4 aspects)
+
+Linking tables that connect milestones to other entities:
+
+- `milestone2author()` - Links milestones to authors
+- `milestone2reference()` - Links milestones to references
+- `milestone2keyword()` - Links milestones to keywords (includes keyword
+  names)
+- `milestone2subject()` - Links milestones to subjects (includes subject
+  names)
+- `milestone2aspect()` - Links milestones to aspects (includes aspect
+  names)
+
+### Helper Functions for Milestones
+
+These functions retrieve related information for one or more milestones:
+
+- `get_milestone_authors(mid)` - Get authors associated with
+  milestone(s)
+- `get_milestone_references(mid)` - Get references for milestone(s)
+- `get_milestone_keywords(mid)` - Get keywords for milestone(s)
+- `get_milestone_subjects(mid)` - Get subjects for milestone(s)
+- `get_milestone_aspects(mid)` - Get aspects for milestone(s)
+- `get_milestone_media(mid)` - Get media items for milestone(s)
+
+These functions accept single or multiple milestone IDs and return
+joined data frames.
+
+### Print Functions
+
+Functions for formatted display of database entries:
+
+- `print_milestone(mid, result = c("text", "html", "md"))` - Print
+  complete milestone information
+  - Includes authors, description, keywords, subjects, aspects,
+    references
+  - Multiple output formats: text, HTML, or markdown
+  - Optional `include` parameter to select which sections to display
+- `print_reference(rid, result = c("text", "html", "md", "bibtex"))` -
+  Print formatted references
+  - Standard citation formats plus BibTeX output
+  - Accepts single or multiple reference IDs
+- `print_author(aid, result = c("text", "html", "md"))` - Print author
+  information
+  - Includes birth/death dates and locations
+  - Multiple output formats
 
 ## Example
 
-This is a stub for a basic example which shows you how to solve a common problem:
-
 ``` r
 library(milestoneR)
-## basic example code
+
+# Get all milestones
+ms <- milestoneR::milestone()
+cat("Total milestones:", nrow(ms), "\n")
+#> Total milestones: 297
+
+# Look at Halley's 1701 contour map milestone
+halley <- ms[ms$date_from_numeric == 1701, ]
+cat("\nMilestone:", halley$tag, "\n")
+#> 
+#> Milestone: 1st contour map?
+cat("Date:", halley$date_from, "\n")
+#> Date: 1701
+
+# Get related information using helper functions
+authors <- milestoneR::get_milestone_authors(halley$mid)
+cat("\nAuthor:", authors$givennames, authors$lname, "\n")
+#> 
+#> Author: Edmond Halley
+
+keywords <- milestoneR::get_milestone_keywords(halley$mid)
+cat("Keywords:", paste(keywords$keyword, collapse = ", "), "\n")
+#> Keywords: contour map, isogonic
+
+# Print the complete milestone in text format
+cat("\n--- Complete Milestone (text format) ---\n")
+#> 
+#> --- Complete Milestone (text format) ---
+milestoneR::print_milestone(halley$mid)
+#> [1701] 1st contour map?
+#> Authors: Edmond Halley
+#> 
+#> Contour maps showing curves of equal value (an isogonic map, lines of equal magnetic declination for the world, possibly the first contour map of a data-based variable)
+#> 
+#> Keywords: contour map, isogonic
+#> Subjects: Physical
+#> Aspects: Statistics & Graphics
+#> 
+#> References:
+#>   - Halley, Edmund. (1701). "The Description and Uses of a New, and Correct Sea-Chart of the Whole World, Shewing Variations of the Compass"
+#>   - Abbott, Edwin A. (1884). "Flatland: A Romance of Many Dimensions". Cutchogue, NY: Buccaneer Books. [(1976 reprint of the 1884 edition)]
+```
+
+### Working with References
+
+``` r
+# Get references for a milestone
+refs <- milestoneR::get_milestone_references(53)
+cat("References for milestone 53:\n")
+#> References for milestone 53:
+print(refs[, c("rid", "bibtexkey", "author", "year")])
+#>   rid   bibtexkey          author year
+#> 1 290 Halley:1701  Halley, Edmund 1701
+#> 2 365 Abbott:1884 Abbott, Edwin A 1884
+
+# Print formatted reference
+cat("\nFormatted reference (text):\n")
+#> 
+#> Formatted reference (text):
+milestoneR::print_reference(refs$rid[1])
+#> Halley, Edmund. (1701). "The Description and Uses of a New, and Correct Sea-Chart of the Whole World, Shewing Variations of the Compass"
+
+# Print as BibTeX
+cat("\nAs BibTeX:\n")
+#> 
+#> As BibTeX:
+milestoneR::print_reference(refs$rid[1], bibtex = TRUE)
+#> @article{Halley:1701,
+#>   author = {Halley, Edmund},
+#>   title = {The Description and Uses of a New, and Correct Sea-Chart of the Whole World, Shewing Variations of the Compass},
+#>   year = {1701},
+#>   publisher = {Author},
+#>   address = {London}
+#> }
+```
+
+### Searching and Filtering
+
+``` r
+# Find milestones with specific keywords
+m2k <- milestoneR::milestone2keyword()
+contour_mids <- m2k[grepl("contour", m2k$keyword, ignore.case = TRUE), "mid"]
+cat("Milestones with 'contour' keyword:", paste(unique(contour_mids), collapse = ", "), "\n")
+#> Milestones with 'contour' keyword: 65, 117, 145, 83, 53
+
+# Find milestones from a specific time period
+ms_1800s <- ms[ms$date_from_numeric >= 1800 & ms$date_from_numeric < 1900, ]
+cat("\nNumber of milestones from 1800-1899:", nrow(ms_1800s), "\n")
+#> 
+#> Number of milestones from 1800-1899: 98
+cat("First few:\n")
+#> First few:
+print(ms_1800s[1:3, c("mid", "date_from", "tag")])
+#>    mid date_from                         tag
+#> 87  87      1800            Coordinate paper
+#> 88  88      1800 Automatic time-series graph
+#> 89  89      1801                   Pie chart
 ```
 
 ## References
 
-Friendly, M., Sigal, M. & Harnanansingh, D. (2015).
-"The Milestones Project: A Database for the History of Data Visualization."
-In Kimball, M. & Kostelnick, C. (Eds.) 
-_Visible Numbers: The History of Data Visualization_, Chapter 10.
-London, UK: Ashgate Press.
+Friendly, M., Sigal, M. & Harnanansingh, D. (2015). “The Milestones
+Project: A Database for the History of Data Visualization.” In Kimball,
+M. & Kostelnick, C. (Eds.) *Visible Numbers: The History of Data
+Visualization*, Chapter 10. London, UK: Ashgate Press.
 [preprint](http://datavis.ca/papers/MilestonesProject.pdf)

@@ -3,7 +3,12 @@
     "allow": [
       "Bash(Rscript:*)",
       "Bash(ls:*)",
-      "Bash(xargs:*)"
+      "Bash(xargs:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:datavis.ca)",
+      "Bash(echo:*)",
+      "Bash(cat:*)"
     ]
   }
 }

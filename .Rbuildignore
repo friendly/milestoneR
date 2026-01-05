@@ -5,3 +5,4 @@ extra/
 ^dev$
 ^.claude$
 
+^README\.Rmd$
