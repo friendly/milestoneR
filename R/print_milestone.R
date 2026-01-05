@@ -4,7 +4,7 @@
 #' HTML, or markdown, including all associated information (authors, references,
 #' keywords, subjects, aspects, media).
 #'
-#' @param ms A data frame from the \code{\link{milestone}} table (one or more rows),
+#' @param ms A data frame from the [milestone()] table (one or more rows),
 #'   or a numeric vector of milestone IDs (mid) to look up
 #' @param result Output format: "text" for plain text (default),
 #'   "html" for HTML formatted output, or "md"/"markdown" for markdown format

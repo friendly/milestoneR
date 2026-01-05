@@ -11,7 +11,7 @@ print_reference(
 )
 }
 \arguments{
-\item{ref}{A data frame from the \code{\link{reference}} table (one or more rows),
+\item{ref}{A data frame from the \code{\link[=reference]{reference()}} table (one or more rows),
 or a numeric vector of reference IDs (rid) to look up}
 
 \item{result}{Output format: "text" for plain text citation (default),
@@ -23,7 +23,7 @@ Default is FALSE.}
 }
 \value{
 A character vector with the formatted references (invisibly). The
-  formatted references are also printed to the console.
+formatted references are also printed to the console.
 }
 \description{
 Format and print reference entries from the milestones database as text,

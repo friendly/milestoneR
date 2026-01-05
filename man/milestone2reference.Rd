@@ -3,28 +3,28 @@
 \name{milestone2reference}
 \alias{milestone2reference}
 \alias{milestone2reference-data}
-\title{Retrieve the `milestone2reference` table from the milestones database}
+\title{Retrieve the \code{milestone2reference} table from the milestones database}
 \format{
-A data frame. See \code{\link{milestone2reference}} for details.
+A data frame. See \code{\link[=milestone2reference]{milestone2reference()}} for details.
 }
 \usage{
 milestone2reference()
 }
 \value{
-Returns a tibble of the `milestone2reference` table
+Returns a tibble of the \code{milestone2reference} table
 }
 \description{
-The `milestone2reference` table links milestones to their references.
+The \code{milestone2reference} table links milestones to their references.
 }
 \details{
-The fields in the `milestone2reference` table are:
- \describe{
-  \item{\code{mid}}{milestone id, a numeric vector}
-  \item{\code{rid}}{reference id, a numeric vector}
- }
+The fields in the \code{milestone2reference} table are:
+\describe{
+\item{\code{mid}}{milestone id, a numeric vector}
+\item{\code{rid}}{reference id, a numeric vector}
+}
 
- This table links milestones to references. Use with \code{\link{reference}}
- to get reference information.
+This table links milestones to references. Use with \code{\link[=reference]{reference()}}
+to get reference information.
 }
 \examples{
 \dontrun{
@@ -34,5 +34,5 @@ m2r <- milestone2reference()
 
 }
 \seealso{
-\code{\link{reference}}, \code{\link{milestone}}
+\code{\link[=reference]{reference()}}, \code{\link[=milestone]{milestone()}}
 }

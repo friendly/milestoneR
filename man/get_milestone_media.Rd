@@ -11,7 +11,7 @@ get_milestone_media(mid)
 }
 \value{
 A data frame with columns from the mediaitem table, including mid, miid,
-  type, url, title, caption, source, and type2
+type, url, title, caption, source, and type2
 }
 \description{
 Retrieves media item information for one or more milestones from the mediaitem table,

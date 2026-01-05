@@ -6,6 +6,10 @@ source(here("data-raw", "html2latin1.R"))
 
 reference <- read_csv("data-raw/reference.csv")
 
+# Convert all "NULL" strings to NA for consistency
+reference <- reference |>
+  mutate(across(everything(), ~ifelse(.x == "NULL", NA, .x)))
+
 # fix books that have a booktitle rather than title; booktitle should only be used for incollection.
 # This is very messy, but it works.
 # Should we also make booktitle NA for books?

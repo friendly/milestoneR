@@ -5,7 +5,7 @@
 \alias{author}
 \title{Author data from the Milestones Project}
 \format{
-A data frame. See \code{\link{authors}} for details.
+A data frame. See \code{\link[=authors]{authors()}} for details.
 }
 \source{
 \url{https://datavis.ca/milestones/}
@@ -16,25 +16,25 @@ authors()
 \value{
 A data frame with 290 rows and 15 variables:
 \describe{
-  \item{aid}{author id, a numeric vector}
-  \item{prefix}{name prefix, a character vector}
-  \item{givennames}{given names, a character vector}
-  \item{lname}{last name, a character vector}
-  \item{suffix}{name suffix, a character vector}
-  \item{lived}{years lived, a character vector}
-  \item{birthdate}{birth date, a Date vector}
-  \item{birthplace}{place of birth, a character vector}
-  \item{birthlat}{latitude of birthplace, a numeric vector}
-  \item{birthlong}{longitude of birthplace, a numeric vector}
-  \item{deathdate}{death date, a Date vector}
-  \item{deathplace}{place of death, a character vector}
-  \item{deathlat}{latitude of deathplace, a numeric vector}
-  \item{deathlong}{longitude of deathplace, a numeric vector}
-  \item{note}{notes about this author, a character vector}
+\item{aid}{author id, a numeric vector}
+\item{prefix}{name prefix, a character vector}
+\item{givennames}{given names, a character vector}
+\item{lname}{last name, a character vector}
+\item{suffix}{name suffix, a character vector}
+\item{lived}{years lived, a character vector}
+\item{birthdate}{birth date, a Date vector}
+\item{birthplace}{place of birth, a character vector}
+\item{birthlat}{latitude of birthplace, a numeric vector}
+\item{birthlong}{longitude of birthplace, a numeric vector}
+\item{deathdate}{death date, a Date vector}
+\item{deathplace}{place of death, a character vector}
+\item{deathlat}{latitude of deathplace, a numeric vector}
+\item{deathlong}{longitude of deathplace, a numeric vector}
+\item{note}{notes about this author, a character vector}
 }
 }
 \description{
-Retrieve the `author` table containing information about authors associated
+Retrieve the \code{author} table containing information about authors associated
 with milestone events in the history of data visualization.
 }
 \examples{

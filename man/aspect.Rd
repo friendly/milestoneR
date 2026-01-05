@@ -5,7 +5,7 @@
 \alias{aspect-data}
 \title{Aspect classification data from the Milestones Project}
 \format{
-A data frame. See \code{\link{aspect}} for details.
+A data frame. See \code{\link[=aspect]{aspect()}} for details.
 }
 \source{
 \url{https://datavis.ca/milestones/}
@@ -16,18 +16,18 @@ aspect()
 \value{
 A data frame with 4 rows and 2 variables:
 \describe{
-  \item{asid}{aspect id, a numeric vector}
-  \item{name}{aspect name (Cartography, Statistics & Graphics, Technology, Other), a character vector}
+\item{asid}{aspect id, a numeric vector}
+\item{name}{aspect name (Cartography, Statistics & Graphics, Technology, Other), a character vector}
 }
 }
 \description{
-Retrieve the `aspect` table containing aspect classifications that indicate
+Retrieve the \code{aspect} table containing aspect classifications that indicate
 the role milestone events played in the history of data visualization.
 }
 \details{
 The aspect classification indicates the role an event played in the history
- of data visualization. Use \code{\link{milestone2aspect}} to link milestones
- to their aspects.
+of data visualization. Use \code{\link[=milestone2aspect]{milestone2aspect()}} to link milestones
+to their aspects.
 }
 \examples{
 \dontrun{
@@ -37,5 +37,5 @@ aspect()
 
 }
 \seealso{
-\code{\link{milestone2aspect}}
+\code{\link[=milestone2aspect]{milestone2aspect()}}
 }

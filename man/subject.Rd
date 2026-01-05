@@ -5,7 +5,7 @@
 \alias{subject-data}
 \title{Subject classification data from the Milestones Project}
 \format{
-A data frame. See \code{\link{subject}} for details.
+A data frame. See \code{\link[=subject]{subject()}} for details.
 }
 \source{
 \url{https://datavis.ca/milestones/}
@@ -16,17 +16,17 @@ subject()
 \value{
 A data frame with 4 rows and 2 variables:
 \describe{
-  \item{sid}{subject id, a numeric vector}
-  \item{name}{subject name (Physical, Mathematical, Human, Other), a character vector}
+\item{sid}{subject id, a numeric vector}
+\item{name}{subject name (Physical, Mathematical, Human, Other), a character vector}
 }
 }
 \description{
-Retrieve the `subject` table containing subject classifications that indicate
+Retrieve the \code{subject} table containing subject classifications that indicate
 the substantive context of milestone events.
 }
 \details{
 The subject classification indicates the substantive context of the milestone event.
- Use \code{\link{milestone2subject}} to link milestones to their subjects.
+Use \code{\link[=milestone2subject]{milestone2subject()}} to link milestones to their subjects.
 }
 \examples{
 \dontrun{
@@ -36,5 +36,5 @@ subj <- subject()
 
 }
 \seealso{
-\code{\link{milestone2subject}}
+\code{\link[=milestone2subject]{milestone2subject()}}
 }

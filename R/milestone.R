@@ -22,7 +22,7 @@
 #'   \item{extra}{extra information, a character vector}
 #' }
 #'
-#' @source \url{https://datavis.ca/milestones/}
+#' @source <https://datavis.ca/milestones/>
 #' @importFrom utils data
 #' @export
 #'
@@ -57,5 +57,5 @@ milestone <- function() {
 
 #' @name milestone-data
 #' @rdname milestone
-#' @format A data frame. See \code{\link{milestone}} for details.
+#' @format A data frame. See [milestone()] for details.
 NULL

@@ -6,18 +6,18 @@
 #' @details
 #'  The fields in the `milestone2aspect` table are:
 #'  \describe{
-#'   \item{\code{mid}}{milestone id, a numeric vector}
-#'   \item{\code{asid}}{aspect id, a numeric vector}
-#'   \item{\code{aspect}}{aspect name, a character vector}
+#'   \item{`mid`}{milestone id, a numeric vector}
+#'   \item{`asid`}{aspect id, a numeric vector}
+#'   \item{`aspect`}{aspect name, a character vector}
 #'  }
 #'
-#'  This table links milestones to aspects. The \code{aspect} field is included
-#'  for convenience (joined from the \code{\link{aspect}} table).
+#'  This table links milestones to aspects. The `aspect` field is included
+#'  for convenience (joined from the [aspect()] table).
 #'
 #' @importFrom utils data
 #' @export
 #'
-#' @seealso \code{\link{aspect}}, \code{\link{milestone}}
+#' @seealso [aspect()], [milestone()]
 #'
 #' @examples
 #' \dontrun{
@@ -33,5 +33,5 @@ milestone2aspect <- function() {
 
 #' @name milestone2aspect-data
 #' @rdname milestone2aspect
-#' @format A data frame. See \code{\link{milestone2aspect}} for details.
+#' @format A data frame. See [milestone2aspect()] for details.
 NULL

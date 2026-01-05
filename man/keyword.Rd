@@ -5,7 +5,7 @@
 \alias{keyword-data}
 \title{Keyword data from the Milestones Project}
 \format{
-A data frame. See \code{\link{keyword}} for details.
+A data frame. See \code{\link[=keyword]{keyword()}} for details.
 }
 \source{
 \url{https://datavis.ca/milestones/}
@@ -16,18 +16,18 @@ keyword()
 \value{
 A data frame with 335 rows and 2 variables:
 \describe{
-  \item{kid}{keyword id, a numeric vector}
-  \item{name}{keyword name, a character vector}
+\item{kid}{keyword id, a numeric vector}
+\item{name}{keyword name, a character vector}
 }
 }
 \description{
-Retrieve the `keyword` table containing keywords or terms attached to
+Retrieve the \code{keyword} table containing keywords or terms attached to
 milestone items as a freeform classification.
 }
 \details{
 This is a freeform classification listing keywords or terms attached to
- milestone items. Use \code{\link{milestone2keyword}} to link milestones
- to their keywords.
+milestone items. Use \code{\link[=milestone2keyword]{milestone2keyword()}} to link milestones
+to their keywords.
 }
 \examples{
 \dontrun{
@@ -41,5 +41,5 @@ kw |> filter(grepl("chart", name, ignore.case = TRUE))
 
 }
 \seealso{
-\code{\link{milestone2keyword}}
+\code{\link[=milestone2keyword]{milestone2keyword()}}
 }

@@ -6,17 +6,17 @@
 #' @details
 #'  The fields in the `milestone2author` table are:
 #'  \describe{
-#'   \item{\code{mid}}{milestone id, a numeric vector}
-#'   \item{\code{aid}}{author id, a numeric vector}
+#'   \item{`mid`}{milestone id, a numeric vector}
+#'   \item{`aid`}{author id, a numeric vector}
 #'  }
 #'
-#'  This table links milestones to authors. Use with \code{\link{authors}}
+#'  This table links milestones to authors. Use with [authors()]
 #'  to get author information.
 #'
 #' @importFrom utils data
 #' @export
 #'
-#' @seealso \code{\link{authors}}, \code{\link{milestone}}
+#' @seealso [authors()], [milestone()]
 #'
 #' @examples
 #' \dontrun{
@@ -32,5 +32,5 @@ milestone2author <- function() {
 
 #' @name milestone2author-data
 #' @rdname milestone2author
-#' @format A data frame. See \code{\link{milestone2author}} for details.
+#' @format A data frame. See [milestone2author()] for details.
 NULL

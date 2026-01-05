@@ -7,6 +7,10 @@ source(here("data-raw", "html2latin1.R"))
 
 mstones <- read_csv("data-raw/milestone.csv")
 
+# Convert all "NULL" strings to NA for consistency
+mstones <- mstones |>
+  mutate(across(everything(), ~ifelse(.x == "NULL", NA, .x)))
+
 mstones <- mstones |>
   select(-uid) |>
   filter(status != "draft") |>

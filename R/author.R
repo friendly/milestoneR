@@ -22,7 +22,7 @@
 #'   \item{note}{notes about this author, a character vector}
 #' }
 #'
-#' @source \url{https://datavis.ca/milestones/}
+#' @source <https://datavis.ca/milestones/>
 #' @importFrom utils data
 #' @export
 #'
@@ -44,5 +44,5 @@ authors <- function() {
 
 #' @name author
 #' @rdname authors
-#' @format A data frame. See \code{\link{authors}} for details.
+#' @format A data frame. See [authors()] for details.
 NULL

@@ -6,18 +6,18 @@
 #' @details
 #'  The fields in the `milestone2keyword` table are:
 #'  \describe{
-#'   \item{\code{mid}}{milestone id, a numeric vector}
-#'   \item{\code{kid}}{keyword id, a numeric vector}
-#'   \item{\code{keyword}}{keyword name, a character vector}
+#'   \item{`mid`}{milestone id, a numeric vector}
+#'   \item{`kid`}{keyword id, a numeric vector}
+#'   \item{`keyword`}{keyword name, a character vector}
 #'  }
 #'
-#'  This table links milestones to keywords. The \code{keyword} field is included
-#'  for convenience (joined from the \code{\link{keyword}} table).
+#'  This table links milestones to keywords. The `keyword` field is included
+#'  for convenience (joined from the [keyword()] table).
 #'
 #' @importFrom utils data
 #' @export
 #'
-#' @seealso \code{\link{keyword}}, \code{\link{milestone}}
+#' @seealso [keyword()], [milestone()]
 #'
 #' @examples
 #' \dontrun{
@@ -33,5 +33,5 @@ milestone2keyword <- function() {
 
 #' @name milestone2keyword-data
 #' @rdname milestone2keyword
-#' @format A data frame. See \code{\link{milestone2keyword}} for details.
+#' @format A data frame. See [milestone2keyword()] for details.
 NULL

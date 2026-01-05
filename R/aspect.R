@@ -11,11 +11,11 @@
 #'
 #' @details
 #'  The aspect classification indicates the role an event played in the history
-#'  of data visualization. Use \code{\link{milestone2aspect}} to link milestones
+#'  of data visualization. Use [milestone2aspect()] to link milestones
 #'  to their aspects.
 #'
-#' @source \url{https://datavis.ca/milestones/}
-#' @seealso \code{\link{milestone2aspect}}
+#' @source <https://datavis.ca/milestones/>
+#' @seealso [milestone2aspect()]
 #' @importFrom utils data
 #' @export
 #'
@@ -33,5 +33,5 @@ aspect <- function() {
 
 #' @name aspect-data
 #' @rdname aspect
-#' @format A data frame. See \code{\link{aspect}} for details.
+#' @format A data frame. See [aspect()] for details.
 NULL

@@ -1,6 +1,7 @@
 Package: milestoneR
 Title: Access the Database of the Milestones Project
-Version: 0.0.3
+Version: 0.3.0
+Date: 2026-01-05
 Authors@R: 
   c(
     person(given = "Michael",
@@ -20,7 +21,11 @@ Description: This package provides a simple R interface to the database tables u
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Language: en-US
 Depends: R (>= 4.1.0)
 URL: https://github.com/friendly/milestoneR
 BugReports: https://github.com/friendly/milestoneR/issues
+Imports:
+    cli
 RoxygenNote: 7.3.3
+Roxygen: list(markdown = TRUE)

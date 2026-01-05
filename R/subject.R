@@ -11,10 +11,10 @@
 #'
 #' @details
 #'  The subject classification indicates the substantive context of the milestone event.
-#'  Use \code{\link{milestone2subject}} to link milestones to their subjects.
+#'  Use [milestone2subject()] to link milestones to their subjects.
 #'
-#' @source \url{https://datavis.ca/milestones/}
-#' @seealso \code{\link{milestone2subject}}
+#' @source <https://datavis.ca/milestones/>
+#' @seealso [milestone2subject()]
 #' @importFrom utils data
 #' @export
 #'
@@ -32,5 +32,5 @@ subject <- function() {
 
 #' @name subject-data
 #' @rdname subject
-#' @format A data frame. See \code{\link{subject}} for details.
+#' @format A data frame. See [subject()] for details.
 NULL

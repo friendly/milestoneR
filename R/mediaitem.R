@@ -7,13 +7,13 @@
 #'
 #'  The fields in the `mediaitem` table are:
 #' \describe{
-#'    \item{\code{miid}}{mediaitem id, a numeric vector}
-#'    \item{\code{type}}{type, a character vector, with values \code{link}, \code{image}}
-#'    \item{\code{url}}{URL to reference this item in the milestones application}
-#'    \item{\code{title}}{a character vector}
-#'    \item{\code{caption}}{a character vector}
-#'    \item{\code{source}}{a character vector}
-#'    \item{\code{mid}}{milestones id to which this is attached, a numeric vector}
+#'    \item{`miid`}{mediaitem id, a numeric vector}
+#'    \item{`type`}{type, a character vector, with values `link`, `image`}
+#'    \item{`url`}{URL to reference this item in the milestones application}
+#'    \item{`title`}{a character vector}
+#'    \item{`caption`}{a character vector}
+#'    \item{`source`}{a character vector}
+#'    \item{`mid`}{milestones id to which this is attached, a numeric vector}
 #' }
 #'
 #' For `type=="link"`, these give a standard HTML reference in the `url` field.
@@ -43,6 +43,6 @@ mediaitem <- function() {
 #'   \item{mid}{milestone id to which this is attached, a numeric vector}
 #'   \item{type2}{secondary type classification, a character vector}
 #' }
-#' @source \url{https://datavis.ca/milestones/}
+#' @source <https://datavis.ca/milestones/>
 "mediaitem"
 

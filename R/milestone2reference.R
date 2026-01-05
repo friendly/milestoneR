@@ -6,17 +6,17 @@
 #' @details
 #'  The fields in the `milestone2reference` table are:
 #'  \describe{
-#'   \item{\code{mid}}{milestone id, a numeric vector}
-#'   \item{\code{rid}}{reference id, a numeric vector}
+#'   \item{`mid`}{milestone id, a numeric vector}
+#'   \item{`rid`}{reference id, a numeric vector}
 #'  }
 #'
-#'  This table links milestones to references. Use with \code{\link{reference}}
+#'  This table links milestones to references. Use with [reference()]
 #'  to get reference information.
 #'
 #' @importFrom utils data
 #' @export
 #'
-#' @seealso \code{\link{reference}}, \code{\link{milestone}}
+#' @seealso [reference()], [milestone()]
 #'
 #' @examples
 #' \dontrun{
@@ -32,5 +32,5 @@ milestone2reference <- function() {
 
 #' @name milestone2reference-data
 #' @rdname milestone2reference
-#' @format A data frame. See \code{\link{milestone2reference}} for details.
+#' @format A data frame. See [milestone2reference()] for details.
 NULL

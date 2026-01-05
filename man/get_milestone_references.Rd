@@ -11,7 +11,7 @@ get_milestone_references(mid)
 }
 \value{
 A data frame with columns from both milestone2reference and reference tables,
-  including mid, rid, and all reference fields (author, title, year, etc.)
+including mid, rid, and all reference fields (author, title, year, etc.)
 }
 \description{
 Retrieves reference information for one or more milestones by joining the

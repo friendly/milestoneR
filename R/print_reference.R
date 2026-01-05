@@ -3,12 +3,12 @@
 #' Format and print reference entries from the milestones database as text,
 #' HTML, or BibTeX.
 #'
-#' @param ref A data frame from the \code{\link{reference}} table (one or more rows),
+#' @param ref A data frame from the [reference()] table (one or more rows),
 #'   or a numeric vector of reference IDs (rid) to look up
 #' @param result Output format: "text" for plain text citation (default),
 #'   "html" for HTML formatted citation, "md" or "markdown" for markdown format,
 #'   or "bibtex" for BibTeX entry
-#' @param bibtex Logical; if TRUE, output as BibTeX entry (overrides \code{result}).
+#' @param bibtex Logical; if TRUE, output as BibTeX entry (overrides `result`).
 #'   Default is FALSE.
 #'
 #' @return A character vector with the formatted references (invisibly). The
@@ -16,8 +16,8 @@
 #'
 #' @details
 #' The function formats references according to the reference type (article, book,
-#' incollection, inproceedings). When \code{bibtex = TRUE}, it generates a proper
-#' BibTeX entry using the \code{bibtexkey} field.
+#' incollection, inproceedings). When `bibtex = TRUE`, it generates a proper
+#' BibTeX entry using the `bibtexkey` field.
 #'
 #' If multiple references are provided (either as multiple rows or multiple IDs),
 #' each reference is printed on a separate line with a blank line between them.

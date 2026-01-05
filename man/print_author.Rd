@@ -7,7 +7,7 @@
 print_author(aut, result = c("text", "html", "md", "markdown"))
 }
 \arguments{
-\item{aut}{A data frame from the \code{\link{authors}} table (one or more rows),
+\item{aut}{A data frame from the \code{\link[=authors]{authors()}} table (one or more rows),
 or a numeric vector of author IDs (aid) to look up}
 
 \item{result}{Output format: "text" for plain text (default),
@@ -15,7 +15,7 @@ or a numeric vector of author IDs (aid) to look up}
 }
 \value{
 A character vector with the formatted author entries (invisibly). The
-  formatted entries are also printed to the console.
+formatted entries are also printed to the console.
 }
 \description{
 Format and print author entries from the milestones database as text,

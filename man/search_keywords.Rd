@@ -19,11 +19,11 @@ search_keywords(
 \item{output}{Output format: "mid" returns milestone IDs (default),
 "print" prints formatted milestones, "data" returns milestone data frame}
 
-\item{...}{Additional arguments passed to \code{\link{print_milestone}} when
+\item{...}{Additional arguments passed to \code{\link[=print_milestone]{print_milestone()}} when
 output = "print"}
 }
 \value{
-Depends on \code{output} parameter (see \code{\link{search_milestones}})
+Depends on \code{output} parameter (see \code{\link[=search_milestones]{search_milestones()}})
 }
 \description{
 Search for milestones that have been tagged with specific keywords.

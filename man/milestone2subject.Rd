@@ -3,29 +3,29 @@
 \name{milestone2subject}
 \alias{milestone2subject}
 \alias{milestone2subject-data}
-\title{Retrieve the `milestone2subject` table from the milestones database}
+\title{Retrieve the \code{milestone2subject} table from the milestones database}
 \format{
-A data frame. See \code{\link{milestone2subject}} for details.
+A data frame. See \code{\link[=milestone2subject]{milestone2subject()}} for details.
 }
 \usage{
 milestone2subject()
 }
 \value{
-Returns a tibble of the `milestone2subject` table
+Returns a tibble of the \code{milestone2subject} table
 }
 \description{
-The `milestone2subject` table links milestones to their subject classifications.
+The \code{milestone2subject} table links milestones to their subject classifications.
 }
 \details{
-The fields in the `milestone2subject` table are:
- \describe{
-  \item{\code{mid}}{milestone id, a numeric vector}
-  \item{\code{sid}}{subject id, a numeric vector}
-  \item{\code{subject}}{subject name, a character vector}
- }
+The fields in the \code{milestone2subject} table are:
+\describe{
+\item{\code{mid}}{milestone id, a numeric vector}
+\item{\code{sid}}{subject id, a numeric vector}
+\item{\code{subject}}{subject name, a character vector}
+}
 
- This table links milestones to subjects. The \code{subject} field is included
- for convenience (joined from the \code{\link{subject}} table).
+This table links milestones to subjects. The \code{subject} field is included
+for convenience (joined from the \code{\link[=subject]{subject()}} table).
 }
 \examples{
 \dontrun{
@@ -35,5 +35,5 @@ m2s <- milestone2subject()
 
 }
 \seealso{
-\code{\link{subject}}, \code{\link{milestone}}
+\code{\link[=subject]{subject()}}, \code{\link[=milestone]{milestone()}}
 }

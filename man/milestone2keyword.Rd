@@ -3,29 +3,29 @@
 \name{milestone2keyword}
 \alias{milestone2keyword}
 \alias{milestone2keyword-data}
-\title{Retrieve the `milestone2keyword` table from the milestones database}
+\title{Retrieve the \code{milestone2keyword} table from the milestones database}
 \format{
-A data frame. See \code{\link{milestone2keyword}} for details.
+A data frame. See \code{\link[=milestone2keyword]{milestone2keyword()}} for details.
 }
 \usage{
 milestone2keyword()
 }
 \value{
-Returns a tibble of the `milestone2keyword` table
+Returns a tibble of the \code{milestone2keyword} table
 }
 \description{
-The `milestone2keyword` table links milestones to their keywords.
+The \code{milestone2keyword} table links milestones to their keywords.
 }
 \details{
-The fields in the `milestone2keyword` table are:
- \describe{
-  \item{\code{mid}}{milestone id, a numeric vector}
-  \item{\code{kid}}{keyword id, a numeric vector}
-  \item{\code{keyword}}{keyword name, a character vector}
- }
+The fields in the \code{milestone2keyword} table are:
+\describe{
+\item{\code{mid}}{milestone id, a numeric vector}
+\item{\code{kid}}{keyword id, a numeric vector}
+\item{\code{keyword}}{keyword name, a character vector}
+}
 
- This table links milestones to keywords. The \code{keyword} field is included
- for convenience (joined from the \code{\link{keyword}} table).
+This table links milestones to keywords. The \code{keyword} field is included
+for convenience (joined from the \code{\link[=keyword]{keyword()}} table).
 }
 \examples{
 \dontrun{
@@ -35,5 +35,5 @@ m2k <- milestone2keyword()
 
 }
 \seealso{
-\code{\link{keyword}}, \code{\link{milestone}}
+\code{\link[=keyword]{keyword()}}, \code{\link[=milestone]{milestone()}}
 }

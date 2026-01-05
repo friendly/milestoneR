@@ -12,10 +12,10 @@
 #'   "data" returns the matching milestone data frame rows.
 #'   Default is "mid".
 #' @param ignore.case Logical; if TRUE (default), case is ignored during matching
-#' @param ... Additional arguments passed to \code{\link{print_milestone}} when
+#' @param ... Additional arguments passed to [print_milestone()] when
 #'   output = "print"
 #'
-#' @return Depends on \code{output}:
+#' @return Depends on `output`:
 #'   \itemize{
 #'     \item "mid": Numeric vector of matching milestone IDs
 #'     \item "print": Character vector of formatted milestones (invisibly),
@@ -28,13 +28,13 @@
 #' regular expression matching. A milestone is included in the results if the
 #' pattern matches in ANY of the specified fields (OR logic).
 #'
-#' The \code{pattern} argument accepts regular expressions, allowing for
+#' The `pattern` argument accepts regular expressions, allowing for
 #' flexible searching:
 #' \itemize{
 #'   \item Simple text: "contour" finds "contour map", "contours", etc.
 #'   \item Multiple terms: "chart|graph" finds either term
 #'   \item Word boundaries: "\\\\bmap\\\\b" finds "map" but not "bitmap"
-#'   \item Case patterns: "[Cc]artograph" finds "cartograph" or "Cartograph"
+#'   \item Case patterns: "\[Cc\]artograph" finds "cartograph" or "Cartograph"
 #' }
 #'
 #' @export
@@ -140,10 +140,10 @@ search_milestones <- function(pattern,
 #' @param ignore.case Logical; if TRUE (default), case is ignored during matching
 #' @param output Output format: "mid" returns milestone IDs (default),
 #'   "print" prints formatted milestones, "data" returns milestone data frame
-#' @param ... Additional arguments passed to \code{\link{print_milestone}} when
+#' @param ... Additional arguments passed to [print_milestone()] when
 #'   output = "print"
 #'
-#' @return Depends on \code{output} parameter (see \code{\link{search_milestones}})
+#' @return Depends on `output` parameter (see [search_milestones()])
 #'
 #' @details
 #' This is a convenience function that searches the keyword field in the
@@ -218,10 +218,10 @@ search_keywords <- function(pattern,
 #' @param ignore.case Logical; if TRUE (default), case is ignored during matching
 #' @param output Output format: "mid" returns milestone IDs (default),
 #'   "print" prints formatted milestones, "data" returns milestone data frame
-#' @param ... Additional arguments passed to \code{\link{print_milestone}} when
+#' @param ... Additional arguments passed to [print_milestone()] when
 #'   output = "print"
 #'
-#' @return Depends on \code{output} parameter (see \code{\link{search_milestones}})
+#' @return Depends on `output` parameter (see [search_milestones()])
 #'
 #' @details
 #' This function searches author names and returns milestones associated with

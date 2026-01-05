@@ -11,11 +11,11 @@
 #'
 #' @details
 #'  This is a freeform classification listing keywords or terms attached to
-#'  milestone items. Use \code{\link{milestone2keyword}} to link milestones
+#'  milestone items. Use [milestone2keyword()] to link milestones
 #'  to their keywords.
 #'
-#' @source \url{https://datavis.ca/milestones/}
-#' @seealso \code{\link{milestone2keyword}}
+#' @source <https://datavis.ca/milestones/>
+#' @seealso [milestone2keyword()]
 #' @importFrom utils data
 #' @export
 #'
@@ -37,5 +37,5 @@ keyword <- function() {
 
 #' @name keyword-data
 #' @rdname keyword
-#' @format A data frame. See \code{\link{keyword}} for details.
+#' @format A data frame. See [keyword()] for details.
 NULL

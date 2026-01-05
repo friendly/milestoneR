@@ -6,18 +6,18 @@
 #' @details
 #'  The fields in the `milestone2subject` table are:
 #'  \describe{
-#'   \item{\code{mid}}{milestone id, a numeric vector}
-#'   \item{\code{sid}}{subject id, a numeric vector}
-#'   \item{\code{subject}}{subject name, a character vector}
+#'   \item{`mid`}{milestone id, a numeric vector}
+#'   \item{`sid`}{subject id, a numeric vector}
+#'   \item{`subject`}{subject name, a character vector}
 #'  }
 #'
-#'  This table links milestones to subjects. The \code{subject} field is included
-#'  for convenience (joined from the \code{\link{subject}} table).
+#'  This table links milestones to subjects. The `subject` field is included
+#'  for convenience (joined from the [subject()] table).
 #'
 #' @importFrom utils data
 #' @export
 #'
-#' @seealso \code{\link{subject}}, \code{\link{milestone}}
+#' @seealso [subject()], [milestone()]
 #'
 #' @examples
 #' \dontrun{
@@ -33,5 +33,5 @@ milestone2subject <- function() {
 
 #' @name milestone2subject-data
 #' @rdname milestone2subject
-#' @format A data frame. See \code{\link{milestone2subject}} for details.
+#' @format A data frame. See [milestone2subject()] for details.
 NULL

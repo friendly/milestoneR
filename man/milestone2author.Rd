@@ -3,28 +3,28 @@
 \name{milestone2author}
 \alias{milestone2author}
 \alias{milestone2author-data}
-\title{Retrieve the `milestone2author` table from the milestones database}
+\title{Retrieve the \code{milestone2author} table from the milestones database}
 \format{
-A data frame. See \code{\link{milestone2author}} for details.
+A data frame. See \code{\link[=milestone2author]{milestone2author()}} for details.
 }
 \usage{
 milestone2author()
 }
 \value{
-Returns a tibble of the `milestone2author` table
+Returns a tibble of the \code{milestone2author} table
 }
 \description{
-The `milestone2author` table links milestones to their authors.
+The \code{milestone2author} table links milestones to their authors.
 }
 \details{
-The fields in the `milestone2author` table are:
- \describe{
-  \item{\code{mid}}{milestone id, a numeric vector}
-  \item{\code{aid}}{author id, a numeric vector}
- }
+The fields in the \code{milestone2author} table are:
+\describe{
+\item{\code{mid}}{milestone id, a numeric vector}
+\item{\code{aid}}{author id, a numeric vector}
+}
 
- This table links milestones to authors. Use with \code{\link{authors}}
- to get author information.
+This table links milestones to authors. Use with \code{\link[=authors]{authors()}}
+to get author information.
 }
 \examples{
 \dontrun{
@@ -34,5 +34,5 @@ m2a <- milestone2author()
 
 }
 \seealso{
-\code{\link{authors}}, \code{\link{milestone}}
+\code{\link[=authors]{authors()}}, \code{\link[=milestone]{milestone()}}
 }

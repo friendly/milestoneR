@@ -12,7 +12,7 @@ print_milestone(
 )
 }
 \arguments{
-\item{ms}{A data frame from the \code{\link{milestone}} table (one or more rows),
+\item{ms}{A data frame from the \code{\link[=milestone]{milestone()}} table (one or more rows),
 or a numeric vector of milestone IDs (mid) to look up}
 
 \item{result}{Output format: "text" for plain text (default),
@@ -27,7 +27,7 @@ Default is TRUE. For text format, shows filenames only.}
 }
 \value{
 A character vector with the formatted milestone entries (invisibly). The
-  formatted entries are also printed to the console.
+formatted entries are also printed to the console.
 }
 \description{
 Format and print milestone entries from the milestones database as text,

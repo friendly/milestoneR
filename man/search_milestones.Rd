@@ -26,17 +26,17 @@ Default is "mid".}
 
 \item{ignore.case}{Logical; if TRUE (default), case is ignored during matching}
 
-\item{...}{Additional arguments passed to \code{\link{print_milestone}} when
+\item{...}{Additional arguments passed to \code{\link[=print_milestone]{print_milestone()}} when
 output = "print"}
 }
 \value{
 Depends on \code{output}:
-  \itemize{
-    \item "mid": Numeric vector of matching milestone IDs
-    \item "print": Character vector of formatted milestones (invisibly),
-          with formatted output printed to console
-    \item "data": Data frame of matching milestone rows
-  }
+\itemize{
+\item "mid": Numeric vector of matching milestone IDs
+\item "print": Character vector of formatted milestones (invisibly),
+with formatted output printed to console
+\item "data": Data frame of matching milestone rows
+}
 }
 \description{
 Search for milestones matching a text pattern (regular expression) across
@@ -50,10 +50,10 @@ pattern matches in ANY of the specified fields (OR logic).
 The \code{pattern} argument accepts regular expressions, allowing for
 flexible searching:
 \itemize{
-  \item Simple text: "contour" finds "contour map", "contours", etc.
-  \item Multiple terms: "chart|graph" finds either term
-  \item Word boundaries: "\\\\bmap\\\\b" finds "map" but not "bitmap"
-  \item Case patterns: "[Cc]artograph" finds "cartograph" or "Cartograph"
+\item Simple text: "contour" finds "contour map", "contours", etc.
+\item Multiple terms: "chart|graph" finds either term
+\item Word boundaries: "\\\\bmap\\\\b" finds "map" but not "bitmap"
+\item Case patterns: "[Cc]artograph" finds "cartograph" or "Cartograph"
 }
 }
 \examples{

@@ -11,7 +11,7 @@ get_milestone_authors(mid)
 }
 \value{
 A data frame with columns from both milestone2author and author tables,
-  including mid, aid, and all author fields (prefix, givennames, lname, etc.)
+including mid, aid, and all author fields (prefix, givennames, lname, etc.)
 }
 \description{
 Retrieves author information for one or more milestones by joining the

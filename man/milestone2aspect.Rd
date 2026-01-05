@@ -3,29 +3,29 @@
 \name{milestone2aspect}
 \alias{milestone2aspect}
 \alias{milestone2aspect-data}
-\title{Retrieve the `milestone2aspect` table from the milestones database}
+\title{Retrieve the \code{milestone2aspect} table from the milestones database}
 \format{
-A data frame. See \code{\link{milestone2aspect}} for details.
+A data frame. See \code{\link[=milestone2aspect]{milestone2aspect()}} for details.
 }
 \usage{
 milestone2aspect()
 }
 \value{
-Returns a tibble of the `milestone2aspect` table
+Returns a tibble of the \code{milestone2aspect} table
 }
 \description{
-The `milestone2aspect` table links milestones to their aspect classifications.
+The \code{milestone2aspect} table links milestones to their aspect classifications.
 }
 \details{
-The fields in the `milestone2aspect` table are:
- \describe{
-  \item{\code{mid}}{milestone id, a numeric vector}
-  \item{\code{asid}}{aspect id, a numeric vector}
-  \item{\code{aspect}}{aspect name, a character vector}
- }
+The fields in the \code{milestone2aspect} table are:
+\describe{
+\item{\code{mid}}{milestone id, a numeric vector}
+\item{\code{asid}}{aspect id, a numeric vector}
+\item{\code{aspect}}{aspect name, a character vector}
+}
 
- This table links milestones to aspects. The \code{aspect} field is included
- for convenience (joined from the \code{\link{aspect}} table).
+This table links milestones to aspects. The \code{aspect} field is included
+for convenience (joined from the \code{\link[=aspect]{aspect()}} table).
 }
 \examples{
 \dontrun{
@@ -35,5 +35,5 @@ m2a <- milestone2aspect()
 
 }
 \seealso{
-\code{\link{aspect}}, \code{\link{milestone}}
+\code{\link[=aspect]{aspect()}}, \code{\link[=milestone]{milestone()}}
 }

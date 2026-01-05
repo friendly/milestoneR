@@ -3,7 +3,7 @@
 #' Format and print author entries from the milestones database as text,
 #' HTML, or markdown.
 #'
-#' @param aut A data frame from the \code{\link{authors}} table (one or more rows),
+#' @param aut A data frame from the [authors()] table (one or more rows),
 #'   or a numeric vector of author IDs (aid) to look up
 #' @param result Output format: "text" for plain text (default),
 #'   "html" for HTML formatted output, or "md"/"markdown" for markdown format

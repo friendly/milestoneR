@@ -3,18 +3,18 @@
 \docType{data}
 \name{mediaitem}
 \alias{mediaitem}
-\title{Retrieve the `mediaitem` table from the milestones database}
+\title{Retrieve the \code{mediaitem} table from the milestones database}
 \format{
 A data frame with 600 rows and 8 variables:
 \describe{
-  \item{miid}{mediaitem id, a numeric vector}
-  \item{type}{type (link or image), a character vector}
-  \item{url}{URL to the media item, a character vector}
-  \item{title}{title or caption, a character vector}
-  \item{caption}{caption text, a character vector}
-  \item{source}{source of the media, a character vector}
-  \item{mid}{milestone id to which this is attached, a numeric vector}
-  \item{type2}{secondary type classification, a character vector}
+\item{miid}{mediaitem id, a numeric vector}
+\item{type}{type (link or image), a character vector}
+\item{url}{URL to the media item, a character vector}
+\item{title}{title or caption, a character vector}
+\item{caption}{caption text, a character vector}
+\item{source}{source of the media, a character vector}
+\item{mid}{milestone id to which this is attached, a numeric vector}
+\item{type2}{secondary type classification, a character vector}
 }
 }
 \source{
@@ -26,26 +26,26 @@ mediaitem()
 mediaitem
 }
 \value{
-Returns a tibble of the `mediaitem` table
+Returns a tibble of the \code{mediaitem} table
 }
 \description{
-The `mediaitem` table gives each link or image used in displaying the milestones items
+The \code{mediaitem} table gives each link or image used in displaying the milestones items
 
 A dataset containing links and images used in displaying milestone items.
 }
 \details{
-The fields in the `mediaitem` table are:
+The fields in the \code{mediaitem} table are:
 \describe{
-   \item{\code{miid}}{mediaitem id, a numeric vector}
-   \item{\code{type}}{type, a character vector, with values \code{link}, \code{image}}
-   \item{\code{url}}{URL to reference this item in the milestones application}
-   \item{\code{title}}{a character vector}
-   \item{\code{caption}}{a character vector}
-   \item{\code{source}}{a character vector}
-   \item{\code{mid}}{milestones id to which this is attached, a numeric vector}
+\item{\code{miid}}{mediaitem id, a numeric vector}
+\item{\code{type}}{type, a character vector, with values \code{link}, \code{image}}
+\item{\code{url}}{URL to reference this item in the milestones application}
+\item{\code{title}}{a character vector}
+\item{\code{caption}}{a character vector}
+\item{\code{source}}{a character vector}
+\item{\code{mid}}{milestones id to which this is attached, a numeric vector}
 }
 
-For `type=="link"`, these give a standard HTML reference in the `url` field.
-For `type=="image"`, the `url` field references the image in the milestones website.
+For \code{type=="link"}, these give a standard HTML reference in the \code{url} field.
+For \code{type=="image"}, the \code{url} field references the image in the milestones website.
 }
 \keyword{datasets}
