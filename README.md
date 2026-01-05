@@ -6,7 +6,7 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Last
-Commit](https://img.shields.io/github/last-commit/friendly/heplots)](https://github.com/friendly/heplots/)
+Commit](https://img.shields.io/github/last-commit/friendly/heplots)](https://github.com/friendly/milestoneR/)
 <!-- badges: end -->
 
 # milestoneR <img src="man/figures/logo.png" height="200" style="float:right; height:200px;"/>
@@ -23,7 +23,20 @@ comprised of important events in this history, combined with source
 images, external links, references, etc. to make this useful for further
 research.
 
-## Installation
+No attempt is made here to replicate the interactive features of the
+[Milestones site](http://datavis.ca/milestones), which includes:
+
+- overview pages for time periods, such as [1700-1799: New graphic
+  forms](https://datavis.ca/milestones/index.php?group=1700s), or
+  [1850-1899: Golden Age of data
+  graphics](https://datavis.ca/milestones/index.php?group=1850%2B)
+- A [keyword
+  index](https://datavis.ca/milestones/index.php?page=keyword+index)
+- [Related
+  resouces](https://datavis.ca/milestones/index.php?page=related)
+- A google-powered search, eg [Search:
+  “Playfair”](https://datavis.ca/milestones/index.php?query=Playfair)
+  \## Installation
 
 This package is not yet on CRAN. You can install this development
 version with:
@@ -194,6 +207,12 @@ milestoneR::print_milestone(halley$mid)
 #> Subjects: Physical
 #> Aspects: Statistics & Graphics
 #> 
+#> Media:
+#>   - [link] National maritime museum, Halley magnetic chart
+#>   - [image] Halley isogonic map
+#>   - [link] Halley biography
+#>   - [link] Geomagnetism: early concept of the North Magnetic Pole - The concept of the North Magnetic Pole arose from the desire of early European navigators to explain the directional properties of the compass. Chines used compass at least as early as the 1st century and it was imported to Europe in the 12th century.
+#> 
 #> References:
 #>   - Halley, Edmund. (1701). "The Description and Uses of a New, and Correct Sea-Chart of the Whole World, Shewing Variations of the Compass"
 #>   - Abbott, Edwin A. (1884). "Flatland: A Romance of Many Dimensions". Cutchogue, NY: Buccaneer Books. [(1976 reprint of the 1884 edition)]
@@ -235,7 +254,8 @@ milestoneR::print_reference(refs$rid[1], bibtex = TRUE)
 ### Searching Milestones
 
 The package provides flexible search functions for finding milestones by
-text, keywords, or authors.
+text, keywords, or authors. The search term can be a regular expression
+(via `grepl()`).
 
 ``` r
 # Full-text search for "statistical" in descriptions, tags, and notes
@@ -278,10 +298,14 @@ search_milestones("Florence Nightingale", fields = "description", output = "prin
 #> Subjects: Physical
 #> Aspects: Statistics & Graphics
 #> 
+#> Media:
+#>   - [image] Guerry's polar diagrams
+#>   - [image] Guerry barcharts and polar diagrams
+#> 
 #> Note: The plate shows six polar diagrams for daily phenomena: direction of the wind in 8 sectors, births and deaths by hour of theday.
 #> 
 #> References:
-#>   - Balbi, Adriano & Guerry, André-Michel. (1829). "Tableau des Variations météorologique comparées aux phénomènes physiologiques, d'aprés les observations faites à l'Obervatoire royal, et les recherches statistique les plus récentes". _Annales d'Hygiène Publique et de Médecine Légale_. 1(NULL). pp. 228-
+#>   - Balbi, Adriano & Guerry, André-Michel. (1829). "Tableau des Variations météorologique comparées aux phénomènes physiologiques, d'aprés les observations faites à l'Obervatoire royal, et les recherches statistique les plus récentes". _Annales d'Hygiène Publique et de Médecine Légale_. 1. pp. 228-
 ```
 
 ### Filtering by Date

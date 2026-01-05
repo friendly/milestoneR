@@ -8,11 +8,13 @@
 * Implement `print_milestone()` method with helper functions
 * Added search_* functions
 * Display media items [link|image] in the print method 
-* Added `print_milestones_cli()` to use the {cli} package for formatting text to console.
+* Added `print_milestone_cli()` to use the {cli} package for formatting text to console.
 * Fixed NULL values in references and milestones tables: NULL -> NA
-* Converted ropxygen documentation to use markdown, via `roxygen2md::roxygen2md()`
+* Converted roxygen documentation to use markdown, via `roxygen2md::roxygen2md()`
+* Added "Getting Started" vignette demonstrating search, filter, and print functions
 
 
 ## milestoneR 0.0.0.9000
 
+* Initial package, with database files (`data-raw/`) and R datasets (`data/`)
 * Added a `NEWS.md` file to track changes to the package.

@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Last
-Commit](https://img.shields.io/github/last-commit/friendly/heplots)](https://github.com/friendly/heplots/)
+Commit](https://img.shields.io/github/last-commit/friendly/milestoneR)](https://github.com/friendly/milestoneR/)
 <!-- badges: end -->
 
 # milestoneR <img src="man/figures/logo.png" height="200" style="float:right; height:200px;"/>
@@ -27,9 +27,16 @@ The goal of the `milestoneR` package is to provide R access to the database tabl
   on this site, such as the [Milestones Calendar](http://www.datavis.ca/milestones-cal/).
   This project is described in Friendly et al. (2015).
 
-  Another goal is to document what we have done to create a database comprised of important events in this
-  history, combined with source images, external links, references, etc. to make this useful for further
-  research.
+Another goal is to document what we have done to create a database comprised of important events in this
+history, combined with source images, external links, references, etc. to make this useful for further
+research.
+  
+No attempt is made here to replicate the interactive features of the [Milestones site](http://datavis.ca/milestones), which includes: 
+  
+*  overview pages for time periods, such as [1700-1799: New graphic forms](https://datavis.ca/milestones/index.php?group=1700s), or [1850-1899: Golden Age of data graphics](https://datavis.ca/milestones/index.php?group=1850%2B)
+* A [keyword index](https://datavis.ca/milestones/index.php?page=keyword+index)
+* [Related resouces](https://datavis.ca/milestones/index.php?page=related)
+* A google-powered search, eg [Search: "Playfair"](https://datavis.ca/milestones/index.php?query=Playfair)
 
 ## Installation
 

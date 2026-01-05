@@ -1,0 +1,417 @@
+---
+title: "Getting Started with milestoneR"
+author: "Michael Friendly"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with milestoneR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 5,
+  warning = FALSE,
+  message = FALSE
+)
+library(milestoneR)
+```
+
+## Introduction
+
+The `milestoneR` package provides R access to the [Milestones Project](http://datavis.ca/milestones) database, a comprehensive collection of important events in the history of data visualization. This vignette demonstrates how to:
+
+- Access milestone data
+- Search and filter milestones
+- Display results in various formats
+- Explore relationships between milestones, authors, and references
+
+## Loading the Package
+
+```{r load}
+library(milestoneR)
+```
+
+## Accessing Data
+
+The package provides accessor functions for all main database tables:
+
+```{r data-access}
+# Get all milestones
+ms <- milestoneR::milestone()
+cat("Total milestones:", nrow(ms), "\n")
+
+# Get all authors
+aut <- milestoneR::authors()
+cat("Total authors:", nrow(aut), "\n")
+
+# Get all references
+refs <- milestoneR::reference()
+cat("Total references:", nrow(refs), "\n")
+
+# Get keywords, subjects, and aspects
+kw <- milestoneR::keyword()
+subj <- milestoneR::subject()
+asp <- milestoneR::aspect()
+
+cat("Keywords:", nrow(kw), "\n")
+cat("Subjects:", nrow(subj), "\n")
+cat("Aspects:", nrow(asp), "\n")
+```
+
+## Exploring Milestones
+
+Let's look at the structure of the milestone data:
+
+```{r explore-milestones}
+# View column names
+names(ms)
+
+# Look at a few key fields
+head(ms[, c("mid", "date_from", "tag", "location")], 10)
+```
+
+### Date Range Coverage
+
+```{r date-range}
+# Date range of milestones
+cat("Earliest milestone:", min(ms$date_from_numeric, na.rm = TRUE), "\n")
+cat("Most recent milestone:", max(ms$date_from_numeric, na.rm = TRUE), "\n")
+
+# Count by century
+ms$century <- (ms$date_from_numeric %/% 100) * 100
+century_counts <- table(ms$century)
+print(century_counts)
+```
+
+## Searching Milestones
+
+The package provides three specialized search functions.
+
+### Full-Text Search
+
+Search across milestone fields (description, tag, note):
+
+```{r search-text}
+# Find milestones mentioning "statistical"
+stat_ids <- milestoneR::search_milestones("statistical")
+cat("Found", length(stat_ids), "milestones mentioning 'statistical'\n")
+
+# Show the first few
+head(stat_ids)
+
+# Use regex to find "chart" OR "graph"
+chart_ids <- milestoneR::search_milestones("chart|graph", fields = c("description", "tag"))
+cat("\nFound", length(chart_ids), "milestones with 'chart' or 'graph'\n")
+
+# Search only in tags for items marked as "1st" (first)
+first_ids <- milestoneR::search_milestones("^1st", fields = "tag")
+cat("\nFound", length(first_ids), "milestone tags starting with '1st'\n")
+```
+
+### Search by Keywords
+
+```{r search-keywords}
+# Find milestones tagged with "contour"
+contour_ids <- milestoneR::search_keywords("contour")
+cat("Milestones with 'contour' keyword:", paste(contour_ids, collapse = ", "), "\n")
+
+# Search for statistical keywords
+stat_kw_ids <- milestoneR::search_keywords("statistic")
+cat("\nMilestones with statistical keywords:", length(stat_kw_ids), "\n")
+```
+
+### Search by Author
+
+```{r search-authors}
+# Find William Playfair's milestones
+playfair_ids <- milestoneR::search_authors("Playfair")
+cat("William Playfair's milestones:", paste(playfair_ids, collapse = ", "), "\n")
+
+# Find all authors named John
+john_ids <- milestoneR::search_authors("John", name_fields = "givennames")
+cat("\nMilestones by authors named John:", length(john_ids), "\n")
+
+# Search only last names
+nightingale_ids <- milestoneR::search_authors("Nightingale", name_fields = "lname")
+cat("\nMilestones by Nightingale:", paste(nightingale_ids, collapse = ", "), "\n")
+```
+
+## Filtering by Date and Category
+
+Combine direct data frame operations with search functions:
+
+```{r filtering}
+# Milestones from the 1800s
+ms_1800s <- ms[ms$date_from_numeric >= 1800 & ms$date_from_numeric < 1900, ]
+cat("Milestones from 1800-1899:", nrow(ms_1800s), "\n")
+
+# Early milestones (before 1700)
+early <- ms[ms$date_from_numeric < 1700, ]
+cat("Milestones before 1700:", nrow(early), "\n")
+
+# Milestones in France
+france <- ms[!is.na(ms$location) & grepl("France", ms$location, ignore.case = TRUE), ]
+cat("Milestones in France:", nrow(france), "\n")
+```
+
+### Filtering by Subject and Aspect
+
+Using the linking tables:
+
+```{r filter-categories}
+# Get milestones by subject
+m2subj <- milestoneR::milestone2subject()
+
+# Milestones with "Physical" subject
+physical_mids <- m2subj[m2subj$subject == "Physical", "mid"]
+cat("Milestones with 'Physical' subject:", length(physical_mids), "\n")
+
+# Get milestones by aspect
+m2asp <- milestoneR::milestone2aspect()
+
+# Milestones with "Cartography" aspect
+carto_mids <- m2asp[m2asp$aspect == "Cartography", "mid"]
+cat("Milestones with 'Cartography' aspect:", length(carto_mids), "\n")
+
+# Combine: Cartography AND Physical
+combined <- intersect(physical_mids, carto_mids)
+cat("\nMilestones that are both Physical and Cartography:", length(combined), "\n")
+```
+
+## Displaying Results
+
+The package provides several print functions with multiple output formats.
+
+### Printing Individual Milestones
+
+```{r print-milestone}
+# Print Halley's 1701 contour map in text format
+halley <- ms[ms$date_from_numeric == 1701, ]
+milestoneR::print_milestone(halley$mid)
+```
+
+### Different Output Formats
+
+```{r print-formats, eval=FALSE}
+# HTML format (useful for R Markdown documents)
+milestoneR::print_milestone(53, result = "html")
+
+# Markdown format
+milestoneR::print_milestone(53, result = "md")
+
+# Enhanced CLI format with clickable links (in modern terminals)
+milestoneR::print_milestone_cli(53)
+```
+
+### Printing Multiple Milestones
+
+```{r print-multiple, eval=FALSE}
+# Print Playfair's milestones
+milestoneR::print_milestone_cli(playfair_ids)
+```
+
+### Selective Sections
+
+You can control which sections to display:
+
+```{r print-selective, eval=FALSE}
+# Show only authors, media, and references
+milestoneR::print_milestone(53, include = c("authors", "media", "references"))
+```
+
+### Search with Formatted Output
+
+Combine search with immediate formatted display:
+
+```{r search-print}
+# Find and print Florence Nightingale's work
+milestoneR::search_milestones("Florence Nightingale",
+                              fields = "description",
+                              output = "print")
+```
+
+## Working with Related Information
+
+Use helper functions to get related data for milestones.
+
+### Getting Authors
+
+```{r get-authors}
+# Get authors for Halley's milestone
+halley_authors <- milestoneR::get_milestone_authors(53)
+print(halley_authors[, c("givennames", "lname", "birthdate", "deathdate")])
+
+# Get authors for multiple milestones
+playfair_authors <- milestoneR::get_milestone_authors(playfair_ids)
+print(playfair_authors[, c("givennames", "lname", "birthdate")])
+```
+
+### Getting References
+
+```{r get-references}
+# Get references for a milestone
+halley_refs <- milestoneR::get_milestone_references(53)
+print(halley_refs[, c("rid", "author", "year", "title")])
+
+# Print formatted reference
+milestoneR::print_reference(halley_refs[1, ])
+```
+
+### Getting Keywords
+
+```{r get-keywords}
+# Get keywords for a milestone
+halley_kw <- milestoneR::get_milestone_keywords(53)
+print(halley_kw)
+
+# Get all keywords for Playfair's work
+playfair_kw <- milestoneR::get_milestone_keywords(playfair_ids)
+print(table(playfair_kw$keyword))
+```
+
+### Getting Media Items
+
+```{r get-media}
+# Get media items for a milestone
+halley_media <- milestoneR::get_milestone_media(53)
+print(halley_media[, c("miid", "type", "title")])
+
+# Check how many milestones have media
+all_media <- milestoneR::get_milestone_media(ms$mid)
+cat("Total media items:", nrow(all_media), "\n")
+cat("Milestones with media:", length(unique(all_media$mid)), "\n")
+```
+
+## Printing References and Authors
+
+### References
+
+```{r print-refs}
+# Print a reference in text format
+milestoneR::print_reference(halley_refs[1, ])
+
+# Print as BibTeX
+cat("\nAs BibTeX:\n")
+milestoneR::print_reference(halley_refs[1, ], bibtex = TRUE)
+
+# Print multiple references
+milestoneR::print_reference(halley_refs)
+```
+
+### Authors
+
+```{r print-authors}
+# Print author information
+milestoneR::print_author(halley_authors[1, ])
+
+# Get a specific author by name
+playfair_aut <- aut[grepl("Playfair", aut$lname), ]
+milestoneR::print_author(playfair_aut[1, ])
+```
+
+## Example Workflow: Researching a Topic
+
+Here's a complete example of researching "contour maps" in the history of data visualization:
+
+```{r workflow}
+# 1. Search for contour-related milestones
+contour_text <- milestoneR::search_milestones("contour", fields = c("description", "tag"))
+contour_kw <- milestoneR::search_keywords("contour")
+
+# Combine results (union)
+contour_all <- unique(c(contour_text, contour_kw))
+cat("Found", length(contour_all), "contour-related milestones\n")
+
+# 2. Get the milestone data
+contour_ms <- ms[ms$mid %in% contour_all, ]
+
+# 3. Sort by date
+contour_ms <- contour_ms[order(contour_ms$date_from_numeric), ]
+
+# 4. Display summary
+cat("\nContour map milestones chronology:\n")
+for (i in 1:nrow(contour_ms)) {
+  cat(sprintf("[%s] %s\n",
+              contour_ms$date_from[i],
+              contour_ms$tag[i]))
+}
+
+# 5. Get all authors involved
+contour_authors <- milestoneR::get_milestone_authors(contour_all)
+cat("\nAuthors involved in contour mapping:\n")
+unique_authors <- unique(contour_authors[, c("givennames", "lname", "birthdate")])
+print(unique_authors[order(unique_authors$birthdate), ])
+
+# 6. Print detailed information for the earliest one
+cat("\n--- Earliest Contour Map Milestone ---\n")
+milestoneR::print_milestone(contour_ms$mid[1])
+```
+
+## Combining Filters
+
+Create complex queries by combining multiple search strategies:
+
+```{r complex-search}
+# Find statistical graphics in the 1800s
+stat_ids <- milestoneR::search_milestones("statistical")
+ms_stat <- ms[ms$mid %in% stat_ids, ]
+stat_1800s <- ms_stat[ms_stat$date_from_numeric >= 1800 &
+                       ms_stat$date_from_numeric < 1900, ]
+
+cat("Statistical graphics milestones in the 1800s:", nrow(stat_1800s), "\n")
+
+# Show them
+print(stat_1800s[, c("mid", "date_from", "tag")][1:5, ])
+```
+
+## Summary Statistics
+
+Get overview statistics about the database:
+
+```{r summary-stats}
+# Count by subject
+m2subj <- milestoneR::milestone2subject()
+subj_counts <- table(m2subj$subject)
+cat("Milestones by Subject:\n")
+print(subj_counts)
+
+# Count by aspect
+m2asp <- milestoneR::milestone2aspect()
+asp_counts <- table(m2asp$aspect)
+cat("\nMilestones by Aspect:\n")
+print(asp_counts)
+
+# Most common keywords (top 10)
+m2kw <- milestoneR::milestone2keyword()
+kw_counts <- sort(table(m2kw$keyword), decreasing = TRUE)
+cat("\nTop 10 Keywords:\n")
+print(head(kw_counts, 10))
+
+# Milestones per century
+century_table <- table(ms$century)
+cat("\nMilestones per Century:\n")
+print(century_table)
+```
+
+## Next Steps
+
+This vignette has covered the basics of accessing, searching, and displaying milestones data. For more advanced usage:
+
+- See `vignette("visualizing-milestones")` for creating plots and visualizations
+- Use `?search_milestones` for advanced search options
+- Explore `?print_milestone_cli` for enhanced console output with clickable links
+- Check the [package website](https://github.com/friendly/milestoneR) for updates
+
+## References
+
+Friendly, M., Sigal, M. & Harnanansingh, D. (2015).
+"The Milestones Project: A Database for the History of Data Visualization."
+In Kimball, M. & Kostelnick, C. (Eds.)
+*Visible Numbers: The History of Data Visualization*, Chapter 10.
+London, UK: Ashgate Press.
+[preprint](http://datavis.ca/papers/MilestonesProject.pdf)
