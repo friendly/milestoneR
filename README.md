@@ -23,12 +23,15 @@ images, external links, references, etc. to make this useful for further
 research.
 
 No attempt is made here to replicate the interactive features of the
-[Milestones site](http://datavis.ca/milestones), which includes:
+[Milestones site](http://datavis.ca/milestones), which include:
 
 - overview pages for time periods, such as [1700-1799: New graphic
   forms](https://datavis.ca/milestones/index.php?group=1700s), or
   [1850-1899: Golden Age of data
   graphics](https://datavis.ca/milestones/index.php?group=1850%2B)
+- A [Milestones calendar](https://www.datavis.ca/milestones-cal/)
+  listing birthdays, death days and the days of significant events
+  associated with individuals in the history of data visualization.
 - A [keyword
   index](https://datavis.ca/milestones/index.php?page=keyword+index)
 - [Related
@@ -331,7 +334,27 @@ ms_1800s |>
 #> 89  89      1801                   Pie chart
 ```
 
+## See also
+
+- The [original Milestones
+  website](http://euclid.psych.yorku.ca/SCS/Gallery/milestone/). It
+  started out as a LaTeX document. A collection of Perl scripts was used
+  to fashion it into a set of HTML pages.
+
+- PDF version: [Milestones in the History of Thematic Cartography,
+  Statistical Graphics, and Data
+  Visualization](http://euclid.psych.yorku.ca/SCS/Gallery/milestone/milestone.pdf)
+
+- A [visual overview of
+  milestones](http://euclid.psych.yorku.ca/SCS/Gallery/milestone/Visualization_Milestones.pdf)
+  designed by Mario Kanno
+
 ## References
+
+Friendly, M. (2005). Milestones in the History of Data Visualization: A
+Case Study in Statistical Historiography. In C. Weihs & W. Gaul (Eds.),
+*Classification: The Ubiquitous Challenge* (pp. 34–52). Springer.
+<http://datavis.ca/papers/gfkl.pdf>
 
 Friendly, M., Sigal, M. & Harnanansingh, D. (2015). “The Milestones
 Project: A Database for the History of Data Visualization.” In Kimball,
