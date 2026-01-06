@@ -240,7 +240,18 @@ ms_1800s |>
   print()
 ```
 
+## See also
+
+* The [original Milestones website](http://euclid.psych.yorku.ca/SCS/Gallery/milestone/). It started out
+as a LaTeX document. A collection of Perl scripts was used to fashion it into a set of HTML pages.
+
+* PDF version: [Milestones in the History of Thematic Cartography, Statistical Graphics, and Data Visualization](http://euclid.psych.yorku.ca/SCS/Gallery/milestone/milestone.pdf)
+
+* A [visual overview of milestones](http://euclid.psych.yorku.ca/SCS/Gallery/milestone/Visualization_Milestones.pdf) designed by Mario Kanno
+
 ## References
+
+Friendly, M. (2005). Milestones in the History of Data Visualization: A Case Study in Statistical Historiography. In C. Weihs & W. Gaul (Eds.), _Classification: The Ubiquitous Challenge_ (pp. 34–52). Springer. [http://datavis.ca/papers/gfkl.pdf](http://datavis.ca/papers/gfkl.pdf)
 
 Friendly, M., Sigal, M. & Harnanansingh, D. (2015).
 "The Milestones Project: A Database for the History of Data Visualization."

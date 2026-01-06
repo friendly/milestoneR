@@ -6,3 +6,8 @@ For the longer term, I'm also interested in developing an admin interface to the
   would have to be in a separate, private GitHub repo. There is already a phpMyAdmin application for the datavis.ca
   site at http://datavis.ca/datavis_db_admin/, but it is password protected, and doesn't provide a simple interface
   for adding/editing items.  I can try to give you access to this if necessary.
+
+## Tagged input format
+
+In a previous version of the milestones project I used a simple "tagged" format to create input for new milestones
+items.
