@@ -6,7 +6,7 @@
 \usage{
 print_milestone(
   ms,
-  result = c("text", "html", "md", "markdown"),
+  result = c("text", "html", "md", "markdown", "cli"),
   include = c("authors", "keywords", "subjects", "aspects", "media", "references"),
   show_images = TRUE
 )
@@ -16,7 +16,8 @@ print_milestone(
 or a numeric vector of milestone IDs (mid) to look up}
 
 \item{result}{Output format: "text" for plain text (default),
-"html" for HTML formatted output, or "md"/"markdown" for markdown format}
+"html" for HTML formatted output, "md"/"markdown" for markdown format,
+or "cli" for enhanced console output with clickable links}
 
 \item{include}{Character vector specifying which sections to include.
 Options: "authors", "keywords", "subjects", "aspects", "media", "references".
@@ -26,13 +27,14 @@ Default is all sections.}
 Default is TRUE. For text format, shows filenames only.}
 }
 \value{
-A character vector with the formatted milestone entries (invisibly). The
-formatted entries are also printed to the console.
+For "text", "html", and "md" formats: a character vector with the
+formatted milestone entries (invisibly). For "cli" format: NULL (invisibly).
+The formatted entries are printed to the console in all cases.
 }
 \description{
 Format and print milestone entries from the milestones database as text,
-HTML, or markdown, including all associated information (authors, references,
-keywords, subjects, aspects, media).
+HTML, markdown, or enhanced CLI output, including all associated information
+(authors, references, keywords, subjects, aspects, media).
 }
 \details{
 The function formats milestones following the structure of the datavis.ca/milestones
@@ -40,7 +42,10 @@ website, including header information (date, authors, tag), description, and
 optional sections for keywords, subjects, aspects, media items, and references.
 
 If multiple milestones are provided (either as multiple rows or multiple IDs),
-each milestone is printed separately with a blank line between them.
+each milestone is printed separately with a blank line (or visual separator for CLI).
+
+The "cli" format uses the \code{cli} package to provide enhanced console output with
+clickable hyperlinks, better visual structure, and improved formatting.
 }
 \examples{
 \dontrun{
@@ -59,6 +64,9 @@ print_milestone(53, result = "html")
 
 # Print as markdown
 print_milestone(53, result = "md")
+
+# Print with enhanced CLI formatting (clickable links)
+print_milestone(53, result = "cli")
 
 # Print with only selected sections
 print_milestone(53, include = c("authors", "references"))

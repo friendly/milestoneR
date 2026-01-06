@@ -31,6 +31,9 @@ Format and print milestone entries from the milestones database using the
 formatting, and visual structure.
 }
 \details{
+This is a convenience wrapper around \code{\link[=print_milestone]{print_milestone()}} with \code{result = "cli"}.
+You can also call \code{print_milestone(ms, result = "cli")} directly.
+
 This function uses the \code{cli} package to create enhanced console output with:
 \itemize{
 \item Clickable hyperlinks for media items and references
@@ -51,6 +54,12 @@ print_milestone_cli(c(53, 54, 55))
 
 # Print with only selected sections
 print_milestone_cli(53, include = c("authors", "references"))
+
+# Equivalent using print_milestone directly
+print_milestone(53, result = "cli")
 }
 
+}
+\seealso{
+\code{\link[=print_milestone]{print_milestone()}} for the main print function with multiple output formats
 }

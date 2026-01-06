@@ -6,3 +6,4 @@ extra/
 ^.claude$
 
 ^README\.Rmd$
+^README\.html$
