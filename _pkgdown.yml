@@ -1,0 +1,77 @@
+url: https://friendly.github.io/milestoneR/
+template:
+  bootstrap: 5
+  # params:
+  #   bootswatch: cerulean
+  bslib:
+    base_font: {google: "Roboto"}
+    heading_font: {google: "Roboto Slab"}
+    code_font: {google: "JetBrains Mono"}
+
+articles:
+- title: "Getting Started"
+  contents:
+  - getting-started
+
+reference:
+- title: "Data Accessor Functions"
+  desc: "Functions to retrieve the main database tables"
+  contents:
+  - milestone
+  - author
+  - reference
+  - mediaitem
+  - keyword
+  - subject
+  - aspect
+
+- title: "Linking Tables"
+  desc: "Functions to retrieve linking tables that connect milestones to other entities"
+  contents:
+  - milestone2author
+  - milestone2reference
+  - milestone2keyword
+  - milestone2subject
+  - milestone2aspect
+
+- title: "Helper Functions"
+  desc: "Functions to retrieve related information for milestones"
+  contents:
+  - get_milestone_authors
+  - get_milestone_references
+  - get_milestone_keywords
+  - get_milestone_subjects
+  - get_milestone_aspects
+  - get_milestone_media
+
+- title: "Search Functions"
+  desc: "Functions for searching and filtering milestones"
+  contents:
+  - search_milestones
+  - search_keywords
+  - search_authors
+
+- title: "Print Functions"
+  desc: "Functions for formatted display of database entries"
+  contents:
+  - print_milestone
+  - print_milestone_cli
+  - print_reference
+  - print_author
+
+- title: "Datasets"
+  desc: "Database tables included in the package"
+  contents:
+  - milestone
+  - author
+  - reference
+  - mediaitem
+  - keyword
+  - subject
+  - aspect
+  - milestone2author
+  - milestone2reference
+  - milestone2keyword
+  - milestone2subject
+  - milestone2aspect
+
