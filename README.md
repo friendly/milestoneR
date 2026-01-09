@@ -11,17 +11,24 @@ Commit](https://img.shields.io/github/last-commit/friendly/milestoneR)](https://
 
 # milestoneR <img src="man/figures/logo.png" height="200" style="float:right; height:200px;"/>
 
-The goal of the `milestoneR` package is to provide R access to the
+The main goal of the `milestoneR` package is to provide R access to the
 database tables used in the Milestones Project, reflecting the history
 of data visualization, as used in <http://datavis.ca/milestones> and
 other applications on this site, such as the [Milestones
 Calendar](http://www.datavis.ca/milestones-cal/). This project is
 described in Friendly et al. (2015).
 
-Another goal is to document what we have done to create a database
-comprised of important events in this history, combined with source
-images, external links, references, etc. to make this useful for further
-research.
+- To do this, I document what we have done to create a database
+  comprised of important events in this history, combined with source
+  images, external links, references, etc. to make this useful for
+  further research.
+
+- Another goal is to begin to explore ways to analyze and visualize this
+  history, for example with categories for milestones events (`subject`,
+  `aspect`) and various kinds of timelines. This part is a work in
+  progress. [Suggestions, comments,
+  issues](https://github.com/friendly/milestoneR/issues) and
+  collaborators are welcome!
 
 No attempt is made here to replicate the interactive features of the
 [Milestones site](http://datavis.ca/milestones), which include:

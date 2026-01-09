@@ -13,6 +13,7 @@
 * Fixed NULL values in references and milestones tables: NULL -> NA
 * Converted roxygen documentation to use markdown, via `roxygen2md::roxygen2md()`
 * Added "Getting Started" vignette demonstrating search, filter, and print functions
+* Added functions to work with "epochs" in history
 
 
 ## milestoneR 0.0.0.9000
