@@ -14,8 +14,8 @@
 #' @param extend Character or logical. How to extend the default epochs:
 #'   \itemize{
 #'     \item \code{NULL} or \code{FALSE}: Use defaults as-is (1500-2000)
-#'     \item \code{"before"}: Add Prehistory epoch before 1500
-#'     \item \code{"after"}: Add Digital Age epoch after 2000
+#'     \item \code{"before"}: Add Prehistory epoch (-Inf to 1500)
+#'     \item \code{"after"}: Add Digital Age epoch (2000 to current year)
 #'     \item \code{"both"} or \code{TRUE}: Add both Prehistory and Digital Age
 #'   }
 #'   Only used when \code{style = "default"}.
@@ -124,12 +124,14 @@ define_epochs <- function(breaks = NULL,
     # Apply extend option
     if (!is.null(extend)) {
       if (extend %in% c("before", "both")) {
-        breaks <- c(1400, breaks)
+        breaks <- c(-Inf, breaks)
         labels <- c("Prehistory", labels)
         descriptions <- c("Pre-1500: Early development period", descriptions)
       }
       if (extend %in% c("after", "both")) {
-        breaks <- c(breaks, 2025)
+        # Use current year as upper bound for Digital Age
+        current_year <- as.integer(format(Sys.Date(), "%Y"))
+        breaks <- c(breaks, current_year)
         labels <- c(labels, "Digital Age")
         descriptions <- c(descriptions, "Modern digital and web-based visualization")
       }

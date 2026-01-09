@@ -39,9 +39,11 @@ Creates epoch definitions for timeline visualization.
 8. 1975-2000: Hi-Dim Vis
 
 **Extension Options:**
-- `extend = "before"` adds: 1400-1500 Prehistory
-- `extend = "after"` adds: 2000-2025 Digital Age
+- `extend = "before"` adds: -Inf to 1500 Prehistory
+- `extend = "after"` adds: 2000 to current year (2026) Digital Age
 - `extend = TRUE` or `"both"` adds both
+
+**Note:** The Prehistory epoch uses -Inf as the lower bound to accommodate very early milestones (e.g., 6200 BC). The Digital Age uses the current year as determined by `Sys.Date()` at runtime.
 
 #### `epoch_boundaries()`
 Extracts unique boundary years from epochs.
@@ -51,9 +53,14 @@ Extracts unique boundary years from epochs.
 epochs <- define_epochs()
 boundaries <- epoch_boundaries(epochs)
 # Returns: c(1500, 1600, 1700, 1800, 1850, 1900, 1950, 1975, 2000)
+
+extended <- define_epochs(extend = TRUE)
+boundaries <- epoch_boundaries(extended)
+# Returns: c(1500, 1600, 1700, 1800, 1850, 1900, 1950, 1975, 2000, 2026)
+# Note: -Inf is filtered out automatically
 ```
 
-Useful for adding vertical reference lines in plots.
+Useful for adding vertical reference lines in plots. The function automatically filters out non-finite values (-Inf, Inf) since they can't be plotted as vertical lines.
 
 #### `get_epoch()`
 Determines which epoch(s) given year(s) belong to.
@@ -137,7 +144,7 @@ source("dev/epochs-usage-demo.R")
 ## Design Decisions Made
 
 1. **Data structure:** Data frame (not list) for ggplot2 compatibility
-2. **Open-ended intervals:** Use finite bounds (1400, 2025) instead of -Inf/Inf
+2. **Open-ended intervals:** Use -Inf for Prehistory lower bound, current year for Digital Age upper bound
 3. **Extension:** `extend = TRUE` same as `extend = "both"` (user-requested)
 4. **Validation:** Errors for clearly wrong inputs, warnings for minor issues
 5. **No summary method:** Removed as redundant with print method (user feedback)

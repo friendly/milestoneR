@@ -136,4 +136,24 @@ tryCatch({
 })
 cat("\n")
 
+# Test 15: Extended epochs with very early dates (BC)
+cat("Test 15: Extended epochs with very early dates\n")
+extended_both <- define_epochs(extend = TRUE)
+early_years <- c(-6200, -1000, 1500, 2000, 2026)
+early_epochs <- get_epoch(early_years, extended_both)
+result3 <- data.frame(
+  year = early_years,
+  epoch = early_epochs
+)
+print(result3)
+cat("\n")
+
+# Test 16: Verify boundaries exclude -Inf
+cat("Test 16: Verify epoch_boundaries() excludes -Inf\n")
+boundaries_ext <- epoch_boundaries(extended_both)
+cat("Boundaries:", boundaries_ext, "\n")
+cat("Should NOT include -Inf\n")
+stopifnot(!any(is.infinite(boundaries_ext)))
+cat("OK - all boundaries are finite\n\n")
+
 cat("=== All tests completed ===\n")

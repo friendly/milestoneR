@@ -49,7 +49,7 @@ For epochs like "Prehistory" (< 1500) or "Digital Age" (> 2000):
 ```r
 breaks <- c(-Inf, 1500, 1600, ..., 2000, Inf)
 ```
-**Pros:** Mathematically clean
+**Pros:** Mathematically clean, handles all dates (including BC dates like -6200)
 **Cons:** Need special handling in plotting (Inf doesn't plot)
 
 ### Option B: Use NA with explicit range
@@ -66,9 +66,9 @@ create_epochs(breaks, labels, from = NA, to = 2000)
 breaks <- c(1400, 1500, 1600, ..., 2000, 2100)
 ```
 **Pros:** Works seamlessly with plotting
-**Cons:** Arbitrary choice of bounds
+**Cons:** Arbitrary choice of bounds, doesn't handle very early dates (BC)
 
-**Recommendation:** Option C for simplicity, with Option B as fallback for truly open intervals.
+**Recommendation:** **Option A implemented** - Use -Inf for prehistory (handles BC dates), current year for digital age. The `epoch_boundaries()` function automatically filters out non-finite values for plotting.
 
 ## Default Epochs
 
