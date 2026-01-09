@@ -1,5 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 <!-- badges: start -->
 
 [![Lifecycle:
@@ -28,7 +29,9 @@ No attempt is made here to replicate the interactive features of the
 - overview pages for time periods, such as [1700-1799: New graphic
   forms](https://datavis.ca/milestones/index.php?group=1700s), or
   [1850-1899: Golden Age of data
-  graphics](https://datavis.ca/milestones/index.php?group=1850%2B)
+  graphics](https://datavis.ca/milestones/index.php?group=1850%2B), or
+  [1900-1949: Modern Dark
+  Ages](https://datavis.ca/milestones/index.php?group=1900%2B)
 - A [Milestones calendar](https://www.datavis.ca/milestones-cal/)
   listing birthdays, death days and the days of significant events
   associated with individuals in the history of data visualization.
