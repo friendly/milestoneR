@@ -15,8 +15,10 @@ The main goal of the `milestoneR` package is to provide R access to the
 database tables used in the Milestones Project, reflecting the history
 of data visualization, as used in <http://datavis.ca/milestones> and
 other applications on this site, such as the [Milestones
-Calendar](http://www.datavis.ca/milestones-cal/). This project is
-described in Friendly et al. (2015).
+Calendar](http://www.datavis.ca/milestones-cal/). The technical details
+are described in [Friendly et
+al. (2015)](http://datavis.ca/papers/MilestonesProject.pdf). Earlier
+papers are Friendly (2005, 2007).
 
 - To do this, I document what we have done to create a database
   comprised of important events in this history, combined with source
@@ -366,8 +368,13 @@ Case Study in Statistical Historiography. In C. Weihs & W. Gaul (Eds.),
 *Classification: The Ubiquitous Challenge* (pp. 34–52). Springer.
 <http://datavis.ca/papers/gfkl.pdf>
 
+Friendly, M. (2007). A Brief History of Data Visualization. In C. Chen,
+W. Härdle, & A. Unwin (Eds.), *Handbook of Computational Statistics:
+Data Visualization*: Vol. III (pp. 1–34). Springer-Verlag.
+<https://www.datavis.ca/papers/hbook.pdf>
+
 Friendly, M., Sigal, M. & Harnanansingh, D. (2015). “The Milestones
 Project: A Database for the History of Data Visualization.” In Kimball,
 M. & Kostelnick, C. (Eds.) *Visible Numbers: The History of Data
 Visualization*, Chapter 10. London, UK: Ashgate Press.
-[preprint](http://datavis.ca/papers/MilestonesProject.pdf)
+<http://datavis.ca/papers/MilestonesProject.pdf>
