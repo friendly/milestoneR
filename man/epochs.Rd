@@ -2,8 +2,6 @@
 % Please edit documentation in R/epochs.R
 \name{define_epochs}
 \alias{define_epochs}
-\alias{epoch_boundaries}
-\alias{get_epoch}
 \alias{print.milestone_epochs}
 \title{Define Historical Epochs for Timeline Visualization}
 \usage{
@@ -14,10 +12,6 @@ define_epochs(
   style = c("default", "custom"),
   extend = NULL
 )
-
-epoch_boundaries(epochs)
-
-get_epoch(year, epochs, label = TRUE)
 
 \method{print}{milestone_epochs}(x, ...)
 }
@@ -36,19 +30,11 @@ to use provided \code{breaks} and \code{labels}.}
 \item{extend}{Character or logical. How to extend the default epochs:
 \itemize{
 \item \code{NULL} or \code{FALSE}: Use defaults as-is (1500-2000)
-\item \code{"before"}: Add Prehistory epoch before 1500
-\item \code{"after"}: Add Digital Age epoch after 2000
+\item \code{"before"}: Add Prehistory epoch (-Inf to 1500)
+\item \code{"after"}: Add Digital Age epoch (2000 to current year)
 \item \code{"both"} or \code{TRUE}: Add both Prehistory and Digital Age
 }
 Only used when \code{style = "default"}.}
-
-\item{epochs}{An object of class \code{"milestone_epochs"} created by
-\code{\link{define_epochs}}.}
-
-\item{year}{Numeric vector of years to classify.}
-
-\item{label}{Logical. If \code{TRUE}, return epoch labels; if \code{FALSE},
-return epoch IDs.}
 
 \item{x}{An object of class \code{"milestone_epochs"}.}
 
@@ -58,26 +44,20 @@ return epoch IDs.}
 A data frame of class \code{c("milestone_epochs", "data.frame")} with
 one row per epoch.
 
-A numeric vector of unique, sorted boundary years.
-
-A character vector (if \code{label = TRUE}) or integer vector
-(if \code{label = FALSE}) indicating which epoch each year belongs to.
-Years outside the epoch range return \code{NA}.
-
 Invisibly returns the input object.
 }
 \description{
-Creates a data structure defining historical epochs (time periods) for use in
-timeline visualizations. Returns a data frame with epoch boundaries, labels,
+The idea of an "epoch" is to provide a grouping of years of into time periods that can be
+characterized by some theme.
+\code{define_epoch()} creates a data structure defining historical epochs or use in
+timeline visualizations, or analysis of milestones items.
+It returns a data frame with epoch boundaries, labels,
 and calculated midpoints.
-
-Extracts the unique boundary years from an epoch definition. Useful for
-adding vertical reference lines at epoch transitions.
-
-Determines which epoch(s) one or more years belong to.
 }
 \details{
-The default epochs are based on the periodization described in Friendly et al. (2015):
+The default epochs are based on the period classification described in Friendly et al. (2015)
+for use in producing timeline with interpretable labels. The \code{extend} argument allows these
+defaults to be extended to earlier or later periods.
 \itemize{
 \item 1500-1600: Early maps & diagrams
 \item 1600-1700: Measurement & theory
@@ -88,6 +68,8 @@ The default epochs are based on the periodization described in Friendly et al. (
 \item 1950-1975: Re-birth
 \item 1975-2000: Hi-Dim Vis
 }
+
+You can create your own time epochs using \code{style = "custom"} and providing \code{breaks} and \code{labels}
 
 The returned data frame has class \code{c("milestone_epochs", "data.frame")}
 and contains columns:
@@ -104,6 +86,9 @@ and contains columns:
 # Get default epochs
 epochs <- define_epochs()
 print(epochs)
+
+# print it just as a plain data.frame
+as.data.frame(epochs)
 
 # Extend with Prehistory and Digital Age
 extended <- define_epochs(extend = TRUE)
@@ -122,20 +107,30 @@ my_epochs <- define_epochs(
 # Get epoch boundaries for plotting vertical lines
 boundaries <- epoch_boundaries(epochs)
 
-epochs <- define_epochs()
-boundaries <- epoch_boundaries(epochs)
-print(boundaries)
+# ---- Relating milestone items to epochs ----
+# Load milestone data
+ms <- milestone()
 
-epochs <- define_epochs()
+# Attach epoch labels to each milestone
+ms$epoch <- get_epoch(ms$date_from_numeric, extended)
 
-# Which epoch is 1850?
-get_epoch(1850, epochs)
+# Create a frequency table of milestones by epoch
+table(ms$epoch, useNA = "ifany")
 
-# Multiple years
-get_epoch(c(1650, 1850, 1975), epochs)
+# Or as a data frame with counts
+as.data.frame(table(epoch = ms$epoch))
 
-# Get IDs instead of labels
-get_epoch(c(1650, 1850), epochs, label = FALSE)
+# Get summary statistics for each epoch: count, min year, max year
+library(dplyr)
+ms |>
+  filter(!is.na(epoch)) |>
+  group_by(epoch) |>
+  summarise(
+    n = n(),
+    min_year = min(date_from_numeric),
+    max_year = max(date_from_numeric)
+  )
+
 
 }
 \references{
@@ -143,4 +138,7 @@ Friendly, M., Sigal, M. & Harnanansingh, D. (2015).
 "The Milestones Project: A Database for the History of Data Visualization."
 In Kimball, M. & Kostelnick, C. (Eds.)
 \emph{Visible Numbers: The Historyof Data Visualization}, Chapter 10.
+}
+\seealso{
+\code{\link[=epoch_boundaries]{epoch_boundaries()}}, \code{\link[=get_epoch]{get_epoch()}}
 }

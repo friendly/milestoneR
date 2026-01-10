@@ -43,6 +43,7 @@ reference:
   - get_milestone_subjects
   - get_milestone_aspects
   - get_milestone_media
+  - epochs
 
 - title: "Search Functions"
   desc: "Functions for searching and filtering milestones"

@@ -1,8 +1,14 @@
 #' Define Historical Epochs for Timeline Visualization
 #'
-#' Creates a data structure defining historical epochs (time periods) for use in
-#' timeline visualizations. Returns a data frame with epoch boundaries, labels,
+#' The idea of an "epoch" is to provide a grouping of years of into time periods that can be
+#' characterized by some theme.
+#' `define_epoch()` creates a data structure defining historical epochs or use in
+#' timeline visualizations, or analysis of milestones items.
+#' It returns a data frame with epoch boundaries, labels,
 #' and calculated midpoints.
+#'
+#' The functions [epoch_boundaries()] and [get_epoch()] provide tools for working with epochs
+#' in relation to milestones events.
 #'
 #' @param breaks Numeric vector of boundary years (for custom epochs). Must be
 #'   sorted in ascending order.
@@ -21,7 +27,9 @@
 #'   Only used when \code{style = "default"}.
 #'
 #' @details
-#' The default epochs are based on the periodization described in Friendly et al. (2015):
+#' The default epochs are based on the period classification described in Friendly et al. (2015)
+#' for use in producing timeline with interpretable labels. The `extend` argument allows these
+#' defaults to be extended to earlier or later periods.
 #' \itemize{
 #'   \item 1500-1600: Early maps & diagrams
 #'   \item 1600-1700: Measurement & theory
@@ -32,6 +40,8 @@
 #'   \item 1950-1975: Re-birth
 #'   \item 1975-2000: Hi-Dim Vis
 #' }
+#'
+#' You can create your own time epochs using `style = "custom"` and providing `breaks` and `labels`
 #'
 #' The returned data frame has class \code{c("milestone_epochs", "data.frame")}
 #' and contains columns:
@@ -54,10 +64,14 @@
 #' \emph{Visible Numbers: The Historyof Data Visualization}, Chapter 10.
 #'
 #' @rdname epochs
+#' @seealso [epoch_boundaries()], [get_epoch()]
 #' @examples
 #' # Get default epochs
 #' epochs <- define_epochs()
 #' print(epochs)
+#'
+#' # print it just as a plain data.frame
+#' as.data.frame(epochs)
 #'
 #' # Extend with Prehistory and Digital Age
 #' extended <- define_epochs(extend = TRUE)
@@ -75,6 +89,31 @@
 #'
 #' # Get epoch boundaries for plotting vertical lines
 #' boundaries <- epoch_boundaries(epochs)
+#'
+#' # ---- Relating milestone items to epochs ----
+#' # Load milestone data
+#' ms <- milestone()
+#'
+#' # Attach epoch labels to each milestone
+#' ms$epoch <- get_epoch(ms$date_from_numeric, extended)
+#'
+#' # Create a frequency table of milestones by epoch
+#' table(ms$epoch, useNA = "ifany")
+#'
+#' # Or as a data frame with counts
+#' as.data.frame(table(epoch = ms$epoch))
+#'
+#' # Get summary statistics for each epoch: count, min year, max year
+#' library(dplyr)
+#' ms |>
+#'   filter(!is.na(epoch)) |>
+#'   group_by(epoch) |>
+#'   summarise(
+#'     n = n(),
+#'     min_year = min(date_from_numeric),
+#'     max_year = max(date_from_numeric)
+#'   )
+#'
 #'
 #' @export
 define_epochs <- function(breaks = NULL,
@@ -188,100 +227,6 @@ define_epochs <- function(breaks = NULL,
   return(epochs)
 }
 
-
-#' Extract Epoch Boundaries
-#'
-#' Extracts the unique boundary years from an epoch definition. Useful for
-#' adding vertical reference lines at epoch transitions.
-#'
-#' @param epochs An object of class \code{"milestone_epochs"} created by
-#'   \code{\link{define_epochs}}.
-#'
-#' @return A numeric vector of unique, sorted boundary years.
-#'
-#' @examples
-#' epochs <- define_epochs()
-#' boundaries <- epoch_boundaries(epochs)
-#' print(boundaries)
-#'
-#' @rdname epochs
-#' @export
-epoch_boundaries <- function(epochs) {
-  if (!inherits(epochs, "milestone_epochs")) {
-    stop("Input must be an object of class 'milestone_epochs'")
-  }
-
-  bounds <- c(epochs$start, epochs$end)
-  bounds <- bounds[is.finite(bounds)]
-  unique(sort(bounds))
-}
-
-
-#' Get Epoch for Given Year(s)
-#'
-#' Determines which epoch(s) one or more years belong to.
-#'
-#' @param year Numeric vector of years to classify.
-#' @param epochs An object of class \code{"milestone_epochs"} created by
-#'   \code{\link{define_epochs}}.
-#' @param label Logical. If \code{TRUE}, return epoch labels; if \code{FALSE},
-#'   return epoch IDs.
-#'
-#' @return A character vector (if \code{label = TRUE}) or integer vector
-#'   (if \code{label = FALSE}) indicating which epoch each year belongs to.
-#'   Years outside the epoch range return \code{NA}.
-#'
-#' @examples
-#' epochs <- define_epochs()
-#'
-#' # Which epoch is 1850?
-#' get_epoch(1850, epochs)
-#'
-#' # Multiple years
-#' get_epoch(c(1650, 1850, 1975), epochs)
-#'
-#' # Get IDs instead of labels
-#' get_epoch(c(1650, 1850), epochs, label = FALSE)
-#'
-#' @rdname epochs
-#' @export
-get_epoch <- function(year, epochs, label = TRUE) {
-  if (!inherits(epochs, "milestone_epochs")) {
-    stop("epochs must be an object of class 'milestone_epochs'")
-  }
-
-  # Use findInterval to locate which epoch each year falls into
-  # findInterval returns 0 if before first interval, n+1 if after last
-  idx <- findInterval(year, epochs$start, rightmost.closed = TRUE)
-
-  # Adjust: findInterval returns the index of the start point that is <= year
-  # We need to check that year is also < end
-  epoch_id <- idx
-
-  # Check if year is within valid range
-  for (i in seq_along(year)) {
-    if (idx[i] == 0 || idx[i] > nrow(epochs)) {
-      epoch_id[i] <- NA_integer_
-    } else {
-      # Check if year is before the end of the epoch
-      if (year[i] >= epochs$end[idx[i]]) {
-        epoch_id[i] <- NA_integer_
-      } else {
-        epoch_id[i] <- idx[i]
-      }
-    }
-  }
-
-  if (label) {
-    result <- epochs$label[epoch_id]
-  } else {
-    result <- epoch_id
-  }
-
-  return(result)
-}
-
-
 #' Print Method for Milestone Epochs
 #'
 #' @param x An object of class \code{"milestone_epochs"}.
@@ -324,8 +269,116 @@ print.milestone_epochs <- function(x, ...) {
       as.character(x$end[i])
     }
 
-    cat(sprintf("%2d. %s-%s: %s\n", i, start_str, end_str, x$label[i]))
+    cat(sprintf("%2d %s-%s: %s\n", i, start_str, end_str, x$label[i]))
   }
 
   invisible(x)
 }
+
+
+#' Extract Epoch Boundaries
+#'
+#' Extracts the unique boundary years from an epoch definition. Useful for
+#' adding vertical reference lines at epoch transitions.
+#'
+#' @param epochs An object of class \code{"milestone_epochs"} created by
+#'   \code{\link{define_epochs}}.
+#'
+#' @seealso [define_epochs()], [get_epoch()]
+#' @return A numeric vector of unique, sorted boundary years.
+#'
+#' @examples
+#' epochs <- define_epochs()
+#' boundaries <- epoch_boundaries(epochs)
+#' print(boundaries)
+#'
+#' @export
+epoch_boundaries <- function(epochs) {
+  if (!inherits(epochs, "milestone_epochs")) {
+    stop("Input must be an object of class 'milestone_epochs'")
+  }
+
+  bounds <- c(epochs$start, epochs$end)
+  bounds <- bounds[is.finite(bounds)]
+  unique(sort(bounds))
+}
+
+
+#' Get Epoch for Given Year(s)
+#'
+#' Determines which epoch(s) one or more years belong to.
+#'
+#' @param year Numeric vector of years to classify.
+#' @param epochs An object of class \code{"milestone_epochs"} created by
+#'   \code{\link{define_epochs}}.
+#' @param label Logical. If \code{TRUE}, return epoch labels; if \code{FALSE},
+#'   return epoch IDs.
+#'
+#' @return A character vector (if \code{label = TRUE}) or integer vector
+#'   (if \code{label = FALSE}) indicating which epoch each year belongs to.
+#'   Years outside the epoch range return \code{NA}.
+#'
+#' @seealso [define_epochs()], [epoch_boundaries()]
+#' @examples
+#' epochs <- define_epochs()
+#'
+#' # Which epoch is 1850?
+#' get_epoch(1850, epochs)
+#'
+#' # Multiple years
+#' get_epoch(c(1650, 1850, 1975), epochs)
+#'
+#' # Get IDs instead of labels
+#' get_epoch(c(1650, 1850), epochs, label = FALSE)
+#'
+#' # Attach epochs to all milestones for analysis
+#' ms <- milestone()
+#' extended <- define_epochs(extend = "before")
+#' ms$epoch <- get_epoch(ms$date_from_numeric, extended)
+#'
+#' # Frequency table of milestones by epoch
+#' table(ms$epoch)
+#'
+#' # Cross-tabulate by epoch and subject
+#' ms_subjects <- milestone2subject()
+#' ms_with_subject <- merge(ms, ms_subjects, by = "mid")
+#' table(ms_with_subject$epoch, ms_with_subject$subject)
+#'
+#' @export
+get_epoch <- function(year, epochs, label = TRUE) {
+  if (!inherits(epochs, "milestone_epochs")) {
+    stop("epochs must be an object of class 'milestone_epochs'")
+  }
+
+  # Use findInterval to locate which epoch each year falls into
+  # findInterval returns 0 if before first interval, n+1 if after last
+  idx <- findInterval(year, epochs$start, rightmost.closed = TRUE)
+
+  # Adjust: findInterval returns the index of the start point that is <= year
+  # We need to check that year is also < end
+  epoch_id <- idx
+
+  # Check if year is within valid range
+  for (i in seq_along(year)) {
+    if (idx[i] == 0 || idx[i] > nrow(epochs)) {
+      epoch_id[i] <- NA_integer_
+    } else {
+      # Check if year is before the end of the epoch
+      if (year[i] >= epochs$end[idx[i]]) {
+        epoch_id[i] <- NA_integer_
+      } else {
+        epoch_id[i] <- idx[i]
+      }
+    }
+  }
+
+  if (label) {
+    result <- epochs$label[epoch_id]
+  } else {
+    result <- epoch_id
+  }
+
+  return(result)
+}
+
+
