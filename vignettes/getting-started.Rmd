@@ -198,6 +198,43 @@ combined <- intersect(physical_mids, carto_mids)
 cat("\nMilestones that are both Physical and Cartography:", length(combined), "\n")
 ```
 
+## Working with epochs
+
+Epochs provide a way to group milestones into meaningful time periods. The package defines default historical epochs based on the time periods described in Friendly et al. (2015).
+
+### Default epochs
+
+```{r epochs}
+# Get default epoch definitions
+epochs <- define_epochs()
+print(epochs)
+```
+
+The default epochs span from 1500 to 2000, covering key periods in the history of data visualization from early maps and diagrams through the development of high-dimensional visualization methods.
+
+### Classifying milestones by epoch
+
+Attach epoch labels to milestones to analyze their distribution across historical periods:
+
+```{r epoch-analysis}
+# Extend epochs to cover all milestones (including prehistoric ones)
+extended_epochs <- define_epochs(extend = "before")
+
+# Attach epoch labels to each milestone
+ms$epoch <- get_epoch(ms$date_from_numeric, extended_epochs)
+
+# Frequency table of milestones by epoch
+table(ms$epoch)
+
+# Or as a data frame
+epoch_counts <- as.data.frame(table(epoch = ms$epoch))
+print(epoch_counts)
+```
+
+This shows how milestones are distributed across different historical periods, with the "Golden Age" (1850-1900) containing the most milestones in the database.
+
+You can also create custom epochs for specific analyses using `style = "custom"` with your own breaks and labels. See `?define_epochs` for more details.
+
 ## Displaying results
 
 The package provides several print functions with various output formats: `"text"`, `"html"`, `"markdown"`,

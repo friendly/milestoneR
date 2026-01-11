@@ -55,6 +55,9 @@ It returns a data frame with epoch boundaries, labels,
 and calculated midpoints.
 }
 \details{
+The functions \code{\link[=epoch_boundaries]{epoch_boundaries()}} and \code{\link[=get_epoch]{get_epoch()}} provide tools for working with epochs
+in relation to milestones events.
+
 The default epochs are based on the period classification described in Friendly et al. (2015)
 for use in producing timeline with interpretable labels. The \code{extend} argument allows these
 defaults to be extended to earlier or later periods.
